@@ -1,0 +1,104 @@
+
+\section*{Proposition 46}
+
+\renewcommand\qedsymbol{Q.E.F}
+
+\begin{con}
+To describe a square on a given straight line.
+\end{con}
+
+\textbf{Given:} A straight line $\overline{AB}$.
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(3,0){B}
+		\tkzDrawSegment[thick](A,B)
+		\tkzDrawPoints(A,B)
+		\tkzLabelPoints[below](A,B)
+	\end{tikzpicture}
+	\caption{Given Line $\overline{AB}$}
+\end{figure}
+
+\begin{con}
+
+\begin{enumerate}
+\item[]
+    \item Draw $\overline{AC}$ at right angles to the straight line $\overline{AB}$ from point $A$ on it.
+    \item Make \[\overline{AD} = \overline{AB}\]
+    \item Draw $\overline{DE}$ through point $D$ parallel to $\overline{AB}$.
+    \item Draw $\overline{BE}$ through point $B$ parallel to $\overline{AD}$. \hfill\textcolor{red}{I.11,I.3,I.31}
+\end{enumerate}
+
+\end{con}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(3,0){B}
+		\tkzDefPoint(0,4){C}
+		\tkzDefPoint(0,3){D}
+		\tkzDefPoint(3,3){E}
+		\tkzDrawSegment[thick](A,C)
+		\tkzDrawPolygon(A,D,E,B)
+		\tkzDrawPoints(A,B,C,D,E)
+		\tkzLabelPoints[below](A,B)
+		\tkzLabelPoints[above](C)
+		\tkzLabelPoints[left](D)
+		\tkzLabelPoints[right](E)
+		\tkzCompass(A,D)
+		\tkzCompass(B,E)
+	\end{tikzpicture}
+	\caption{Parallelogram}
+\end{figure}
+
+\begin{proof}%
+
+\begin{lemma}
+\begin{itemize}
+$ADEB$ is a parallelogram.
+\item Proof: By construction, 
+\[\overline{DE} \parallel \overline{AB}\] 
+and 
+\[\overline{BE} \parallel  \overline{AD}\] 
+thus $ADEB$ is a parallelogram.
+\end{itemize}
+\end{lemma}
+
+\begin{lemma}
+\begin{itemize}
+$ADEB$ is equilateral.
+\item Proof: Since 
+\[\overline{AB} = \overline{AD}\]
+ and 
+ \[\overline{AB} = \overline{DE}\] 
+ (as opposite sides of a parallelogram are equal), 
+ \[\overline{AB} = \overline{AD} = \overline{DE}\]
+ Thus, $ADEB$ is equilateral.
+ \end{itemize}
+ \end{lemma}
+
+\begin{lemma}
+\begin{itemize}
+$ADEB$ is right-angled.
+\item Proof: 
+\[\angle{BAD} + \angle{ADE} =2\times\ang{90} \]
+Since $\overline{AD}$ falls on parallels $\overline{AB}$ and $\overline{DE}$
+    \[\angle{BAD} = \ang{90}\]
+    Given:
+    \[\rightarrow \angle{ADE} = \ang{90}\]\hfill\textcolor{red}{I.29,I.Post.4,I.34}
+    \end{itemize}
+\end{lemma}
+
+Now, consider the parallelogram $ADEB$.
+
+Similarly, using the property of parallelograms, we can show that $\angle{ABE}$ and $\angle{BED}$ are also right angles.
+
+\textbf{Conclusion:} Since $ADEB$ is both equilateral and right-angled, it is a square, and it is described on the straight line $\overline{AB}$.
+
+
+$\therefore$ the square on the given $\overline{AB}$ is successfully constructed and proven.\hfill\textcolor{red}{I.Def.22}
+
+\end{proof}
+
+\clearpage

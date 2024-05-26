@@ -1,0 +1,197 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{Euclid}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5a91980afcd8fcc91d0c22c49d033baa}{%
+           family={Casey},
+           familyi={C\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Dublin}%
+      }
+      \list{publisher}{3}{%
+        {Hodges, Figgis,}%
+        {Co.; Longmans, Green,}%
+        {Co.}%
+      }
+      \strng{namehash}{5a91980afcd8fcc91d0c22c49d033baa}
+      \strng{fullhash}{5a91980afcd8fcc91d0c22c49d033baa}
+      \strng{fullhashraw}{5a91980afcd8fcc91d0c22c49d033baa}
+      \strng{bibnamehash}{5a91980afcd8fcc91d0c22c49d033baa}
+      \strng{authorbibnamehash}{5a91980afcd8fcc91d0c22c49d033baa}
+      \strng{authornamehash}{5a91980afcd8fcc91d0c22c49d033baa}
+      \strng{authorfullhash}{5a91980afcd8fcc91d0c22c49d033baa}
+      \strng{authorfullhashraw}{5a91980afcd8fcc91d0c22c49d033baa}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The First Six Books of the Elements of Euclid}
+      \field{year}{1885}
+    \endentry
+    \entry{Henrici}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5106eaf8e20d0302e1ab9fce9a4123fa}{%
+           family={Dodgson},
+           familyi={D\bibinitperiod},
+           given={Charles\bibnamedelima Lutwidge},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Oxford}%
+      }
+      \list{publisher}{1}{%
+        {Horace Hart}%
+      }
+      \strng{namehash}{5106eaf8e20d0302e1ab9fce9a4123fa}
+      \strng{fullhash}{5106eaf8e20d0302e1ab9fce9a4123fa}
+      \strng{fullhashraw}{5106eaf8e20d0302e1ab9fce9a4123fa}
+      \strng{bibnamehash}{5106eaf8e20d0302e1ab9fce9a4123fa}
+      \strng{authorbibnamehash}{5106eaf8e20d0302e1ab9fce9a4123fa}
+      \strng{authornamehash}{5106eaf8e20d0302e1ab9fce9a4123fa}
+      \strng{authorfullhash}{5106eaf8e20d0302e1ab9fce9a4123fa}
+      \strng{authorfullhashraw}{5106eaf8e20d0302e1ab9fce9a4123fa}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Euclid and his Modern Rivals}
+      \field{year}{1885}
+    \endentry
+    \entry{Heath}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b06ad49522a61c935a5e3d62dbdd803e}{%
+           family={Heath},
+           familyi={H\bibinitperiod},
+           given={Sir\bibnamedelimb Thomas\bibnamedelima L.},
+           giveni={S\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Dover Publications}%
+      }
+      \strng{namehash}{b06ad49522a61c935a5e3d62dbdd803e}
+      \strng{fullhash}{b06ad49522a61c935a5e3d62dbdd803e}
+      \strng{fullhashraw}{b06ad49522a61c935a5e3d62dbdd803e}
+      \strng{bibnamehash}{b06ad49522a61c935a5e3d62dbdd803e}
+      \strng{authorbibnamehash}{b06ad49522a61c935a5e3d62dbdd803e}
+      \strng{authornamehash}{b06ad49522a61c935a5e3d62dbdd803e}
+      \strng{authorfullhash}{b06ad49522a61c935a5e3d62dbdd803e}
+      \strng{authorfullhashraw}{b06ad49522a61c935a5e3d62dbdd803e}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Thirteen Books of Euclid's Elements}
+      \field{year}{1956}
+    \endentry
+    \entry{Proclus1}{incollection}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bdd382245bcf2a055fbc5aefc6ae5dd1}{%
+           family={Proclus},
+           familyi={P\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=46546e88b2c25c8b1b104d2d2eeb20b9}{%
+           family={Fauvel},
+           familyi={F\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e54187eb645c273bd47e10b323423be8}{%
+           family={Gray},
+           familyi={G\bibinitperiod},
+           given={Jeremy},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{bdd382245bcf2a055fbc5aefc6ae5dd1}
+      \strng{fullhash}{bdd382245bcf2a055fbc5aefc6ae5dd1}
+      \strng{fullhashraw}{bdd382245bcf2a055fbc5aefc6ae5dd1}
+      \strng{bibnamehash}{bdd382245bcf2a055fbc5aefc6ae5dd1}
+      \strng{authorbibnamehash}{bdd382245bcf2a055fbc5aefc6ae5dd1}
+      \strng{authornamehash}{bdd382245bcf2a055fbc5aefc6ae5dd1}
+      \strng{authorfullhash}{bdd382245bcf2a055fbc5aefc6ae5dd1}
+      \strng{authorfullhashraw}{bdd382245bcf2a055fbc5aefc6ae5dd1}
+      \strng{editorbibnamehash}{ee1bba45a9d3452c73f7d727bae4e160}
+      \strng{editornamehash}{ee1bba45a9d3452c73f7d727bae4e160}
+      \strng{editorfullhash}{ee1bba45a9d3452c73f7d727bae4e160}
+      \strng{editorfullhashraw}{ee1bba45a9d3452c73f7d727bae4e160}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{The histor of mathematics}
+      \field{title}{Euclid's Elements}
+      \field{year}{1987}
+      \field{pages}{99\bibrangedash 147}
+      \range{pages}{49}
+    \endentry
+    \entry{Proclus}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=26d8968d5675e23616871ec570b67a57}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Thomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Princeton}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{26d8968d5675e23616871ec570b67a57}
+      \strng{fullhash}{26d8968d5675e23616871ec570b67a57}
+      \strng{fullhashraw}{26d8968d5675e23616871ec570b67a57}
+      \strng{bibnamehash}{26d8968d5675e23616871ec570b67a57}
+      \strng{authorbibnamehash}{26d8968d5675e23616871ec570b67a57}
+      \strng{authornamehash}{26d8968d5675e23616871ec570b67a57}
+      \strng{authorfullhash}{26d8968d5675e23616871ec570b67a57}
+      \strng{authorfullhashraw}{26d8968d5675e23616871ec570b67a57}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Proclus's Commentary on the First Book of Euclid's Elements}
+      \field{year}{1792}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

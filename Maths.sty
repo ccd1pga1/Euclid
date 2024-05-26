@@ -1,0 +1,105 @@
+%--------------------------------------------------Packages---------------------------------------------------%
+\usepackage{tkz-euclide}										%Tkz-Euclide diagrams
+\usepackage{amsmath,amsthm,amssymb,cancel}					%Math packages
+\usepackage{mathrsfs}										%Maths sybols
+\usepackage{float}											%Float for figures
+\usepackage{siunitx}											%Units
+\usepackage{cleveref} 										% Enhanced cross-referencing
+\usepackage{qtree}											%Tree diagrams
+%-------------------------------------------------Symbols----------------------------------------------------%
+\makeatletter												%eqparallel
+\newcommand{\eqparallel}{\mathrel{\vphantom{\parallel}\mathpalette\eqparallel@\relax}}
+\newcommand{\eqparallel@}[2]{%
+  \ooalign{\hidewidth$\m@th#1\parallel$\hidewidth\cr$\m@th#1=$\cr}%
+}
+\makeatother
+
+\DeclareSymbolFont{yhlargesymbols}{OMX}{yhex}{m}{n}
+
+\DeclareMathAccent{\widetriangle}{\mathord}{yhlargesymbols}{"E6}
+
+%-----------------------------------------------Environments---------------------------%
+% Customize theorem environments
+% 
+\newcounter{theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+%\newtheorem{theorem}{Theorem}[chapter]
+%\newtheorem{definition}{Definition}[chapter]
+%\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{remark}{Remark}[section]
+
+
+
+
+
+
+
+%-----------------------------------------------Library-------------------------------------------------------%
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{fit,shapes.geometric}
+\usetikzlibrary{tikzmark}
+\usetikzlibrary{shapes.geometric} % required for the ellipse shape
+\usetikzlibrary{arrows, backgrounds, calc, hobby, positioning}
+
+
+
+
+
+
+%-----------------------------------------------Shapes-----------------------------------------------------%
+\newcommand{\ETri}[4]{%
+	\tkzDefPoint(#1){#2}%
+ \tkzDefShiftPoint[A](60:3){#3}%<------------45 for right angles iso
+ \tkzDefShiftPoint[A](0:3){#4}%
+ \tkzDrawPolygon(#2,#3,#4)%
+ \tkzDrawPoints(#2,#3,#4)%
+ \tkzLabelPoints[below](#2,#4)%
+ \tkzLabelPoints[above](#3)%
+}%
+
+\newcommand{\TRI}[7]{%
+	\tkzDefPoint(#1){#2}%
+ \tkzDefShiftPoint[#2](#3){#4}%
+ \tkzDefShiftPoint[#2](#5){#6}%
+ \tkzDrawPolygon[fill=#7](#2,#4,#6)%
+ \tkzDrawPoints(#2,#4,#6)%
+}%
+
+\newcommand{\AB}[1]{%
+	\tkzDefPoint(0,0){A}%
+	\tkzDefPoint(3,0){B}%
+}%
+
+\newcommand{\Tri}[8]{%%
+	\tkzDefPoint(0,0){#1}%
+	\tkzDefPoint({#2,#3}){#4}%
+	\tkzDefPoint({#5,#6}){#7}%
+	\tkzDrawPolygon[fill=#8](#1,#4,#7)%
+	\tkzDrawPoints(#1,#4,#7)%
+}
+
+
+\newcommand{\iTri}[4]{%
+	\tkzDefPoint(0,0){#1}%
+	\tkzDefPoint(3,0){#2}%
+	\tkzDefPoint(1.5,3){#3}%
+	\tkzDrawPolygon[fill=#4, opacity=0.3](#1,#2,#3)% 
+	\tkzLabelPoint[left](#1){$#1$}% 
+	\tkzLabelPoint[right](#2){$#2$}%
+	\tkzLabelPoint[above](#3){$#3$}%
+	\tkzMarkSegment[mark=|](#1,#3)%
+	\tkzMarkSegment[mark=|](#2,#3)%
+}	
+	
+\newcommand{\tri}[6]{%
+\tkzDefPoint(0,0){#1}% 
+\tkzDefPoint(#2){#3}%
+ \tkzDefPointBy[rotation=center #1 angle #4](#3)%
+       \tkzGetPoint{#5}%
+\tkzDrawPolygon[fill=#6](#1,#3,#5)% 
+\tkzDrawPoints(#1,#3,#5)
+}
+
+
+
+

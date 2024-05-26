@@ -1,0 +1,65 @@
+
+\section*{Proposition 38}
+
+\begin{thm}
+Triangles which are on equal bases and in the same parallels are equal to one another.
+\end{thm}
+
+Let $\widetriangle{ABC}$ and $\widetriangle{DEF}$ be triangles on equal bases $\overline{BC}$ and $\overline{EF}$ and in the same parallels $\overline{BF}$ and $\overline{AD}$.
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\Tri{B}{3}{0}{C}{2.5}{3}{A}{green, opacity=0.3}
+		\tkzDefPoint(4,0){E}
+		\tkzDefPoint(7,0){F}
+		\tkzDefPoint(3.5,3){D}
+		\tkzDrawPolygon[fill=green, opacity=0.3](E,F,D)
+		\tkzLabelPoints(E,F)
+		\tkzLabelPoints[above](D)
+		\tkzDrawPoints(E,F,D)
+		\tkzDrawSegments(B,F A,D)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+I say that the $\widetriangle{ABC}$ equals the $\widetriangle{DEF}$.  
+
+ Produce $\overline{AD}$ in both directions to $G$ and $H$. Draw $\overline{BG}$ through $B$ parallel to $\overline{CA}$, and draw $\overline{FH}$ through $F$ parallel to $\overline{DE}$. \hfill\textcolor{red}{I.Post.2, I.31}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\Tri{B}{3}{0}{C}{2.5}{3}{A}{green, opacity=0.3}
+		\tkzDefPoint(4,0){E}
+		\tkzDefPoint(7,0){F}
+		\tkzDefPoint(3.5,3){D}
+		\tkzDrawPolygon[fill=green, opacity=0.3](E,F,D)
+		\tkzDefPoint(-0.5,3){G}
+		\tkzDefPoint(6.5,3){H}
+		\tkzLabelPoints(E,F)
+		\tkzLabelPoints[above](D,G,H)
+		\tkzDrawSegments(B,F G,H G,B H,F)
+		\tkzDrawPoints(E,F,D,G,H)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{proof}
+
+\begin{itemize}
+
+\item Then each of the figures $GBCA$ and $DEFH$ is a parallelogram, and $GBCA$ equals $DEFH$, for they are on equal bases $\overline{BC}$ and $\overline{EF}$ and in the same parallels $\overline{BF}$ and $\overline{GH}$. \hfill\textcolor{red}{I.36}
+
+\item Moreover, the $\widetriangle{ABC}$ is half of the parallelogram $GBCA$, for the diameter $\overline{AB}$ bisects it. 
+
+\item And the $\widetriangle{FED}$ is half of the parallelogram $DEFH$, for the diameter $\overline{DF}$ bisects it. \hfill\textcolor{red}{I.35}
+
+\item[$\therefore$] the 
+\[\widetriangle{ABC} = \widetriangle{DEF}\]\hfill\textcolor{red}{C.N.1}
+
+\end{itemize}
+
+$\therefore$ triangles which are on equal bases and in the same parallels equal one another.
+
+\end{proof}
+
+\clearpage

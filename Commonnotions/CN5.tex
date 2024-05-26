@@ -1,0 +1,79 @@
+\begin{cn}
+The whole is greater than the part.
+\end{cn}
+
+\begin{figure}[H]
+    \centering
+    % First Box
+    \begin{subfigure}[b]{0.2\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \tkzDefPoint(0,0){A}
+            \tkzDefPoint(1,0){B}
+            \tkzDefPoint(0,1){C}
+            \tkzDefPoint(1,1){D}
+            \tkzFillPolygon[color=blue,opacity=0.5](A,C,D,B) % draws the first square
+        \end{tikzpicture}
+        \caption{Part}
+    \end{subfigure}
+    \hfill % Ensures that the plus sign aligns with the boxes
+    % Plus Sign, centered
+    \begin{tikzpicture}[baseline=-0.3cm]
+        \tkzDefPoint(0,0.5){A}
+        \tkzDefPoint(0,1){B}
+        \tkzDefPoint(-0.25,0.75){C}
+        \tkzDefPoint(0.25,0.75){D}
+        \tkzDrawSegments[very thick](A,B C,D)
+    \end{tikzpicture}
+    \hfill
+    % Second Box
+    \begin{subfigure}[b]{0.2\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \tkzDefPoint(0,0){A}
+            \tkzDefPoint(1,0){B}
+            \tkzDefPoint(0,1){C}
+            \tkzDefPoint(1,1){D}
+            \tkzFillPolygon[color=green,opacity=0.5](A,C,D,B) % draws the second square
+        \end{tikzpicture}
+        \caption{Part}
+    \end{subfigure}
+    \hfill
+    % Equals Sign, centered
+    \begin{tikzpicture}[baseline=-0.4cm]
+        \tkzDefPoint(0,0.5){A}
+        \tkzDefPoint(0.75,0.5){B}
+        \tkzDefPoint(0,0.65){C}
+        \tkzDefPoint(0.75,0.65){D}
+        \tkzDrawSegments[very thick](A,B C,D)
+    \end{tikzpicture}
+    \hfill
+    % Combined Boxes
+    \begin{subfigure}[b]{0.4\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \tkzDefPoint(0,0){A}
+            \tkzDefPoint(1,0){B}
+            \tkzDefPoint(0,1){C}
+            \tkzDefPoint(1,1){D}
+            \tkzDefPoint(2,0){E}
+            \tkzDefPoint(2,1){F}
+            \tkzFillPolygon[color=blue,opacity=0.5](A,C,D,B) % draws the first square
+            \tkzFillPolygon[color=green,opacity=0.5](B,D,F,E) % draws the second square attached to the first
+        \end{tikzpicture}
+        \caption{Whole}
+    \end{subfigure}
+    \caption{Visualization of Euclid's Common Notion 5}
+\end{figure}
+
+At first glance, the statement that the whole is greater than the part might seem straightforward, almost too self-evident to warrant explicit mention. However, this simplicity is precisely why it is foundational not only in axiomatic geometry and logical proofs but also in numerous other fields beyond pure mathematics.
+
+Consider biology, for instance. The approach to studying the cells that make up the brain—simple firings of synapses—is markedly different from studying the brain itself, capable of language, imagination, and dreams. Zooming out further, the entire body emerges as a system capable of turning those dreams into reality. This illustrates how the properties of the whole cannot be deduced merely by examining its parts.
+
+Similarly, in systems theory, this principle finds its echo in the idea that a system can exhibit properties and behaviors that its individual components do not possess. This notion is crucial in understanding complex systems in both natural and artificial contexts.
+
+Philosophically, this principle touches on concepts of unity and integrity, suggesting a way of viewing objects and entities not merely as assemblies of parts but as cohesive wholes. This perspective is also vital in education, where understanding individual elements of a subject is essential for grasping the discipline as a whole.
+
+Although Proclus includes this axiom using the same argument as for the previous, but others disagree.  Tannery for example objected due to the language used in I.6 namely `the triangle DBC will be equal to the triangle ACB, the less to the greater: which is absurd.', and no other direct or even indirect references seem to be in book I. So the liklyhood is that  it was added later despite Proclus' inclusion.
+
+\clearpage

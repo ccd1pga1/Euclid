@@ -1,0 +1,76 @@
+
+\section*{Poroposition 43}
+
+\begin{thm}
+In any parallelogram, the complements of the parallelograms about the diameter equal one another.
+\end{thm}
+
+\begin{proof}
+
+\begin{itemize}
+
+\item[]
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(1,4){A}
+		\tkzDefPoint(0,0){B}
+		\tkzDefPoint(4,0){C}
+		\tkzDefPoint(5,4){D}
+		\tkzDrawPolygon(A,B,C,D)
+		\tkzDrawSegment(A,C)
+		\tkzDrawPoints(A,B,C,D)
+		\tkzLabelPoints[above](A,D)
+		\tkzLabelPoints[below](B,C)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\item In parallelogram $AEKH$, since $\overline{AK}$ is its diameter:
+\[\widetriangle{AEK} = \widetriangle{AHK}\] 
+Similarly,  
+\[\widetriangle{KFC} = \widetriangle{KGC}\]\hfill\textcolor{red}{I.34,C.N.2}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(1,4){A}
+		\tkzDefPoint(0,0){B}	
+		\tkzDefPoint(4,0){C}
+		\tkzDefPoint(5,4){D}
+		\tkzDefPoint(2,4){H}
+		\tkzDefPoint(1,0){G}
+		\tkzDrawPolygon(A,B,C,D)
+		\tkzInterLL(A,C)(G,H) 	\tkzGetPoint{K}
+		\tkzDefShiftPoint[K](0:-1){E}
+		\tkzDefShiftPoint[K](0:3){F}
+		\tkzLabelPoints[right](F)
+		\tkzDrawSegments(A,C H,G E,F)
+		\tkzDrawPolygon[fill=blue,  opacity=0.5](E,B,G,K)
+		\tkzDrawPolygon[fill=green, opacity=0.7](H,K,F,D)
+		\tkzDrawPoints(A,B,C,D,E,K)
+		\tkzLabelPoints[above](A,D,H)
+		\tkzLabelPoints[below](B,C,G)
+		\tkzLabelPoints[left](E)
+		\tkzLabelPoints[below left](K)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\item Since 
+\[\widetriangle{AEK} = \widetriangle{AHK}\] \hfill\textcolor{red}{I.34}
+and 
+\[\widetriangle{KFC} = \widetriangle{KGC}\] \hfill\textcolor{red}{C.N.2}
+
+\item[$\therefore$] 
+\[\widetriangle{AEK} + \widetriangle{KGC} =  \widetriangle{AHK} + \widetriangle{KFC}\]\hfill\textcolor{red}{C.N.3}
+
+\item Since the whole 
+\[\widetriangle{ABC} = \widetriangle{ADC}\]
+
+\item[$\therefore$]the remaining complement $BGKE$ equals the remaining complement $KFDH$.
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

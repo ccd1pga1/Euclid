@@ -1,0 +1,107 @@
+\section*{Proposition 16}
+
+\begin{thm}
+In any triangle, if one of the sides is produced, then the exterior angle is greater than either of the interior and opposite angles.
+\end{thm}
+
+
+Let $\widetriangle{ABC}$ be a triangle, and let one side $\overline{BC}$ be produced to $D$. We want to show that the exterior $\angle{ACD}$ is greater than either of the interior and opposite $\angle{CBA}$ and $\angle{BAC}$.
+
+
+\textbf{Construction}
+
+\begin{enumerate}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\Tri{B}{3}{0}{C}{2}{3}{A}{none}
+		\tkzDefPointWith[linear normed,K=-2](C,B)  
+    		\tkzGetPoint{D}
+    		\tkzDrawSegment(C,D)
+    		\tkzDrawPoints(D)
+    		\tkzLabelPoints(D)
+    		\tkzDrawSegment[red](C,D)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\item Produce $\overline{AC}$ to $G$
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\Tri{B}{3}{0}{C}{2}{3}{A}{none}
+		\tkzDefPointWith[linear normed,K=-2](C,B)	\tkzGetPoint{D}
+		\tkzDefPointWith[linear normed,K=-1](C,A)    	\tkzGetPoint{G}
+    		\tkzDrawSegments(C,D C,G)
+    		\tkzDefMidPoint(C,A)			\tkzGetPoint{E}
+    		\tkzLabelPoints(D,G)
+    		\tkzDrawPoints(D,G)
+    		\tkzDrawSegments[red](C,D C,G)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\clearpage
+
+\item Bisect $\overline{AC}$, and produce $\overline{BE}$ to $F$, were $\overline{BE} =\overline{EF}$.
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\Tri{B}{3}{0}{C}{2}{3}{A}{none}
+		\tkzDefPointWith[linear normed,K=-2](C,B)	\tkzGetPoint{D}
+		\tkzDefPointWith[linear normed,K=-1](C,A)    	\tkzGetPoint{G}
+		\tkzDefMidPoint(C,A)					\tkzGetPoint{E}
+    		\tkzDefPointOnLine[pos=2](B,E)			\tkzGetPoint{F}
+    		\tkzDrawSegments[red](C,D C,G B,F)
+    		\tkzLabelPoints(D,G,E,F)
+    		\tkzDrawPoints(D,G,E,F)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\item Draw $\overline{FC}$
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\Tri{B}{3}{0}{C}{2}{3}{A}{red, opacity=0.5}
+		\tkzDefMidPoint(A,C)					\tkzGetPoint{E}
+		\tkzDefPointOnLine[pos=2](B,E)			\tkzGetPoint{F} 
+ 		\tkzDefPointWith[linear normed,K=-2](C,B)	\tkzGetPoint{D}
+ 		\tkzDefPointWith[linear normed,K=-1](C,A)    	\tkzGetPoint{G}
+    		\tkzDrawSegments(C,D C,G B,F F,C)
+    		\tkzDrawPoints(D,G)   
+    		\tkzDrawPoints(D,E,F,G)
+    		\tkzLabelPoints(D,E,F,G)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\end{enumerate}
+
+\begin{proof}
+
+\begin{itemize}
+
+\item Since \[\overline{AE} = \overline{EC} \text{ and } \overline{BE} = \overline{EF}\]
+\[\widetriangle{ABE} \cong \widetriangle{CFE}\] \hfill\textcolor{red}{ I.15,I.4}
+
+\item[$\therefore$]
+ \[\overline{AB} = \overline{FC} \text { and } \angle{BAE} = \angle{ECF}\]. \hfill\textcolor{red}{C.N.5}
+
+\clearpage
+
+\item But 
+\[\angle{ECD} > \angle{ECF}\]
+
+\item[$\therefore$], 
+\[\angle{ACD} > \angle{BAE}\] \hfill\textcolor{red}{I.15}
+
+\item[\textbf{Similarly:}] If $\overline{BC}$ is bisected, then $\angle{BCG}$, that is, $\angle{ACD}$, can also be proved to be greater than $\angle{ABC}$.
+
+\item[$\therefore$] in any triangle, if one of the sides is produced, then the exterior angle is greater than either of the interior and opposite angles.
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage   

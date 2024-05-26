@@ -1,0 +1,98 @@
+
+\section*{Proposition 28}
+
+\begin{thm}
+If a straight line falling on two straight lines makes the exterior angle equal to the interior and opposite angle on the same side, or the sum of the interior angles on the same side equal to two right angles, then the straight lines are parallel to one another.
+\end{thm}
+
+\textbf{Given:} Straight line$ \overline{EF}$ falls on the two straight lines $\overline{AB}$ and $\overline{CD}$, and the exterior  $\angle{EGB}$ is equal to the interior and opposite $\angle{GHD}$, or the sum of the interior $\angle{BGH}$ and $\angle{GHD}$ is equal to two right angles.
+
+\begin{proof}
+
+\begin{itemize}
+
+\item[]
+
+    \item Assume: $\overline{AB} \nparallel \overline{CD}$.
+    
+    \item By the definition of parallel lines,  $if \overline{AB} \nparallel \overline{CD}$, then there exists a transversal $\overline{EF}$ that intersects $\overline{AB}$ and $\overline{CD}$. \hfill\textcolor{red}{ I.28}
+    
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(3,0){B}
+		\tkzDefPoint(0,-2){C}
+		\tkzDefPoint(3,-2){D}
+		\tkzDefPoint(1,1){E}
+		\tkzDefPoint(2,-3){F}
+		\tkzDrawSegments(A,B C,D)
+		\tkzInterLL(C,D)(E,F)		\tkzGetPoint{H}
+		\tkzInterLL(A,B)(E,F)		\tkzGetPoint{G}
+		\tkzDrawSegment[red](E,F)
+		\tkzLabelPoints[left](A,C)
+		\tkzLabelPoints[above](B,E,H)
+		\tkzLabelPoints[below](D,F,G)
+		\tkzDrawPoints[red](G,H)
+	\end{tikzpicture}
+   	\caption{}
+\end{figure}  
+    
+    \item By the exterior angle theorem,  
+    \[\angle{EGB} = \angle{GHD}\]\hfill\textcolor{red}{ I.15}
+    
+        \clearpage
+    
+    \item By the alternate interior angles theorem, since 
+    \[\angle{EGB} = \angle{GHD}\] 
+    and 
+    \[\angle{EGB} = \angle{AGH}\] 
+    then 
+    \[\angle{AGH} equals \angle{GHD}\] \hfill\textcolor{red}{ C.N.1, I.27}
+    
+    \item By the alternate interior angles theorem, since 
+    \[\angle{AGH} = \angle{GHD}\] 
+    \[\overline{AB} \parallel \overline{CD}\]\hfill\textcolor{red}{I.13}
+    
+    \item By the definition of parallel lines, if 
+   \[ \overline{AB} \parallel \overline{CD}\] 
+    then the assumption in step 1 is false.\hfill\textcolor{red}{C.N.1}
+    
+    \item[$\therefore$] $\overline{AB} \parallel to \overline{CD}$
+    
+    \item Next, assume again: $\overline{AB} \nparallel  \overline{CD}$
+    
+        \clearpage
+    
+    \item By the sum of interior angles on the same side theorem, 
+    \[ \angle{BGH} + \angle{GHD} =2\times\ang{90}\]\hfill\textcolor{red}{I.Post.4}
+     
+    \item By the sum of interior angles on the same side theorem, 
+    \[\angle{AGH} + \angle{BGH} +2\times\ang{90}\]\hfill\textcolor{red}{C.N.3, I.27}
+    
+    \item Subtract $\angle{BGH}$ from both sides of the equation in above, yielding 
+    \[\angle{AGH} = \angle{GHD}\]
+    
+    \item By the alternate interior angles theorem, since 
+    \[\angle{AGH} = \angle{GHD}\] 
+    \[\overline{AB} \parallel  \overline{CD}\]\hfill\textcolor{red}{I.13}
+    
+    \item By the definition of parallel lines, if 
+    \[\overline{AB} \parallel  \overline{CD}\]
+     then the assumption above is also false.\hfill\textcolor{red}{ C.N.1}
+     
+    \item[$\therefore$] 
+    \[\overline{AB} \parallel  \overline{CD}\]
+    
+        \clearpage
+    
+    \item Since assuming 
+    \[\overline{AB} \nparallel  \overline{CD}\]
+     leads to a contradiction in both cases, it must be true that 
+     \[\overline{AB} \parallel \overline{CD}\]
+\end{itemize}
+
+   $\therefore$ if a straight line falling on two straight lines makes the exterior angle equal to the interior and opposite angle on the same side, or the sum of the interior angles on the same side equal to two right angles, then the straight lines are parallel to one another.
+
+\end{proof}
+
+\clearpage

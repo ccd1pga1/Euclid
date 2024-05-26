@@ -1,0 +1,91 @@
+\section*{Proposition 3}
+
+\begin{con}
+To cut off from the greater of two given unequal straight lines $\overline{AB}$ and $\overline{CD}$ (with $\overline{AB}$ being the greater) a straight line equal to the less $\overline{CD}$.
+\end{con}
+
+\textbf{Given:} $\overline{AB}$ and $\overline{CD}$, where $\overline{AB}$ is greater.
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(6,0){B}
+		\tkzDefPoint(1,1){C}
+		\tkzDefPoint(3,1){D}
+   		\tkzDrawSegment[blue](A,B)
+   		\tkzDrawSegment[red](C,D)
+       		\tkzDrawPoints(A,B,C,D)
+       		\tkzLabelPoints[below,red](A,B)
+       		\tkzLabelPoints[below,red](C,D)
+       \end{tikzpicture}
+       \caption{Cut off a segment from a larger segment}
+\end{figure}
+
+\textbf{Construction:}
+
+\begin{enumerate}
+\item Place $\overline{CD}$ at point $A$ and describe $\mathscr{C}(A;AD)$.  \hfill\textcolor{red}{ I.2, I.Post.3}
+
+\begin{figure}[H]  
+\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(160:2){D}
+   		\tkzDrawSegment[blue](A,D)
+   		\tkzDrawCircle(A,D)
+       		\tkzDrawPoints[red](A,D)
+       		\tkzLabelPoints[below,red](A)
+       		\tkzLabelPoints[above,red](D)
+	\end{tikzpicture}
+	\caption{Cut off a segment from a larger segment: step 1}
+\end{figure}
+
+\clearpage
+
+\item draw the segment $\overline{AB}$ and mark the intersect with $\mathscr{C}(A;AD)$, $E$
+  
+\begin{figure}[H]  
+\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(6,0){B}
+		\tkzDefPoint(160:2){D}
+   		\tkzDrawSegment[blue](A,D)
+   		\tkzDrawSegment[red](A,B)
+   		\tkzDrawCircle(A,D)
+   		\tkzInterLC(A,B)(A,D)		\tkzGetPoints{F}{E}
+   		\tkzDrawSegment[thick,dashed, blue](A,E)
+       		\tkzDrawPoints[red](A,B,E,D)
+       		\tkzLabelPoints[below,red](A,E,B)
+       		\tkzLabelPoints[above,red](D)
+	\end{tikzpicture}
+	\caption{Cut off a segment from a larger segment: step 2}
+\end{figure}  
+
+\end{enumerate}
+
+\begin{proof}
+
+\begin{itemize}
+\item[]
+\item Since the point $A$ is the center of $\mathscr{C}(A;AD)$, $\therefore$\[ \overline{AE} = \overline{AD}\]\hfill\textcolor{red}{I.Def.15}
+  
+  
+\item[and]
+\[\overline{CD} = \overline{AD}\]
+
+\item[$\therefore$] each of the straight lines $\overline{AE}$ and $\overline{CD}$ equals $\overline{AD}$, so that
+ \[\overline{AE} = \overline{CD}\] \hfill\textcolor{red}{C.N.1}
+\end{itemize}
+
+\textbf{Conclusion:}
+\begin{itemize}
+\item[$\therefore$] given the two straight lines $\overline{AB}$ and $\overline{CD}$, $\overline{AE}$ has been cut off from $\overline{AB}$ (the greater) equal to $\overline{CD}$ (the less).
+
+\item[] The construction has been successfully completed. 
+\end{itemize}
+
+\end{proof}
+
+\clearpage

@@ -1,0 +1,97 @@
+
+\section*{Proposition 34}
+
+\begin{thm}
+In a parallelogram, opposite sides and angles are equal, and the diameter bisects the area.
+\end{thm}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoints{0/0/C,3/0/D,2/2/B}
+		\tkzDefParallelogram(C,D,B)	\tkzGetPoint{A}
+		\tkzDrawPolygon[fill=blue,  opacity=0.3](C,D,B,A)
+		\tkzDrawSegment(C,B)
+		\tkzLabelPoints[right](D,B)
+		\tkzLabelPoints[left](C,A)
+		\tkzDrawPoints(A,...,D)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\textbf{Given:} Parallelogram $ACDB$ with diameter $BC$.
+
+\begin{proof}
+
+\textbf{1. Opposite Angles are Equal} \hfill\textcolor{red}{ I.34, I.29}
+\begin{itemize}
+   \item Since $\overline{AB} \parallel \overline{CD}$ and $\overline{BC}$ is a transversal line, we have  
+   \[\angle{ABC} = \angle{BCD}\] \hfill\textcolor{red}{I.34}
+   
+    \item Similarly, since 
+    $\overline{AC} \parallel \overline{BD}$ and $\overline{BC}$ is a transversal line,we have 
+    \[\angle{ACB} = \angle{CBD}\] \hfill\textcolor{red}{I.29}
+\end{itemize}
+
+\textbf{2. Triangle Equality} \hfill\textcolor{red}{ I.26}
+\begin{itemize}
+    \item Consider $\widetriangle{ABC}$ and $\widetriangle{DCB}$ 
+    
+    \item They have 
+    \[\angle{ABC} = \angle{BDC}\]
+    \[ \angle{ACB} = \angle{CBD}\]
+    and $\overline{BC}$ in common.
+    
+    \item[$\therefore$]by SAS criterion,  
+    \[\widetriangle{ABC} \cong \widetriangle{DCB}\]
+     
+    \item This implies  
+    \[\overline{AB} = \overline{CD}\]
+     \[\overline{AC} = \overline{BD}\]
+     \[\angle{BAC} = \angle{CDB}\]
+\end{itemize}
+
+\textbf{3. Sum of Angles} \hfill\textcolor{red}{C.N.2}
+\begin{itemize}
+    \item $\angle{ABC} = \angle{BCD}$ and $\angle{CBD} = \angle{ACB}$, 
+    \item imply that the sum of angles $\angle{ABD} = \angle{ACD}$.
+\end{itemize}
+
+\textbf{4. Conclusion - Opposite Sides and Angles:}
+\begin{itemize}
+    \item In parallelogram $ACDB$, 
+    \item opposite sides 
+    \[\overline{AB} = \overline{CD}\] 
+    and 
+    \[\overline{AC} = \overline{BD}\]
+     
+    \item and opposite angles 
+    \[\angle{ABC} = \angle{BDC}\] 
+    and 
+    \[\angle{ACB} = \angle{CBD}\] 
+\end{itemize}
+
+\clearpage
+
+\textbf{5. Diameter Bisects the Parallelogram} \hfill\textcolor{red}{ I.4}
+\begin{itemize}
+    \item Since 
+    \[\overline{AB} = \overline{CD}\] 
+    $\overline{BC}$ is common, and 
+    \[\angle{ABC} = \angle{BCD}\]
+     
+    \item 
+    \[\widetriangle{ABC} \cong \widetriangle{BCD}\]
+    
+    \item This implies 
+    \[\overline{AC} = \overline{DB}\]
+    \[ \widetriangle{ABC} = \widetriangle{DCB}\]
+\end{itemize}
+
+\textbf{6. Conclusion - Diameter Bisects the Area:}
+\begin{itemize}
+    \item[$\therefore$] the diameter $\overline{BC}$ bisects the parallelogram $ACDB$.
+\end{itemize}
+
+\end{proof}
+
+\clearpage

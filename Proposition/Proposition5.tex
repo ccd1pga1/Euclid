@@ -1,0 +1,279 @@
+\section*{Proposition 5}
+
+\begin{thm}
+In isosceles triangles, the angles at the base equal one another, and if the equal straight lines are produced further, then the angles under the base equal one another.
+\end{thm}
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\Tri{B}{3}{0}{C}{1.5}{3}{A}{none}
+		\tkzDrawPolygon(A,B,C)
+		\tkzMarkSegment[mark=|](A,C)
+		\tkzMarkSegment[mark=|](A,B)
+		\tkzMarkAngle[size=0.5](A,C,B)
+		\tkzMarkAngle[size=0.5](C,B,A)
+	\end{tikzpicture}
+	\caption{Isosceles Triangle Theorem}
+\end{figure}
+
+Let $\widetriangle{ABC}$ be an isosceles triangle with side $\overline{AB}$ equal to side $\overline{AC}$, and let the straight lines $\overline{BD}$ and $\overline{CE}$ be produced further in a straight line with $\overline{AB}$ and $\overline{AC}$.\hfill \textcolor{red}{ I.Def.20, I.Post.2}
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\Tri{B}{3}{0}{C}{1.5}{3}{A}{none}
+       		\tkzDefPointOnLine[pos=2](A,B)		\tkzGetPoint{E}
+        		\tkzDefPointOnLine[pos=2](A,C)		\tkzGetPoint{D}
+        		\tkzDrawPolygon(A,B,C)
+       		\tkzDrawSegment(A,E)
+        		\tkzDrawSegment(A,D)
+         	\tkzLabelPoints[left](E)
+         	\tkzLabelPoints[right](D)
+         	\tkzMarkSegment[mark=|](A,C)
+        		\tkzMarkSegment[mark=|](A,B)
+    		\tkzMarkAngle[size=0.5](A,C,B)
+		\tkzMarkAngle[size=0.5](C,B,A)
+	\end{tikzpicture}
+	\caption{Isosceles Triangle Theorem; step 1}
+\end{figure}
+
+\subsection*{Definitions and Postulates:}
+\begin{itemize}
+  	\item An isosceles triangle is a triangle with two sides of equal length. \hfill\textcolor{red}{ I.Def.20}
+  	\item A straight line can be produced indefinitely.\hfill\textcolor{red}{ I.Post.2}
+  	\item Given two points, a straight line can be drawn between them.\hfill\textcolor{red}{ I.Post.1}
+\end{itemize}
+
+\begin{lemma}
+If two sides and the included angle of one triangle are equal to the corresponding sides and angle of another triangle, then the two triangles are congruent.\hfill\textcolor{red}{ I.3}
+\end{lemma}
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\Tri{B}{1.5}{0}{C}{0.75}{2}{A}{none}
+     		\tkzDefPointOnLine[pos=2](A,B)		\tkzGetPoint{E}
+     		\tkzDefPointOnLine[pos=2](A,C)		\tkzGetPoint{D}
+     		\tkzDefPointOnLine[pos=1.5](A,B)		\tkzGetPoint{F}
+     		\tkzDefPointOnLine[pos=1.5](A,C)		\tkzGetPoint{G} 
+     		\tkzDrawPolygon(A,B,C)
+     		\tkzDrawSegment(A,E)
+     		\tkzDrawSegment(A,D)
+     		\tkzLabelPoints[left](E)
+     		\tkzLabelPoints[right](D)
+     		\tkzLabelPoints[left](F)
+     		\tkzLabelPoints[right](G)
+     		\tkzMarkSegment[mark=|](A,C)
+     		\tkzMarkSegment[mark=|](A,B)
+     		\tkzMarkAngle[size=0.5](A,C,B)
+     		\tkzMarkAngle[size=0.5](C,B,A)
+     		\tkzDrawPoints[fill=gray](A,B,C,D,E,F,G)
+	\end{tikzpicture}
+	\caption{Isosceles Triangle Theorem; step 2}
+\end{figure}
+    
+\clearpage
+    
+\begin{con}
+	\begin{enumerate}
+	\item[]
+    		\item Take an arbitrary point $F$ on $\overline{BD}$.
+    		\item Cut off $\overline{AG}$ from $\overline{AE}$,  where $\overline{AG} > \overline{AF}$.
+    		\item Join $FC$ and $GB$.\hfill\textcolor{red}{ I.3, I.Post.1}
+	\end{enumerate}
+\end{con}
+
+\begin{figure}[H]
+\centering
+	\begin{subfigure}{0.35\textwidth}
+		\begin{tikzpicture}
+			\Tri{B}{1.5}{0}{C}{0.75}{2}{A}{none}
+        			\tkzDefPointOnLine[pos=2](A,B)		\tkzGetPoint{E}
+     			\tkzDefPointOnLine[pos=2](A,C)		\tkzGetPoint{D}
+     			\tkzDefPointOnLine[pos=1.5](A,B)		\tkzGetPoint{F}
+     			\tkzDefPointOnLine[pos=1.5](A,C)		\tkzGetPoint{G} 
+         		\tkzDrawPolygon(A,B,C)
+         		\tkzDrawSegment(A,E)
+         		\tkzDrawSegment(A,D)
+        			\tkzLabelPoints[left](E)
+        			\tkzLabelPoints[right](D)
+        			\tkzLabelPoints[left](F)
+        			\tkzLabelPoints[right](G)
+        			\tkzMarkSegment[mark=|](A,C)
+        			\tkzMarkSegment[mark=|](A,B)
+        			\tkzMarkAngle[size=0.5](A,C,B)
+        			\tkzMarkAngle[size=0.5](C,B,A)
+        			\tkzDrawPoints[fill=gray](A,B,C,D,E,F,G)
+         		\tkzDrawSegment[dashed](C,F)
+		\end{tikzpicture}
+		\sidecaption[a][-4cm]{Join $\overline{FC}$}
+	\end{subfigure}
+%%%%%%%%%%%%
+	\begin{subfigure}{0.35\textwidth}
+		\begin{tikzpicture}
+       			\Tri{B}{1.5}{0}{C}{0.75}{2}{A}{none}
+       			\tkzDefPointOnLine[pos=2](A,B)		\tkzGetPoint{E}
+ 			\tkzDefPointOnLine[pos=2](A,C)		\tkzGetPoint{D}
+     			\tkzDefPointOnLine[pos=1.5](A,B)		\tkzGetPoint{F}
+     			\tkzDefPointOnLine[pos=1.5](A,C)		\tkzGetPoint{G} 
+        			\tkzDrawPolygon(A,B,C)
+        			\tkzDrawSegment(A,E)
+        			\tkzDrawSegment(A,D)
+        			\tkzLabelPoints[left](E)
+        			\tkzLabelPoints[right](D)
+        			\tkzLabelPoints[left](F)
+        			\tkzLabelPoints[right](G)       
+        			\tkzMarkSegment[mark=|](A,C)
+        			\tkzMarkSegment[mark=|](A,B)
+        			\tkzMarkAngle[size=0.5](A,C,B)
+        			\tkzMarkAngle[size=0.5](C,B,A)
+        			\tkzDrawSegment[dashed](B,G)
+        			\tkzDrawPoints[fill=gray](A,B,C,D,E,F,G)
+		\end{tikzpicture}
+		\sidecaption[b][-3cm]{Join $\overline{GB}$}
+	\end{subfigure}
+%%%%%%%%%%%%%
+	\begin{subfigure}{0.35\textwidth}
+   		 \begin{tikzpicture}
+        			\Tri{B}{1.5}{0}{C}{0.75}{2}{A}{none}
+          		\tkzDefPointOnLine[pos=2](A,B)		\tkzGetPoint{E}
+     			\tkzDefPointOnLine[pos=2](A,C)		\tkzGetPoint{D}
+     			\tkzDefPointOnLine[pos=1.5](A,B)		\tkzGetPoint{F}
+     			\tkzDefPointOnLine[pos=1.5](A,C)		\tkzGetPoint{G} 
+        			\tkzDrawPolygon(A,B,C)
+        			\tkzDrawSegment(A,E)
+        			\tkzDrawSegment(A,D)
+        			\tkzLabelPoints[left](E)
+        			\tkzLabelPoints[right](D)
+        			\tkzLabelPoints[left](F)
+        			\tkzLabelPoints[right](G)       
+        			\tkzMarkSegment[mark=|](A,C)
+        			\tkzMarkSegment[mark=|](A,B)
+        			\tkzMarkAngle[size=0.5](A,C,B)
+        			\tkzMarkAngle[size=0.5](C,B,A)
+        			\tkzDrawSegment[dashed](B,G)
+          		\tkzDrawSegment[dashed](C,F)
+        			\tkzDrawPoints[fill=gray](A,B,C,D,E,F,G)
+		\end{tikzpicture}
+		\sidecaption[c][-2cm]{$\overline{FC}$ $\overline{GB}$}
+	\end{subfigure}
+	\caption{Isosceles Triangle Theorem: step 3}
+\end{figure}
+
+\clearpage
+
+\begin{proof}
+
+\begin{itemize}
+\item[]
+	\item Since $\overline{AF} = \overline{AG}$ and $\overline{AB} = \overline{AC}$,  $\widetriangle{FAG}$ and $\widetriangle{ CAB}$ are congruent by $SSS$ (side-side-side) criterion.
+        		\[\Rightarrow \angle{FAG} = \angle{CAB}\]
+	\item $FC = GB$ (Base angles in congruent triangles are equal).\hfill\textcolor{red}{ I.4}
+        		\[\Rightarrow \widetriangle AFC \cong \widetriangle AGB\]
+        		\[\Rightarrow \angle{ACF} = \angle{ABG}, \quad \angle{AFC} = \angle{AGB}\]
+	\item $BF = CG$. \hfill\textcolor{red}{ C.N.3}
+        		\[\Rightarrow BF + FC = CG + GB\]
+        		\[\Rightarrow \widetriangle BFC \cong \widetriangle CGB\]
+        		\[\Rightarrow \angle{BFC} = \angle{CGB}, \quad \angle{BCF} = \angle{CBG}\]
+	\item Combining the results:
+        		\[\Rightarrow \angle{ACF} = \angle{ABG}\]
+        		\[\Rightarrow \angle{AFC} = \angle{AGB}\]
+        		\[\Rightarrow \angle{BFC} = \angle{CGB}\]
+        		\[\Rightarrow \angle{BCF} = \angle{CBG}\]
+	\item Since $\angle{ACF} = \angle{ABG}$ and $\angle{CBG} = \angle{BCF}$,  $BC$ is parallel to $FG$. \hfill\textcolor{red}{ I.Post.1}
+	
+\clearpage
+	
+	\item Since $\angle{ABC}$ and $\angle{ACB}$ are corresponding angles when $BC$ is parallel to $FG$, $\angle{ABC} = \angle{ACB}$.
+	
+	\item Also, $\angle{FBC} = \angle{GCB}$ as proved earlier.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+	\begin{subfigure}{0.4\textwidth}
+		\begin{tikzpicture}
+	 		\Tri{B}{1.5}{0}{C}{0.75}{2}{A}{none}
+          		\tkzDefPointOnLine[pos=2](A,B)		\tkzGetPoint{E}
+     			\tkzDefPointOnLine[pos=2](A,C)		\tkzGetPoint{D}
+     			\tkzDefPointOnLine[pos=1.5](A,B)		\tkzGetPoint{F}
+     			\tkzDefPointOnLine[pos=1.5](A,C)		\tkzGetPoint{G} 
+        			\tkzDrawPolygon(A,B,C)
+            		\tkzDrawPolygon[fill=green,opacity=0.5](F,B,C)
+      			\tkzDrawSegment(A,E)
+        			\tkzDrawSegment(A,D)
+        			\tkzLabelPoints[left](E)
+        			\tkzLabelPoints[right](D)
+        			\tkzLabelPoints[left](F)
+       			\tkzLabelPoints[right](G)       
+        			\tkzMarkSegment[mark=|](A,C)
+        			\tkzMarkSegment[mark=|](A,B)
+        			\tkzMarkAngle[size=0.5](A,C,B)
+        			\tkzMarkAngle[size=0.5](C,B,A)
+        			\tkzDrawSegment[dashed](B,G)
+         		\tkzDrawSegment[dashed](C,F)
+        			\tkzDrawPoints[fill=gray](A,B,C,D,E,F,G)
+    		\end{tikzpicture}
+    		\caption{}
+	\end{subfigure}
+%%%%%%%%%%%%%
+	\begin{subfigure}{0.4\textwidth}
+		\begin{tikzpicture}
+	 		\Tri{B}{1.5}{0}{C}{0.75}{2}{A}{none}
+          		\tkzDefPointOnLine[pos=2](A,B)		\tkzGetPoint{E}
+     			\tkzDefPointOnLine[pos=2](A,C)		\tkzGetPoint{D}
+     			\tkzDefPointOnLine[pos=1.5](A,B)		\tkzGetPoint{F}
+     			\tkzDefPointOnLine[pos=1.5](A,C)		\tkzGetPoint{G} 
+         		\tkzDrawPolygon(A,B,C)
+         		\tkzDrawPolygon[fill=red,opacity=0.5](B,C,G)
+        			\tkzDrawSegment(A,E)
+       			\tkzDrawSegment(A,D)
+        			\tkzLabelPoints[left](E)
+        			\tkzLabelPoints[right](D)
+        			\tkzLabelPoints[left](F)
+        			\tkzLabelPoints[right](G)       
+        			\tkzMarkSegment[mark=|](A,C)
+        			\tkzMarkSegment[mark=|](A,B)
+        			\tkzMarkAngle[size=0.5](A,C,B)
+        			\tkzMarkAngle[size=0.5](C,B,A)
+        			\tkzDrawSegment[dashed](B,G)
+         		\tkzDrawSegment[dashed](C,F)
+        			\tkzDrawPoints[fill=gray](A,B,C,D,E,F,G)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+	\caption{Isosceles Triangle Theorem: step 4}
+\end{figure}
+
+$\therefore$ in isosceles $\widetriangle{ABC}$, the angles at the base ($\angle{ABC}$ and $\angle{ACB}$) are equal, and if the equal sides are produced further, the angles under the base ($\angle{FBC}$ and $\angle{GCB}$) are equal.
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+  		\Tri{B}{1.5}{0}{C}{0.75}{2}{A}{none}
+          	\tkzDefPointOnLine[pos=2](A,B)		\tkzGetPoint{E}
+     		\tkzDefPointOnLine[pos=2](A,C)		\tkzGetPoint{D}
+     		\tkzDefPointOnLine[pos=1.5](A,B)		\tkzGetPoint{F}
+     		\tkzDefPointOnLine[pos=1.5](A,C)		\tkzGetPoint{G} 
+         	\tkzDrawPolygon(A,B,C)
+        		\tkzDrawSegment(A,E)
+        		\tkzDrawSegment(A,D)
+        		\tkzLabelPoints[left](E)
+        		\tkzLabelPoints[right](D)
+       		\tkzLabelPoints[left](F)
+        		\tkzLabelPoints[right](G)       
+        		\tkzMarkSegment[mark=|](A,C)
+        		\tkzMarkSegment[mark=|](A,B)
+        		\tkzMarkAngle[size=0.5,arc=l,red](A,C,B)
+       		\tkzMarkAngle[size=0.5,arc=l,red](C,B,A)
+         	\tkzMarkAngle[size=0.5,arc=ll,blue](F,B,C)
+        		\tkzMarkAngle[size=0.5,arc=ll,blue](B,C,G)
+        		\tkzDrawPoints[fill=gray](A,B,C,D,E,F,G)
+	\end{tikzpicture}
+	\caption{Isosceles Triangle Theorem: conclusion}
+\end{figure}
+    
+\end{proof}
+
+\clearpage

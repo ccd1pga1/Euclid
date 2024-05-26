@@ -1,0 +1,83 @@
+
+\section*{Proposition 36}
+
+\begin{thm}
+Parallelograms that are on equal bases and in the same parallels are equal to one another.
+\end{thm}
+
+Let $ABCD$ and $EFGH$ be parallelograms with equal bases $\overline{BC}$ and $\overline{FG}$, and in the same parallels $\overline{AH}$ and $\overline{BG}$.
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){B}
+		\tkzDefPoint(2,0){C}
+		\tkzDefPoint(-1,3){A}
+		\tkzDefPoint(3,0){F}
+		\tkzDefPoint(5,0){G}
+		\tkzDefPoint(4,3){E}
+		\tkzDefParallelogram(A,B,C)		 \tkzGetPoint{D}
+		\tkzDefParallelogram(E,F,G)		 \tkzGetPoint{H}
+		\tkzDrawPolygons[fill=blue, opacity=0.3](A,B,C,D E,F,G,H)
+		\tkzLabelPoints(B,C,F)
+		\tkzLabelPoints[above](A,D,E)
+		\tkzLabelPoints[right](H,G)
+		\tkzDrawPoints(A,...,H)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+Join $\overline{BE}$ and $\overline{CH}$. \hfill\textcolor{red}{ I.Post.1}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){B}
+		\tkzDefPoint(2,0){C}
+		\tkzDefPoint(-1,3){A}
+		\tkzDefPoint(3,0){F}
+		\tkzDefPoint(5,0){G}
+		\tkzDefPoint(4,3){E}
+		\tkzDefParallelogram(A,B,C)		 \tkzGetPoint{D}
+		\tkzDefParallelogram(E,F,G)		 \tkzGetPoint{H}
+		\tkzDrawPolygons[fill=blue, opacity=0.3](A,B,C,D E,F,G,H)
+		\tkzDrawSegments(B,E C,H D,E C,F)
+		\tkzLabelPoints(B,C,F)
+		\tkzLabelPoints[above](A,D,E)
+		\tkzLabelPoints[right](H,G)
+		\tkzDrawPoints(A,...,H)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{proof}
+
+\begin{itemize}
+
+\item[]
+
+\item  Since 
+\[\overline{BC} = \overline{FG}\] 
+and 
+\[\overline{FG} = \overline{EH}\]
+then 
+\[\overline{BC} = \overline{EH}\]\hfill\textcolor{red}{I.34, C.N.1}
+
+\item  \[\overline{BC} \parallel \overline{EH}\] 
+and $\overline{EB}$ and $\overline{HC}$ join them. \hfill\textcolor{red}{I.33}
+
+\item  Straight lines joining equal and parallel lines in the same directions are equal and parallel. 
+
+\item[$\therefore$] $EBCH$ is a parallelogram. \hfill\textcolor{red}{I.35}
+
+\item  $EBCH$ = $ABCD$, for it has the same base $\overline{BC}$ and is in the same parallels $\overline{BC}$ and $\overline{AH}$ with $ABCD$. \hfill\textcolor{red}{C.N.1}
+
+\item Similarly, $EFGH$ also equals $EBCH$.
+
+\item[$\therefore$] $ABCD$ = $EFGH$.
+
+Hence, parallelograms that are on equal bases and in the same parallels are equal to one another. 
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

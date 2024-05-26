@@ -1,0 +1,61 @@
+
+\section*{Proposition 41}
+
+\begin{thm} 
+If a parallelogram has the same base with a triangle and is in the same parallels, then the parallelogram is double the triangle.
+\end{thm}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\TRI{0,0}{B}{0:2}{C}{30:4}{E}{orange,  opacity=0.5}
+		\tkzDefPoint(-1,2){A}
+		\tkzDefPoint(1,2){D}
+		\tkzDrawPolygon[fill=blue, opacity=0.5](A,B,C,D)
+		\tkzLabelPoints[above](A,D)
+		\tkzDrawPoints(A,D)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+Join point $\overline{AC}$ and $\overline{DE}$,\hfill\textcolor{red}{I.Post.1}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\TRI{0,0}{B}{0:2}{C}{30:4}{E}{orange,  opacity=0.5}
+		\tkzDefPoint(-1,2){A}
+		\tkzDefPoint(1,2){D}
+		\tkzDrawPolygon[fill=blue, opacity=0.5](A,B,C,D)
+		\tkzLabelPoints[above](A,D)
+		\tkzDrawPoints(A,D)
+		\tkzDrawSegments(D,E A,C)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{proof}
+
+\begin{itemize}
+
+\item Claim: 
+\[\widetriangle{ABC} = \widetriangle{EBC}\]
+Both triangles share the same base $\overline{BC}$ and are between the same parallels $\overline{BC}$ and $\overline{AE}$.\hfill\textcolor{red}{I.37}
+
+
+\begin{lemma}
+The parallelogram ABCD is double the triangle ABC.
+\end{lemma}
+\begin{itemize}
+\item Proof: The diameter $\overline{AC}$ bisects parallelogram $ABCD$.\hfill\textcolor{red}{I.34}
+\end{itemize}
+
+\item \textbf{Conclusion:} Since parallelogram $ABCD$ is double $\widetriangle{ABC}$, and 
+\[\widetriangle{ABC} = \widetriangle{EBC}\] 
+parallelogram $ABCD$ is also double $\widetriangle{EBC}$.
+
+\item[$\therefore$] if a parallelogram has the same base with a triangle and is in the same parallels, then the parallelogram is double the triangle.
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

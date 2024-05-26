@@ -1,0 +1,98 @@
+
+\section*{Proposition 42}
+
+\renewcommand\qedsymbol{Q.E.F}
+
+\begin{con}
+To construct a parallelogram equal to a given triangle in a given rectilinear angle.
+\end{con}
+
+Let $\widetriangle{ABC}$ be the given triangle, and $D$ the given rectilinear angle.
+
+\begin{figure}[H]
+	\begin{subfigure}{0.25\textwidth}
+		\begin{tikzpicture}[scale=1.5]
+			\tkzDefPoint(0,0){D}
+			\tkzDefShiftPoint[D](0:1.5){Y}
+			\tkzDefShiftPoint[D](40:1.5){Z}
+			\tkzDrawPoints(D,Y,Z)
+			\tkzDrawSegments(D,Y D,Z)
+			\tkzLabelPoints(D)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+%%%%%%%%%%%%%%%%
+	\begin{subfigure}{0.25\textwidth}
+		\begin{tikzpicture}
+			\TRI{0,0}{B}{0:3}{C}{40:3}{A}{green, opacity=0.3}
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+	\caption{}
+\end{figure}
+
+\textbf{Construction:}
+
+\begin{enumerate}
+\item[]
+    \item Bisect $\overline{BC}$ at $E$, and join $\overline{AE}$.
+    \item Construct the angle $\angle{CEF}$ on $\overline{EC}$ at the point $E$ on it equal to the angle $D$.
+    \item Draw $\overline{AG}$ through $A$ parallel to $\overline{EC}$.
+    \item Draw $\overline{CG}$ through $C$ parallel to $\overline{EF}$.\hfill\textcolor{red}{I.10,I.Post.1,I.23,I.31}
+\end{enumerate}
+
+\begin{figure}[H]
+	\begin{subfigure}{0.4\textwidth}
+		\begin{tikzpicture}
+			\TRI{0,0}{B}{0:3}{C}{40:3}{A}{green, opacity=0.3}
+			\tkzDefPoint(1.5,0){E}
+			\tkzDrawSegment(A,E)
+			\tkzLabelPoints(E)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+%%%%%%%%%%%%%%
+	\begin{subfigure}{0.4\textwidth}
+		\begin{tikzpicture}
+			\TRI{0,0}{B}{0:3}{C}{40:3}{A}{green, opacity=0.3}
+			\tkzDefPoint(1.5,0){E}
+			\tkzDrawSegment(A,E)
+			\TRI{1.5,0}{E}{0:1.5}{C}{40:3}{F}{none}
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+%%%%%%%%%%%%%%%%
+	\begin{subfigure}{0.4\textwidth}
+		\begin{tikzpicture}
+			\TRI{0,0}{B}{0:3}{C}{40:3}{A}{green, opacity=0.3}
+			\tkzDefPoint(1.5,0){E}
+			\TRI{1.5,0}{E}{0:1.5}{C}{40:3}{F}{none}
+			\tkzDefShiftPoint[A](0:3){G}
+			\tkzDrawSegments(A,E A,G C,G)
+			\tkzLabelPoints(G)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+	\caption{}
+\end{figure}
+
+\begin{proof}
+
+\begin{itemize}
+
+\item Parallelogram $FECG$ is a parallelogram. \hfill\textcolor{red}{I.38}
+
+\item Since 
+\[\overline{BE} = \overline{EC}\] 
+\[\triangle{ABE} = \triangle{AEC} \]
+as they are on equal bases $\overline{BE}$ and $\overline{EC}$ and in the same parallels $\overline{BC}$ and $\overline{AG}$.%\hfill\textcolor{red}{I.41}
+
+\item The parallelogram $FECG$ is double $\widetriangle{AEC}$ since it has the same base and is in the same parallels with it. \hfill\textcolor{red}{C.N.1}
+
+The parallelogram $FECG$ has been constructed equal to the given $\widetriangle{ABC}$ in the $\angle{CEF}$ which equals $D$.
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

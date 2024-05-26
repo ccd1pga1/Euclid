@@ -1,0 +1,61 @@
+
+\renewcommand\qedsymbol{Q.E.F}
+
+\section*{Proposition 31}
+
+\begin{thm}
+Given a point $A$ and a line $\overline{BC}$ there exists a unique line passing through $A$ that is parallel to $\overline{BC}$.
+\end{thm}
+
+
+\textbf{To prove;}
+To draw a straight line through a given point $A$ parallel to a given straight line $\overline{BC}$.
+
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){B}
+		\tkzDefPoint(4,0){C}
+		\tkzDefPoint(2.5,2){A}
+		\tkzDrawSegment(B,C)	
+		\tkzLabelPoints[left](B,A)
+		\tkzLabelPoints[right](C)
+		\tkzDrawPoints(A,B,C)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{proof}
+
+\textbf{Proof by construction:}
+\begin{enumerate}
+    \item Take a point $D$ at random on $\overline{BC}$.
+    \item Join $\overline{AD}$.
+    \item Construct $\angle{DAE}$ equal to $\angle{ADC}$ on the straight line $\overline{DA}$ at point $A$.
+    \item Produce the straight line $\overline{AF}$ in a straight line with $\overline{EA}$. \hfill\textcolor{red}{I.Post.1,I.23,I.Post.2}
+\end{enumerate}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){B}
+		\tkzDefPoint(4,0){C}
+		\tkzDefPoint(1.5,2){A}
+		\tkzDefPoint(1,0){D}
+		\tkzDefPoint(0,2){E}
+		\tkzDefPoint(4,2){F}
+		\tkzDrawSegments(B,C A,D E,F)
+		\tkzLabelPoints[left](E,B)
+		\tkzLabelPoints[right](F,C)
+		\tkzLabelPoints[above](A)
+		\tkzLabelPoints[below](D)
+		\tkzDrawPoints(A,B,C,D,E,F)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\textbf{Justification:}
+Since the straight line $\overline{AD}$ falling on the two straight lines $\overline{BC}$ and $\overline{EF}$ makes the alternate $\angle{EAD}$ and $\angle{ADC}$ equal to one another, $\therefore$ $\overline{EAF}$ is parallel to $\overline{BC}$. $\therefore$ the straight line $\overline{EAF}$ has been drawn through the given point $A$ parallel to the given straight line $\overline{BC}$. \hfill\textcolor{red}{I.27}
+
+\end{proof}
+
+\clearpage

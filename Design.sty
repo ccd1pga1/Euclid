@@ -1,0 +1,300 @@
+\usetikzlibrary{patterns.meta}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Counter definitions tied to section or chapter
+\newcounter{thm}[section]
+\newcounter{con}[section]
+\newcounter{defin}[section]
+\newcounter{post}[section]
+\newcounter{cn}[section]
+\newcounter{lemma}[section]
+
+
+% Initialize current color with a default
+\newcommand{\currentcolor}{colthm}
+
+% Command to change the current color based on section
+\newcommand{\changecolor}[1]{%
+  \renewcommand{\currentcolor}{#1}%
+}
+
+
+% redefine the \section command or create a new one to include the color change. 
+\newcommand{\thmsection}[1]{%
+  \changecolor{colthm}%
+  \section{#1}%
+}
+\newcommand{\consection}[1]{%
+  \changecolor{colcon}%
+  \section{#1}%
+}
+\newcommand{\definsection}[1]{%
+  \changecolor{coldefin}%
+  \section{#1}%
+}
+\newcommand{\postsection}[1]{%
+  \changecolor{colpost}%
+  \section{#1}%
+}
+\newcommand{\cnsection}[1]{%
+  \changecolor{colcn}%
+  \section{#1}%
+}
+% Repeat for other types as needed
+
+% Apply the current color to subsection titles
+\titleformat{\subsection}[hang]
+  {\normalfont\large\bfseries\color{\currentcolor}} % Format
+  {\thesubsection}{0.5em}{} % Label and separation
+
+
+% Custom formatting for counters
+\renewcommand{\thethm}{\thechapter.\thesection.\arabic{thm}}
+\renewcommand{\thecon}{\thechapter.\thesection.\arabic{con}}
+\renewcommand{\thedefin}{\thechapter.\thesection.\arabic{defin}}
+\renewcommand{\thepost}{\thechapter.\thesection.\arabic{post}}
+\renewcommand{\thecn}{\thechapter.\thesection.\arabic{cn}}
+
+
+% Color definitions for different box types
+\colorlet{colthm}{red!90!black}
+\colorlet{colcon}{blue!70!white}
+\colorlet{coldefin}{green!50!black!50}
+\colorlet{colpost}{green!80!white!50}
+\colorlet{colcn}{orange!80!black!10}
+
+% The main command to create a styled tcolorbox
+\newcommand{\newmybox}[4]{%
+  \tcbset{
+    #1base/.style={ 
+      enhanced,                % Use enhanced features for the box
+      breakable,               % Allow box to break across pages
+      empty,                   % No background and frame by default
+      frame engine=path,       % Use path-based rendering for the frame
+      colframe=yellow!10,      % Frame color (not visible with empty style)
+      sharp corners,           % Sharp corners, can be customized
+      title={#2 \thechapter.\thesection.\arabic{#3}}, % Box title format
+      attach boxed title to top left={yshift*=-\tcboxedtitleheight},
+      boxed title style={size=minimal, top=4pt, left=4pt, colback=#4},
+      coltitle=black,          % Title text color
+      fonttitle=\large\bfseries\sffamily, % Title font style
+      drop fuzzy shadow=black!50!white, % Uncomment for shadow effect
+      borderline west={3pt}{-3pt}{#4}, % Border line on the left
+      attach boxed title to top left={xshift=3mm, yshift*=-\tcboxedtitleheight/2},
+      boxed title style={right=3pt, bottom=3pt, overlay={
+        \draw[draw=#4, fill=#4, line join=round] 
+        (frame.south west) -- (frame.north west) -- (frame.north east) --
+        (frame.south east) -- ++(-2pt, 0) -- ++(-2pt, -4pt) --
+        ++(-2pt, 4pt) -- cycle;
+      }},
+    },
+  }
+  \newtcolorbox[use counter=#1]{#1}{%
+    #1base, % Apply the base style
+    % Additional styles or parameters can be added here
+  }
+}
+% Revised command to ensure proper text wrapping
+\newtcolorbox{boxsubsect}[2][]{
+  enhanced,
+  before skip=2mm, after skip=2mm,
+  colframe=blue!50!black, colback=yellow!20!white,
+  colbacktitle=red!5!white,
+  breakable, % Ensures content can break across pages/lines
+  fonttitle=\bfseries\small,
+  coltitle=black,
+  width=\linewidth, % Explicitly set the width to the line width
+  left=1mm, right=1mm, % Adjust padding as necessary
+  attach boxed title to top left={
+    yshift=-0.25mm-\tcboxedtitleheight/2,
+    yshifttext=2mm-\tcboxedtitleheight/3
+  },
+  boxed title style={
+    boxrule=0.4mm,
+    frame code={
+      \path[tcb fill frame] ([xshift=-0mm]frame.west)--(frame.north west) -- (frame.north east) -- ([xshift=3mm]frame.east)
+      -- (frame.south east) -- (frame.south west) -- cycle;
+    },
+    interior code={
+      \path[tcb fill interior] ([xshift=-0mm]interior.west)--(interior.north west) -- (interior.north east)
+      -- ([xshift=1.5mm]interior.east) -- (interior.south east) -- (interior.south west)
+      -- cycle;
+    },
+  },
+  title={\thesubsection #2}, #1,
+  valign=center, % This ensures vertical alignment; adjust as needed
+}
+
+\renewcommand{\thesubsection}{\Roman{subsection}.}
+
+% Adjusted title format for subsection to ensure the box is used correctly
+\titleformat{\subsection}
+  {} % Preceding the title body
+  {}{0em} % Space between label and title body, if any
+  {\begin{boxsubsect}{\hskip0.7em#1}\end{boxsubsect}} % Before the title
+  [] % After the title
+
+% Command to easily create new theorem-like environments
+\newcommand{\newmythm}[3]{%
+  \newmybox{#1}{#2}{#3}{col#1}%
+}
+
+% Creating specific environments
+\newmythm{thm}{Theorem}{thm}
+\newmythm{con}{Construction}{con}
+\newmythm{defin}{Definition}{defin}
+\newmythm{post}{Postulate}{post}
+\newmythm{cn}{Common notion}{cn}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{chngcntr} % For counterwithin if needed
+
+% Assuming the rest of your preamble is as you've defined it
+
+% Define a counter for subtheorems that is subordinate to the theorem counter
+\newcounter{subthm}[thm]
+\counterwithin{subthm}{thm} % Makes subthm subordinate to thm
+
+\newcounter{subcon}[con]
+\counterwithin{subcon}{con} % Makes subthm subordinate to thm
+
+\newcounter{subdefin}[defin]
+\counterwithin{subdefin}{defin} % Makes subthm subordinate to thm
+
+\newcounter{subpost}[post]
+\counterwithin{subpost}{post} % Makes subthm subordinate to thm
+
+\newcounter{subcn}[cn]
+\counterwithin{subcn}{cn} % Makes subthm subordinate to thm
+
+
+
+% Create a new box style for subtheorems using the existing color scheme
+\newtcolorbox{subthmbox}[1][]{
+  enhanced,
+  breakable,
+  colback=\currentcolor!5, % Lighter background color; adjust as necessary
+  colframe=\currentcolor, % Frame color uses the current color
+  coltitle=\currentcolor, % Title color
+  title=Subtheorem~\thethm.\arabic{subthm}:,
+  #1
+}
+
+% Create a new box style for subtheorems using the existing color scheme
+\newtcolorbox{subconbox}[1][]{
+  enhanced,
+  breakable,
+  colback=\currentcolor!5, % Lighter background color; adjust as necessary
+  colframe=\currentcolor, % Frame color uses the current color
+  coltitle=\currentcolor, % Title color
+  title=Subconstruction~\thecon.\arabic{subcon}:,
+  #1
+}
+
+% Create a new box style for subtheorems using the existing color scheme
+\newtcolorbox{subdefinbox}[1][]{
+  enhanced,
+  breakable,
+  colback=\currentcolor!5, % Lighter background color; adjust as necessary
+  colframe=\currentcolor, % Frame color uses the current color
+  coltitle=\currentcolor, % Title color
+  title=Subdefinition~\thedefin.\arabic{subdefin}:,
+  #1
+}
+
+% Create a new box style for subtheorems using the existing color scheme
+\newtcolorbox{subpostbox}[1][]{
+  enhanced,
+  breakable,
+  colback=\currentcolor!5, % Lighter background color; adjust as necessary
+  colframe=\currentcolor, % Frame color uses the current color
+  coltitle=\currentcolor, % Title color
+  title=Subpostulate~\thepost.\arabic{subpost}:,
+  #1
+}
+
+% Create a new box style for subtheorems using the existing color scheme
+\newtcolorbox{subcnbox}[1][]{
+  enhanced,
+  breakable,
+  colback=\currentcolor!5, % Lighter background color; adjust as necessary
+  colframe=\currentcolor, % Frame color uses the current color
+  coltitle=\currentcolor, % Title color
+  title=Subcommonnotion~\thethm.\arabic{subtm}:,
+  #1
+}
+
+% Define the subthm environment to use this new box style
+\newenvironment{subthm}[1][]{%
+  \refstepcounter{subthm}% Increment the subthm counter
+  \begin{subthmbox}[#1]%
+}{%
+  \end{subthmbox}%
+}
+
+% Define the subthm environment to use this new box style
+\newenvironment{subcon}[1][]{%
+  \refstepcounter{subcon}% Increment the subthm counter
+  \begin{subconbox}[#1]%
+}{%
+  \end{subconbox}%
+}
+
+% Define the subthm environment to use this new box style
+\newenvironment{subdefin}[1][]{%
+  \refstepcounter{subdefin}% Increment the subthm counter
+  \begin{subdefinbox}[#1]%
+}{%
+  \end{subdefinbox}%
+}
+
+% Define the subthm environment to use this new box style
+\newenvironment{subpost}[1][]{%
+  \refstepcounter{subpost}% Increment the subthm counter
+  \begin{subpostbox}[#1]%
+}{%
+  \end{subpostbox}%
+}
+
+% Define the subthm environment to use this new box style
+\newenvironment{subcn}[1][]{%
+  \refstepcounter{subcn}% Increment the subthm counter
+  \begin{subcnbox}[#1]%
+}{%
+  \end{subcnbox}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%--------------------------------------------------Chapter style---------------------%
+\makeatletter
+\def\@chapter[#1]#2#3{%
+    \ifnum \c@secnumdepth >-2\relax
+      \refstepcounter{chapter}%
+      \addcontentsline{toc}{part}{\thechapter\hspace{1em}#1}%
+    \else
+      \addcontentsline{toc}{part}{#1}%
+    \fi
+    \markboth{}{}%
+  \reset@font
+  \parindent \z@ 
+  \vspace*{10\p@}%
+  \hbox{%
+    \vbox{%
+      \hsize=7mm%
+      \begin{tabular}{@{}p{7mm}@{}}
+        \makebox[7mm]{\scshape\strut\small\chaptername}\\
+        \makebox[7mm]{\cellcolor{#3}\Huge\color{white}\bfseries\strut\thechapter\rule[-4cm]{0pt}{4cm}}%
+      \end{tabular}%
+      \makebox(0,0){\put(-10,-100){\fbox{\phantom{\rule[-4cm]{7mm}{4cm}}}}}
+      }%
+    \kern-2pt
+    \vbox to 0pt{%
+       \tabular[t]{@{}p{1cm}p{\dimexpr\hsize-2.1cm}@{}}\hline
+          & \Huge\itshape\rule{0pt}{1.5\ht\strutbox}#2\endtabular}%
+    }%
+  \cleardoublepage
+%  \vskip 100\p@
+}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%

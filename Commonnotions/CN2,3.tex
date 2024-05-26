@@ -1,0 +1,78 @@
+\begin{cn}
+If equal be added to equals, the whole are equal.
+\end{cn}
+\begin{cn}
+If equals be subtracted from equals, the remainders are equal.
+\end{cn}
+
+In our exploration of Euclid's \textit{Elements}, we've already delved into the subtleties of \textit{Common Notion 1} (C.N.1) and now we shall look at \textit{C.N.2 and C.N.3};
+
+\begin{figure}[H]
+\centering
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(3,3){C}
+\tkzDefRectangle(A,C)
+\tkzGetPoints{B}{D}
+\tkzDefPoint(3,0){E}
+\tkzDefPoint(5,3){G}
+\tkzDefRectangle(E,G)
+\tkzGetPoints{F}{H}
+\tkzDrawPolygon[fill=teal!15](A,B,C,D)
+\tkzDrawPolygon[fill=red!50](E,F,G,H)
+\node at (barycentric cs:A=1,B=1,C=1,D=1) {$\alpha$};
+\node at (barycentric cs:E=1,F=1,G=1,H=1) {$\beta$}; 
+\end{tikzpicture}
+\sidecaption{$\alpha + \beta$: Addition of areas.}
+\end{subfigure}%
+\begin{subfigure}{0.45\textwidth}
+\centering
+\begin{tikzpicture}
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(3,3){C}
+\tkzDefRectangle(A,C)
+\tkzGetPoints{B}{D}
+\tkzDefPoint(3,0){E}
+\tkzDefPoint(5,3){G}
+\tkzDefRectangle(E,G)
+\tkzGetPoints{F}{H}
+\tkzDrawPolygon[fill=teal!15](A,B,C,D)
+\tkzDrawPolygon[fill=red!50](E,F,G,H)
+\node at (barycentric cs:A=1,B=1,C=1,D=1) {$\gamma$};
+\node at (barycentric cs:E=1,F=1,G=1,H=1) {$\delta$}; 
+\end{tikzpicture}
+\sidecaption{$\gamma + \delta$: Another addition of areas.}
+\end{subfigure}
+\caption{Illustration of Common Notion 2}
+\end{figure}
+
+\begin{gather*}
+\alpha = \gamma\\
+\beta = \delta\\ 
+\therefore \alpha + \beta = \gamma + \delta
+\end{gather*}
+
+We can use the same reasoning for \textit{Common Notion 3}.
+
+Historical studies suggest that later mathematicians sought to expand upon Euclid's original set of axioms, proposing additional ones that might seem intuitive but were not explicitly stated by Euclid. Here is a brief look at these proposed axioms:
+
+\begin{enumerate}[label=\alph*]
+\item If equals be added to unequals, the wholes are unequal.
+\item If equals be subtracted from unequals, the remainders are unequal.
+\item Things which are double of the same thing are equal to one another.
+\item Things which are halves of the same thing are equal to one another.
+\item If unequals be added to equals, the difference between the wholes is equal to the difference between the added parts.
+\item If equals be added to unequals, the difference between the wholes is equal to the difference between the original unequals.
+\end{enumerate}
+
+Upon close inspection, it becomes clear why Euclid may have chosen to omit these from his Common Notions. The language of 'unequals' used in propositions (a) and (b) introduces a level of ambiguity absent in Euclid's precise formulations. For instance, Euclid’s Proposition I.17 relies on C.N.1 to argue that when an angle is added to both a greater and a lesser angle, the resulting sums reflect their original relationships—greater and lesser, respectively. The additional axioms proposed above could imply contradictory outcomes, thus they are not suitable for inclusion.
+
+As for (c) and (d), their redundancy might be the reason behind their exclusion. These axioms assert equality relations among multiples and fractions of the same quantity, something that would be inherently understood within the framework of Euclid's other axioms and propositions. Essentially, if two quantities are equal to a third, they are equal to each other, a principle already covered under other axioms.
+
+Lastly, (e) and (f) were analyzed by the philosopher Proclus, who suggested that these follow logically from existing axioms, making their explicit mention unnecessary. Proclus' commentary supports the notion that Euclid's original axioms were sufficiently comprehensive to derive further logical conclusions without additional elaboration.
+
+In conclusion, while these additional axioms offer interesting insights into logical extensions, Euclid's original choices reflect a preference for essential, universally applicable principles that elegantly support the structure of his geometric proofs.
+
+\clearpage

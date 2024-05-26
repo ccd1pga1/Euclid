@@ -1,0 +1,88 @@
+
+\section*{proposition 13}
+
+\begin{thm}
+If a straight line stands on a straight line, then it makes either two right angles or angles whose sum equals two right angles.
+\end{thm}
+
+Let any straight line $\overline{AB}$ standing on the straight line $\overline{CD}$ make $\angle{CBA}$ and $\angle{ABD}$. I say that either $\angle{CBA}$ and $\angle{ABD}$ are two right angles or their sum equals two right angles.
+
+\begin{proof}
+
+\begin{itemize}
+
+	\item[]
+
+   	 \item If, 
+   	 \[\angle{CBA} = \angle{ABD}\]
+   	 then they are two right angles. \hfill\textcolor{red}{I.Def.10}
+    
+   	 \item If 
+   	 \[\angle{CBA} \neq \angle{ABD}\]
+    	 draw $\overline{BE}$ from $B$ perpendicular to $\overline{CD}$. \hfill\textcolor{red}{I.11}
+    
+  \begin{figure}[H]
+	\begin{subfigure}{0.35\textwidth}
+		\begin{tikzpicture}
+			\tkzDefPoint(0,0){A}
+			\tkzDefShiftPointCoord[3,0](0:0){B}
+			\tkzDefShiftPointCoord[2.5,2.5](30:0){D}
+			\tkzDefBarycentricPoint(A=2,B=3)	\tkzGetPoint{C}
+			\tkzDrawSegments(A,B C,D)
+			\tkzDrawPoints(A,B,C,D)
+			\tkzLabelPoints(A,B,C)
+			\tkzLabelPoints[above](D)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+%%%%%%%%%%%
+	\begin{subfigure}{0.35\textwidth}
+		\begin{tikzpicture}
+			\tkzDefPoint(0,0){A}
+			\tkzDefShiftPointCoord[3,0](0:0){B}
+			\tkzDefShiftPointCoord[2.5,2.5](30:0){D}
+			\tkzDefShiftPointCoord[C](90:3){E}	
+			\tkzDefBarycentricPoint(A=2,B=3)	\tkzGetPoint{C}
+			\tkzDrawSegments(A,B C,D)
+			\tkzDrawSegment[red](C,E)
+			\tkzDrawPoints(A,B,C,D,E)
+			\tkzLabelPoints(A,B,C)
+			\tkzLabelPoints[above](D,E)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+	\caption{}
+\end{figure}  
+
+\clearpage
+    
+    \item Now 
+    \[\angle{CBE} = \angle{CBA} + \angle{ABE}\] 
+    
+    and 
+    \[\angle{EBD} = \angle{DBE} + \angle{EBA}\] \hfill\textcolor{red}{I.Def.10}
+    
+    \item[$\therefore$] \[\angle{CBE} + \angle{EBD} = \angle{CBA} + \angle{ABE} + \angle{DBE} + \angle{EBA}\]\hfill\textcolor{red}{C.N.2}
+    
+    \item Also, \[\angle{DBA} = \angle{DBE} + \angle{EBA}\] 
+    and 
+    \[\angle{ABC} = \angle{ABE} + \angle{CBA}\]\hfill\textcolor{red}{I.Def.10}
+    
+    \item[$\therefore$]\[\angle{DBA} + \angle{ABC} = \angle{DBE} + \angle{EBA} + \angle{ABE} + \angle{CBA}\] \hfill\textcolor{red}{C.N.2}
+    
+    \item Since 
+    \[\angle{CBE} + \angle{EBD} = \angle{DBA} + \angle{ABC}\] 
+    and 
+    $\angle{CBE}$ and $\angle{EBD}$ are two right angles, 
+    
+    \item then 
+    \[\angle{DBA} + \angle{ABC} = 2\times\ang{90}\] \hfill\textcolor{red}{C.N.1}
+  
+\clearpage
+    
+    \item Thus, if a straight line stands on a straight line, then it makes either two right angles or angles whose sum equals two right angles. 
+\end{itemize}
+
+\end{proof}
+
+\clearpage

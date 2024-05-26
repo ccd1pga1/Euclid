@@ -1,0 +1,33 @@
+\begin{post}
+To produce a finite straight line continuously in a straight line.
+\end{post}
+
+Again we have a translation issue with the $\textit{Postulate}$, Heath\margincite{Heath} has decided to use the word finite here instead of other words like limited. For example, the term 'finite', when applied to a straight line, might not adequately convey what modern mathematicians of the time termed 'rectilinear segments'—that is, a straight line defined by two extremities.
+
+\vspace{0.5cm}
+
+\sidenote{\raggedright\ssmall{This diagram depicts a straight line segment CD, with points A and B marked in red on the segment, demonstrating the concept of producing a straight line from point C to D.}}
+\begin{figure}[H]
+\centering
+		\begin{tikzpicture}
+			\tkzDefPoint(0,0){A}
+			\tkzDefPoint(5,0){B}
+			\tkzDefPoint(-3,0){C}
+			\tkzDefPoint(6,0){D}
+			\tkzDrawSegment(C,D)
+			\tkzLabelPoints[below](A,B,C,D)
+			\tkzDrawPoints[red](A,B,C,D)
+		\end{tikzpicture}
+		\caption{Produce a straight line}
+\end{figure}
+
+
+Here we have the second chance to use a straightedge, namely, to extend (produce) a given $\overline{AB}$ to $C$ and $D$. This \textit{Postulate} does not say how far a straight line can be extended. Sometimes it is used so that the extension equals some other straight line. Other times it is extended arbitrarily far. Heath\margincite{Heath} describes this \textit{Postulate} with reference to \textit{Postulate 1} to emphasise this unique property of a straight line;
+
+\textit{''Just as Post. 1 asserting the possibility of drawing a straight line from any one point to another must be held to declare at the same time that the straight line so drawn is unique, so Post. 2 maintaining the possibility of producing a finite straight line (a " rectilinear segment") continuously in a straight line must also be held to assert that the straight line can only be produced in one way at either end, or that the produced part in either direction is unique; in other words, that two straight lines cannot have a common segment.''}
+
+In Euclid's works, much is left for the reader to infer from seemingly simple statements. These texts suggest not only that we can extend a line to points arbitrarily far from one another, as long as they reside on the same straight line, but also that such a line is inherently unique, and no two straight lines can share a common segment. This distinction is crucial and must be understood from the outset, as early as \textit{Proposition I}. It's implied that two straight lines cannot share identical segments. Proclus\sidenote[2][-1.2cm]{\raggedright\ssmall{Proclus Diadochus (412–485 CE), often referred to simply as Proclus, was a Greek Neoplatonist philosopher and mathematician. Notable for his influential commentaries on Plato's and Euclid's works, Proclus sought to harmonize philosophical and mathematical truths, significantly impacting the medieval understanding of Euclidean geometry.}} highlights this necessity, noting that if it were not so, lines $\overline{AC}$ and $\overline{BC}$ might intersect before reaching point $C$, sharing a portion of their lengths. This would imply that the resulting triangle formed by these lines with $\overline{AB}$ would not be equilateral, contradicting the fundamental properties of Euclidean geometry \margincite{Proclus1}.
+
+As with the first \textit{Postulate}, it is implicitly assumed in the books on plane geometry that when a straight line is extended, it remains in the plane of discussion. The first \textit{Proposition} on solid geometry, \textit{proposition XI.1}, claims that a straight line can’t be only partly in a plane. The central step in the proof of that \textit{Proposition} is to show that a straight line cannot be extended in two ways, that is, there is only one continuation of a straight line. The proof is hardly convincing. Rather, this \textit{Postulate} should include a clause to that effect.
+
+\clearpage

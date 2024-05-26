@@ -1,0 +1,62 @@
+
+\section*{Proposition 48}
+
+\begin{thm}
+If in a triangle the square on one of the sides equals the sum of the squares on the remaining two sides of the triangle, then the angle contained by the remaining two sides of the triangle is right.
+\end{thm}
+
+\textbf{To prove:} $$\angle BAC$$ is a right angle.
+
+\textbf{Construction:} Draw $\overline{AD}$ from point $A$ perpendicular to side $\overline{AC}$. Make $\overline{AD}$ equal to $\overline{BA}$ and join $\overline{DC}$.\hfill\textcolor{red}{ I.11, I.3,I.Post.1}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){D}
+		\tkzDefPoint(5,0){B}
+		\tkzDefPoint(2.5,4){C}
+		\tkzDefMidPoint(D,B)	\tkzGetPoint{A}
+		\tkzDrawPolygon(C,D,B)
+		\tkzDrawSegment(C,A)
+		\tkzLabelPoints(D,A,B)
+		\tkzLabelPoints[above](C)
+		\tkzFillPolygon[green, opacity=0.7](A,B,C)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{proof}
+
+\begin{itemize}
+
+\item Since $\overline{DA}$ equals $\overline{AB}$ (by construction), the square on $\overline{DA}$ equals the square on $\overline{AB}$.
+
+
+\textbf{Addition of Squares:}
+Add the square on $\overline{AC}$ to both sides of the equation. Now, the sum of the squares on $\overline{DA}$ and $\overline{AC}$ equals the sum of the squares on $\overline{BA}$ and $\overline{AC}$.\hfill\textcolor{red}{C.N.2}
+
+\textbf{Claim:} The square on $\overline{DC}$ equals the sum of the squares on $\overline{DA}$ and $\overline{AC}$.
+
+\item Since $\angle{DAC}$ is right (by construction), the square on $\overline{DC}$ equals the sum of the squares on $\overline{DA}$ and $\overline{AC}$ (by the Pythagorean Theorem).\hfill\textcolor{red}{I.47, C.N.1}
+
+
+\textbf{Conclusion:}
+Combining the two claims, the square on $\overline{DC}$ equals the square on $\overline{BC}$, and $\therefore$, $\overline{DC}$ equals $\overline{BC}$.
+
+\textbf{Congruence:}
+Since
+\[ \overline{DA} = \overline{AB}\] 
+$\overline{AC}$ is common, and 
+\[\overline{DC} = \overline{BC}\]
+and 
+\[\widetriangle{DAC} \cong \widetriangle{BAC}\] 
+
+\textbf{Conclusion:}
+Since $\angle{DAC}$ is a right angle, $\angle{BAC}$ is also a right angle (corresponding parts of congruent triangles are equal).
+
+\textbf{$\therefore$} If in a triangle, the square on one side equals the sum of the squares on the remaining two sides, then the angle contained by the remaining two sides is right.
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

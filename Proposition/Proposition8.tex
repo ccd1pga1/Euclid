@@ -1,0 +1,74 @@
+
+\section*{Proposition 8}
+
+\begin{thm}
+If two triangles ABC and DEF have the two sides AB and AC equal to the two sides DE and DF respectively, namely AB = DE and AC = DF, and the base BC equal to the base EF, then the angle BAC equals the angle EDF.
+\end{thm}
+
+
+\textbf{Given:} $\widetriangle{ABC}$ and $\widetriangle{DEF}$ with $\overline{AB}$ = $\overline{DE}$, $\overline{AC}$ = $\overline{DF}$, and $\overline{BC}$ = $\overline{EF}$.
+
+\textbf{To Prove:} $\angle BAC = \angle EDF$.
+
+\begin{figure}[H]
+	\begin{subfigure}{0.35\textwidth}
+		\begin{tikzpicture}
+   			\Tri{B}{3}{0}{C}{1.8}{2.5}{A}{none}  
+   			\tkzMarkSegment[mark=|](B,C)
+   			\tkzMarkSegment[mark=||](B,A)
+   			\tkzMarkSegment[mark=|||](A,C)  
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+%%%%%%%%%%%%%%
+	\begin{subfigure} {0.35\textwidth}
+		\begin{tikzpicture}
+   			\Tri{E}{3}{0}{F}{2.3}{1.8}{D}{none}
+  			\tkzMarkSegment[mark=|](E,F)
+   			\tkzMarkSegment[mark=||](E,D)
+   			\tkzMarkSegment[mark=|||](D,F)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+	\caption{}
+\end{figure}
+
+\begin{proof}
+
+\textbf{Proof by Construction:}
+\begin{enumerate}
+  \item Apply $\widetriangle{ABC}$ to $\widetriangle{DEF}$ by placing point $B$ on point $E$ and aligning $\overline{BC}$ with $\overline{EF}$.
+  
+  \item Since $\overline{BC}$ coincides with $\overline{EF}$, point $C$ also coincides with point $F$.
+  
+  \item If $\overline{BA}$ and $\overline{AC}$ do not coincide with $\overline{ED}$ and $\overline{DF}$, then,  two other straight lines would have been constructed on the same side of $\overline{AB}$ and meeting in a point, equal to $\overline{BA}$ and $\overline{AC}$, respectively. This is a contradiction.\hfill\textcolor{red}{I.7, C.N.4}
+  
+  \item[$\therefore$] $\overline{BA}$ and $\overline{AC}$ coincide with $\overline{ED}$ and $\overline{DF}$.
+\end{enumerate}
+
+\clearpage
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+     		\Tri{B}{3}{0}{C}{2.3}{1.8}{D}{none}
+  		\Tri{B}{3}{0}{C}{1.8}{2.5}{A}{blue, opacity=0.2}
+     		\tkzMarkSegment[mark=|](B,C)
+     		\tkzMarkSegments[mark=||](D,B A,B)
+     		\tkzMarkSegments[mark=|||](D,C A,C)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\textbf{Conclusion:}
+\begin{itemize}
+  \item The base $\overline{BC}$ coinciding with $\overline{EF}$ implies that sides $\overline{BA}$ and $\overline{AC}$ coincide with $\overline{ED}$ and $\overline{DF}$ respectively.
+  
+  \item Thus, $\angle {BAC}$ coincides with $\angle{EDF}$, and they are equal.
+\end{itemize}
+
+$\therefore$ if two triangles have two sides equal to two sides respectively, and also have the base equal to the base, then the angles contained by the equal sides are also equal.
+
+\end{proof}
+ 
+ \clearpage
+ 

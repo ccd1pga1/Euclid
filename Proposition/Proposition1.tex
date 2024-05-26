@@ -1,0 +1,122 @@
+
+\section*{Proposition 1}
+
+\renewcommand\qedsymbol{Q.E.F}
+    
+\begin{con}
+        To construct an equilateral triangle on a given finite straight line $\overline{AB}$.
+\end{con}
+
+Let $\overline{AB}$ be the given finite straight line.\hfill\textit{ I.1}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+			\tkzDefPoint(0,0){A}
+			\tkzDefPoint(3,0){B}
+			\tkzDrawPoints(A,B)
+			\tkzLabelPoints(A,B)
+			\tkzDrawSegment[red](A,B)
+	\end{tikzpicture}
+		\caption{Equilateral triangle construction}
+\end{figure}
+
+
+\begin{enumerate}
+  	\item  It is required to construct an equilateral triangle on the straight line $\overline{AB}$.  
+  	\item Describe the $\mathscr{C}(A;AB)$.  
+  	\item Then,  describe the $\mathscr{C}(A;BA)$. 
+  	\item Join the straight lines $\overline{CA}$ and $\overline{CB}$ from the point $C$ at which the circles cut one another to the points $A$ and $B$. \hfill\textit{ I.Post.3, I.Post.1}
+  \end{enumerate}
+
+  
+\begin{figure}[H]
+\centering
+	\begin{subfigure}{0.3\textwidth}
+		\begin{tikzpicture}
+		\centering
+    			\tkzDefPoint(0,0){A}
+    			\tkzDefPoint(1.5,0){B}
+    			\tkzDrawCircle[blue](A,B)
+    			\tkzDrawPoints(A,B)
+    			\tkzLabelPoints(A,B)
+    			\tkzDrawSegment[red](A,B)
+		\end{tikzpicture}
+		\sidecaption[a][-3cm]{Step 1}
+	\end{subfigure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{subfigure}{0.3\textwidth}
+		\begin{tikzpicture}
+		\centering
+   			\tkzDefPoint(0,0){A}
+    			\tkzDefPoint(1.5,0){B}
+    			\tkzDrawCircle[green](B,A)
+    			\tkzInterCC(A,B)(B,A)       \tkzGetPoints{C}{D}
+    			\tkzCompass[color=blue, thick](A,C)
+    			\tkzDrawPoints(A,B)
+    			\tkzLabelPoints(A,B)
+    			\tkzDrawSegment[red](A,B)
+		\end{tikzpicture}
+			\sidecaption[b][-2cm]{Step 2}
+	\end{subfigure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{subfigure}{0.3\textwidth}
+		\begin{tikzpicture}
+		\centering
+			\tkzDefPoint(0,0){A}
+    			\tkzDefPoint(1.5,0){B}
+			\tkzInterCC(A,B)(B,A)		\tkzGetPoints{C}{D}
+			\tkzCompass[color=blue, thick](A,C)
+			\tkzCompass[color=green, thick](B,C)s
+			\tkzDrawPoints(A,B,C)
+       			\tkzLabelPoints(A,B)
+       			\tkzLabelPoints[above](C)
+         		\tkzDrawSegments[red](A,B A,C B,C)
+		\end{tikzpicture}
+		\sidecaption[c][-1cm]{Step 3}
+	\end{subfigure}
+	\caption{Equilateral triangle construction}
+\end{figure}
+
+\begin{proof}
+ 
+  \begin{itemize}
+  \item Since the point $A$ is the center of the $\mathscr{C}(A;AB)$, $\therefore$ $overline{AC}$ equals $\overline{AB}$. Again, since the point $B$ is the center of the $\mathscr{C}(A;BA)$ $\therefore$ $\overline{BC}$ equals $\overline{BA}$.  \hfill\textit{ I.Def.15}
+  \item Things which equal the same thing also equal one another $\therefore$ $\overline{AC}$ also equals$\overline{BC}$. 
+              \hfill\textit{ C.N.1}
+\end{itemize}
+
+\clearpage
+
+\textbf{Conclusion:}
+
+\begin{itemize}
+	\item $\therefore$,  the three straight lines $\overline{AC}$, $\overline{AB}$, and $\overline{BC}$ equal one another.
+  	\item $\therefore$,  $\widetriangle{ABC}$ is equilateral,  and it has been constructed on the given finite straight line $\overline{AB}$. \hfill\textit{ I.Def.20}
+\end{itemize}
+
+\begin{figure}[h]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(3,0){B}
+		\tkzInterCC(A,B)(B,A)		\tkzGetPoints{C}{D}
+		\tkzCompass[color=blue, thick](A,C)
+		\tkzCompass[color=green, thick](B,C)
+		\tkzDrawPoints(A,B,C)
+       		\tkzLabelPoints(A,B)
+       		\tkzLabelPoints[above](C)
+         	\tkzDrawSegments[red](A,B A,C B,C)
+	\end{tikzpicture}
+		\caption{Equilateral triangle construction}
+\end{figure}
+
+ The construction has been successfully completed. 
+\end{proof}
+
+%\begin{remark}
+	\begin{itemize}
+		\item The construction relies on the principles of circle description and intersection, line segment joining, and the properties of circles with given centers. \hfill\textcolor{red}{ I.Post.1, I.Post.3, I.Def.15}
+    		\item The Equilateral Triangle is characterized by the equality of its three sides ($\overline{AC}$, $\overline{AB}$, $\overline{BC}$).\hfill\textit{ I.Def.20}
+	\end{itemize}
+%\end{remark}
+
+\clearpage

@@ -1,0 +1,86 @@
+
+\section*{Proposition 35}
+
+\begin{thm}
+Parallelograms on the same base and in the same parallels are equal to one another.
+\end{thm}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){B}
+		\tkzDefPoint(2,0){C}
+		\tkzDefPoint(-1,3){A}
+		\tkzDefParallelogram(A,B,C)		 \tkzGetPoint{D}
+		\tkzDefPointOnLine[pos=.60](C,D)	\tkzGetPoint{G}
+		\tkzInterLL(A,D)(B,G) 			\tkzGetPoint{E}
+		\tkzDefParallelogram(E,B,C) \tkzGetPoint{F}
+		\tkzDrawSegment(D,E)
+		\tkzDrawPolygons(A,B,C,D B,C,F,E)
+		\tkzLabelPoints(B,C)
+		\tkzLabelPoints[above](A,D,E,F)
+		\tkzLabelPoints[right](G)
+		\tkzDrawPoints(A,...,G)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\textbf{Given:} Parallelograms $ABCD$ and $EBCF$ on the same base $\overline{BC}$ and in the same parallels $\overline{AF}$ and $\overline{BC}$.
+
+\begin{proof}
+
+\begin{enumerate}
+    \item \textbf{Parallelogram Properties} \hfill\textcolor{red}{I.35, I.34}
+    \begin{itemize}
+        \item Since $ABCD$ is a parallelogram, 
+        \[\overline{AD} = \overline{BC}\] \hfill\textcolor{red}{I.35}
+        
+        \item Similarly, for $EBCF$, 
+        \[\overline{EF} = \overline{BC}\] \hfill\textcolor{red}{I.34}
+    \end{itemize}
+
+    \item \textbf{Triangle Equality} \hfill\textcolor{red}{C.N.1, C.N.2, I.4}
+    \begin{itemize}
+        \item Since 
+        \[\overline{AD} = \overline{BC}\] 
+        and 
+        \[\overline{EF} = \overline{BC}\] 
+        we can conclude that 
+        \[\overline{AD} = \overline{EF}\]
+        
+        \item Since $\overline{DE}$ is common, we have 
+        \[\overline{AE} = \overline{DF}\]\hfill\textcolor{red}{C.N.1}
+        
+        \item Also, 
+        \[\overline{AB} = \overline{DC}\]\hfill\textcolor{red}{I.34}
+        
+        \item[$\therefore$] the two sides $\overline{EA}$ and $\overline{AB}$ equal the two sides $\overline{FD}$ and $\overline{DC}$, respectively, and $\angle{FDC}$ = $\angle{EAB}$. \hfill\textcolor{red}{I.4}
+        
+        \item Thus, the base 
+        \[\overline{EB} =\overline{FC}\] 
+        and 
+        \[\widetriangle{EAB} = \widetriangle{FDC}\]\hfill\textcolor{red}{C.N.2}
+    \end{itemize}
+
+    \item \textbf{Trapezium Equality} \hfill\textcolor{red}{C.N.3}
+    \begin{itemize}
+        \item Subtract $\widetriangle{DGE}$ from each side.
+        \item Then the trapezium $ABGD$ equals the trapezium $EGCF$.
+    \end{itemize}
+
+    \item \textbf{Whole Parallelogram Equality. }\hfill\textcolor{red}{C.N.2}
+    \begin{itemize}
+        \item Add the $\widetriangle{GBC}$ to each side.
+        \item Then the whole parallelogram $ABCD$ equals the whole parallelogram $EBCF$.
+    \end{itemize}
+\end{enumerate}
+
+\clearpage
+
+\textbf{Conclusion:}
+\begin{itemize}
+    \item[$\therefore$] parallelograms on the same base and in the same parallels equal one another.
+\end{itemize}
+
+\end{proof}
+
+\clearpage

@@ -1,0 +1,85 @@
+
+\section*{Proposition 25}
+
+\begin{thm}
+If two triangles ABC and DEF have two sides AB and AC equal to two sides DE and DF, respectively (AB = DE and AC = DF), and the base BC is greater than the base EF (BC > EF), then the angle BAC is greater than the angle EDF.
+\end{thm}
+
+\begin{figure}[H]
+	\begin{subfigure}{0.35\textwidth}
+		\begin{tikzpicture}
+			\tkzDefPoints{0/0/B,3/0/C, 1/2.5/A}
+			\tkzDrawPolygon(A,B,C)
+			\tkzDrawPoints(A,B,C)
+			\tkzLabelPoints(B,C)
+			\tkzLabelPoints[above](A)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+%%%%%%%%%%%%%%%%%%5
+	\begin{subfigure}{0.35\textwidth}
+		\begin{tikzpicture}
+			\tkzDefPoints{0/0/E,2/0/F,1/2.5/D}
+			\tkzDrawPolygon(E,D,F)
+			\tkzDrawPoints(E,D,F)
+			\tkzLabelPoints(E,F)
+			\tkzLabelPoints[above](D)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+	\caption{}
+\end{figure}
+
+\textbf{To Prove:} 
+\[\angle{BAC} > \angle{EDF}\]
+
+\begin{proof}
+
+\begin{itemize}
+
+\item[]
+
+\item Assume, for the sake of contradiction, that 
+\[\angle{BAC} = \angle{EDF}\]
+   \begin{itemize}
+     \item If 
+     \[\angle{BAC} = \angle{EDF}\] 
+     then by the Angle-Side-Angle (ASA) congruence,  
+     \[\widetriangle{ABC} \cong \widetriangle{DEF}\] 
+ 
+ \clearpage
+     
+     \item This implies 
+     \[\overline{BC} = \angle{EF}\]
+      but this contradicts the given condition 
+      \[\overline{BC} > \overline{EF}\]\hfill\textcolor{red}{I.4}
+   \end{itemize}
+
+\item Next, assume that 
+\[\angle{BAC} < \angle{EDF}\]
+   \begin{itemize}
+     \item If
+     \[ \angle{BAC} < \angle{EDF}\]
+      then by the Angle-Side-Angle (ASA) inequality, 
+      \[\widetriangle{ABC} \cong \widetriangle{DEF}\] 
+      
+     \item This implies 
+     \[\overline{BC} < \overline{EF}\] 
+     but this contradicts the given condition 
+     \[\overline{BC} > \overline{EF}\]\hfill\textcolor{red}{I.24}
+   \end{itemize}
+
+\item Since $\angle{BAC}$ cannot be equal to or less than $\angle{EDF}$, the only remaining possibility is that 
+\[\angle{BAC} > \angle{EDF}\]
+
+\clearpage
+
+\item[$\therefore$] if two triangles have two sides equal to two sides respectively, but have the base greater than the base, then they also have one of the angles contained by the equal straight lines greater than the other.
+
+\textbf{Conclusion:} The statement is proved by contradiction, and the desired inequality $\angle{BAC}$ $>$ $\angle{EDF}$ holds. 
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

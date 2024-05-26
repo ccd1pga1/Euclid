@@ -1,0 +1,67 @@
+
+\section*{Proposition 30}
+
+\begin{thm}
+If two straight lines, such as $\overline{AB}$ and $\overline{CD}$, are each parallel to a third straight line $\overline{EF}$, then $\overline{AB}$ is also parallel to $\overline{CD}$.
+\end{thm}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(3,0){B}
+		\tkzDefPoint(0,-2){E}
+		\tkzDefPoint(3,-2){F}
+		\tkzDefPoint(0,-1){C}
+		\tkzDefPoint(3,-1){D}
+		\tkzDefPoint(1,1){I}
+		\tkzDefPoint(2,-3){J}
+		\tkzDrawSegments(A,B C,D E,F)
+		\tkzDrawSegment[red](I,J)
+		\tkzInterLL(A,B)(I,J)		\tkzGetPoint{G}
+		\tkzInterLL(E,F)(I,J)		\tkzGetPoint{H}
+		\tkzInterLL(C,D)(I,J)		\tkzGetPoint{K}
+		\tkzLabelPoints[left](A,C,E)
+		\tkzLabelPoints[right](B,F,D)
+		\tkzLabelPoints[above](G)
+		\tkzLabelPoints[below](H,K)
+		\tkzDrawPoints[red](G,H,K)
+	\end{tikzpicture}
+   	\caption{}
+\end{figure}   	
+
+\begin{proof}
+
+\begin{itemize}
+
+\item[]
+
+\textit{Given:} Straight lines $\overline{AB}$ and $\overline{CD}$ are each parallel to $\overline{EF}$.
+
+\textit{To prove:} 
+\[\overline{AB} \parallel  \overline{CD}\]
+
+\item Let the straight line $\overline{GH}$ fall upon $\overline{AB}$ and $\overline{CD}$. Since $\overline{GK}$ falls on the parallel straight lines $\overline{AB}$ and $\overline{EF}$, it follows from the Corresponding Angles Postulate that 
+\[\angle{AGK} = \angle{GHF}\]
+\hfill\textcolor{red}{I.29}
+
+\item Again, since $\overline{GH}$ falls on the parallel straight lines $\overline{EF}$ and $\overline{CD}$, the Corresponding Angles Postulate implies that the 
+\[\angle{GHF} = \angle{GKD}\]
+ By the Corresponding Angles Postulate, we have 
+ \[\angle{AGK} = \angle{GHF}\]
+ and
+ \[ \angle{GHF} = \angle{GKD}\]
+ 
+ \item[ $\therefore$] 
+ \[\angle{AGK} = \angle{GKD}\] 
+ and they are alternate angles. \hfill\textcolor{red}{I.29, C.N.1}
+
+\item Thus, by the Alternate Interior Angles Theorem, it is concluded that 
+\[\overline{AB} \parallel  \overline{CD}\] \hfill\textcolor{red}{I.29}
+
+\item[$\therefore$] straight lines parallel to the same straight line are also parallel to one another.
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

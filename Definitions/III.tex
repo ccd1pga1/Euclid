@@ -1,0 +1,39 @@
+\definsection{Definition III}
+
+\begin{defin}
+\textgreek{Οἱ τῶν γραμμῶν τετμημένοι συμπίπτουσιν ἐν τοῖς ἄκροις αὐτῶν σημείοις.}
+
+"The intersections of lines and their extremities are points."
+\end{defin}
+
+This definition suggests that there's a relationship between certain lines and points, implying that a point can be considered an endpoint of a line. However, it doesn't provide a clear definition of what exactly "ends" are, nor does it specify how many ends a line can have. For example, while the circumference of a circle has no ends, a finite line segment has two distinct endpoints.
+
+\fs
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.4\textwidth}
+        \begin{tikzpicture}
+            \tkzDefPoint(0,0){A}
+            \tkzDefPoint(3,0){B}
+            \tkzDrawSegment(A,B)
+            \tkzDrawPoints[red](A,B)
+        \end{tikzpicture}
+        \sidecaption[a][-2cm]{Points teminating a line segment}
+    \end{subfigure}
+    \begin{subfigure}{0.4\textwidth}
+        \begin{tikzpicture}
+            \tkzDefPoint(0,0){A}
+            \tkzDefPoint(3,0){B}
+            \tkzDefPoint(1,1){C}
+            \tkzDefPoint(2,-1){D}
+            \tkzInterLL(A,B)(C,D)   \tkzGetPoint{E}
+            \tkzDrawSegments(A,B C,D)
+            \tkzDrawPoints[red](A,B,C,D,E)
+        \end{tikzpicture}
+        \sidecaption[b][-1cm]{point on an intersection of two line segments}
+    \end{subfigure}
+    \caption{Points and intersections}
+\end{figure}
+
+\clearpage

@@ -1,0 +1,97 @@
+
+\section*{Proposition 20}
+
+\begin{thm}
+In any triangle the sum of any two sides is greater than the remaining one.
+\end{thm}
+
+Given $\widetriangle{ABC}$
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\Tri{B}{3}{0}{C}{1}{1}{A}{yellow}
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\textbf{Construction}
+
+\begin{enumerate}
+
+\item Produce $\overline{BA}$ through to the point $D$. \hfill\textcolor{red}{ I.Post.2, I.3}
+\item Make $\overline{DA}$ equal to $\overline{CA}$.
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\Tri{B}{3}{0}{C}{1}{1}{A}{yellow}
+    		\tkzDefPointOnLine[pos=3](B,A)			\tkzGetPoint{E}
+  		\tkzInterLC(B,E)(A,C)	\tkzGetPoints{F}{D}
+  		\tkzDrawPoints(D)
+  		\tkzLabelPoints[above](D)
+  		\tkzDrawSegment(B,D)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\clearpage
+
+\item Join $\overline{DC}$. \hfill\textcolor{red}{I.Post.1}
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\Tri{B}{3}{0}{C}{1}{1}{A}{yellow}
+    		\tkzDefPointOnLine[pos=3](B,A)			\tkzGetPoint{E}
+  		\tkzInterLC(B,E)(A,C)	\tkzGetPoints{F}{D}
+  		\tkzDrawPoints(D)
+  		\tkzLabelPoints[above](D)
+  		\tkzDrawSegment(B,D)
+  		\tkzDrawPolygon[fill=pink](A,C,D)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\end{enumerate}
+
+\begin{proof}
+
+\begin{itemize}
+
+\item Since 
+\[\overline{DA} = \overline{AC}\]
+\[\angle{ADC} = \angle{ACD}\] \hfill\textcolor{red}{I.5, C.N.5}
+
+\item Since $\triangle{DCB}$ has 
+\[\angle{BCD} > \angle{BDC}\] 
+the side opposite the greater angle is greater. 
+
+\item[$\therefore$]
+ \[\overline{DB} > \overline{BC}\] \hfill\textcolor{red}{I.19}
+
+\textbf{Conclusion:}
+\begin{itemize}
+  \item Since 
+\[\overline{DA} = \overline{AC}\] 
+\[\overline{DB} > \overline{BC}\]
+ 
+  \item By the triangle inequality theorem, 
+  \[\overline{BA} + \overline{AC} > \overline{BC}\]
+\end{itemize}
+
+\textbf{Similarly:}
+
+  \item Apply the same reasoning to the other sides:
+   
+      \[  \overline{AB} + \overline{BC} > \overline{CA}\]
+      
+      \[ \overline{BC} + \overline{CA} > \overline{AB}\]
+   
+\item[$\therefore:$] In any $\widetriangle{ABC}$, the sum of any two sides is greater than the remaining one.
+
+  \item The statement has been demonstrated and proven.
+
+\end{itemize}
+
+\end{proof}

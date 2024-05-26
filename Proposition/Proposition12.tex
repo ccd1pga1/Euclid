@@ -1,0 +1,111 @@
+\renewcommand\qedsymbol{Q.E.F}
+
+\begin{con}
+To draw a straight line perpendicular to a given infinite straight line from a given point not on it.
+\end{con}
+
+Let $\overline{AB}$ be the given infinite straight line, and $C$ the given point not on it. It is required to draw a straight line perpendicular to the given infinite straight line $\overline{AB}$ from the given point $C$.
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(-1,0){A}    		\tkzLabelPoint[left](A){$A$}	
+		\tkzDefPoint(5,0){B}    		\tkzLabelPoint[right](B){$B$}
+		\tkzDefPoint(2,2){C}			\tkzLabelPoint[above](C){$C$}
+		\tkzDrawSegment(A,B)
+		\tkzDrawPoints[fill=gray](A,B,C)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{enumerate}
+
+	\item[]
+
+	\item Take an arbitrary point $D$ on the other side of the straight line $\overline{AB}$.
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(-1,0){A}    		\tkzLabelPoint[left](A){$A$}	
+		\tkzDefPoint(5,0){B}    		\tkzLabelPoint[right](B){$B$}
+		\tkzDefPoint(2,2){C}			\tkzLabelPoint[above](C){$C$}
+		\tkzDefPoint(2.5,-0.8){D}	\tkzLabelPoint[below](D){$D$}
+		\tkzDrawSegment(A,B)
+		\tkzDrawPoints[fill=gray](A,B,C,D)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\clearpage
+
+	\item Describe $\mathscr{C}(C;CD)$.
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(-1,0){A}    		\tkzLabelPoint[left](A){$A$}	
+		\tkzDefPoint(5,0){B}    		\tkzLabelPoint[right](B){$B$}
+		\tkzDefPoint(2,2){C}			\tkzLabelPoint[above](C){$C$}
+		\tkzDefPoint(2.5,-0.8){D}		
+		\tkzInterLC(A,B)(C,D)	\tkzGetPoints{E}{G}
+		\tkzLabelPoints[below](D,E,G)
+		\tkzDrawCircle(C,D)
+		\tkzDrawSegments(A,B)
+		\tkzDrawPoints[fill=gray](A,B,C,D,E,G)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+	\item Bisect the straight line $\overline{EG}$ at $H$, and join the straight lines $\overline{CG}$, $\overline{CH}$, and $\overline{CE}$.\hfill\textcolor{red}{I.10}
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(-1,0){A}    		\tkzLabelPoint[left](A){$A$}	
+		\tkzDefPoint(5,0){B}    		\tkzLabelPoint[right](B){$B$}
+		\tkzDefPoint(2,2){C}			\tkzLabelPoint[above](C){$C$}
+		\tkzDefPoint(2.5,-0.8){D}		
+		\tkzInterLC(A,B)(C,D)	\tkzGetPoints{E}{G}
+		\tkzDefMidPoint(E,G)	\tkzGetPoint{H}
+		\tkzLabelPoints[below](D,E,G,H)
+		\tkzCompass[blue,thick](C,E)
+		\tkzCompass[blue, thick](C,G)
+		\tkzDrawSegments(A,B C,G C,H C,E)
+		\tkzDrawPoints[fill=gray](A,B,C,D,E,G,H)
+		\tkzMarkRightAngle[red](E,H,C)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\end{enumerate}
+
+\begin{proof}
+
+\begin{itemize}
+
+\item[]
+
+\item Since 
+\[\overline{GH} = \overline{HE}\]
+
+\item and $\overline{HC}$ is common, $\therefore$ the two sides $\overline{GH}$ and $\overline{HC}$ equal the two sides $\overline{EH}$ and $\overline{HC}$ respectively
+
+\clearpage
+
+\item and the bases 
+\[\overline{CG} = \overline{CE}\] 
+
+\item[$\therefore$] 
+\[\angle{CHG} = \angle{EHC}\] 
+and they are adjacent angles.
+
+\item When a straight line standing on a straight line makes the adjacent angles equal to one another, each of the equal angles is right, and the straight line standing on the other is called a perpendicular to that on which it stands.\hfill\textcolor{red}{ I.Def.10}
+
+\item[$\therefore$] $\overline{CH}$ has been drawn perpendicular to the given infinite straight line $\overline{AB}$ from the given point $C$ not on it.
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

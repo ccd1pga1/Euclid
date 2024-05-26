@@ -1,0 +1,83 @@
+%-----------------------------Packages----------------------------%
+								% Load the geometry package
+\usepackage[
+    b5paper,             % h=250mm, w=176mm
+    inner=10mm,          % Inner margin
+    outer=40mm,          % Outer margin
+    top=25mm,            % Top margin
+    bottom=25mm,         % Bottom margin
+    marginparsep=5mm,    % Margin par separator
+    marginparwidth=34mm, % Width of the margin paragraph
+    twoside,             % Use different margins for odd and even pages
+    bindingoffset=10mm   % Space for binding
+]{geometry}
+\usepackage{parskip} 				% Set zero paragraph indent and non-zero paragraph spacing
+\usepackage{fancyhdr} 				% Customize headers and footers
+\usepackage{graphicx} 				% Include graphics
+\usepackage{setspace} 				% Adjust line spacing
+\usepackage[utf8]{inputenc} 			% Input encoding
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{booktabs} 				% Better horizontal rules in tables
+\usepackage{xspace} 				% Used for printing a trailing space better than using a tilde (~) using the \xspace command
+\usepackage{microtype} 				% Improves character and word spacing
+\usepackage[many]{tcolorbox}			% Boxes for headings or text
+\usepackage{lmodern}
+\usepackage[explicit]{titlesec} 				% Customize chapter and section titles
+\usepackage{sidenotes} 				% For Tufte-style sidenotes (conflicts with marginfix package)
+\usepackage{etoolbox}
+\usepackage{epigraph}
+\usepackage{environ}
+\usepackage[table]{xcolor}           		% Better control over table colors
+\usepackage[LGR,T1]{fontenc}        		% Font encoding (combined with the one below)
+\usepackage{libertine} 				% Use the Linux Libertine font (conflicts with fontenc)
+\usepackage{marginfix}              		% To fix the margin figure placement
+%\usepackage{natbib}                 			% For bibliography management
+\usepackage{libertine}              			% Use the Linux Libertine font (repeated)
+\usepackage{enumitem}
+
+\usetikzlibrary{patterns}
+
+\setstretch{1.5}                    			% Adjust line spacing
+\pagestyle{fancy}  
+\sloppy							% preventes some hbox overfull errors
+%\hyphenation{encaps-ulates}
+\graphicspath{ {figures/} }				%list of figures
+
+    \usepackage{eso-pic}				%For front cover
+
+
+
+\usepackage[style=authoryear, backend=biber]{biblatex}
+\addbibresource{bibliography.bib} % Replace 'yourbibfile.bib' with your bibliography file
+\usepackage[english]{babel}			% Sets the laguage to English to allow for hyphenation and things
+\usepackage{csquotes}
+% Adjusted command for citation in a margin note
+\newcommand{\margincite}[1]{
+  \marginnote{\textbf{\citeauthor{#1} (\citeyear{#1})}}
+}
+
+\setlength{\emergencystretch}{3em} % Adjust the value as needed
+
+\usepackage{blindtext}
+\usepackage{moresize}
+
+\newcommand{\fs}[1]{\vspace{0.5cm}}
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+% Set the head height and adjust the top margin
+\setlength{\headheight}{14.5pt}
+\setlength{\parindent}{0em} % Remove paragraph indentation
+\setlength{\parskip}{1em} % Set paragraph spacing
+
+%\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio} % Improves figure scaling
+
+% Greek Writing
+\newcommand{\textgreek}[1]{\begingroup\fontencoding{LGR}\selectfont#1\endgroup}
+

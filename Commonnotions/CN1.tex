@@ -1,0 +1,63 @@
+\begin{cn}
+\textgreek{Ἄ ἴσα τῷ αὐτῷ ἴσα καὶ ἀλλήλοις ἐστίν.}
+
+Things equal to the same thing are also equal to one another.
+\end{cn}
+Here is the original Greek as written by Euclid: \textgreek{Ἄ ἴσα τῷ αὐτῷ ἴσα καὶ ἀλλήλοις ἐστίν.} Below is the literal translation:
+
+\begin{itemize}
+\item \textgreek{Ἄ ἴσα (ta isa)}: Things equal
+\item \textgreek{τῷ αὐτῷ (tōi autōi)}: to the same thing
+\item \textgreek{ἴσα (isa)}: [are] equal
+\item \textgreek{καὶ (kai)}: also
+\item \textgreek{ἀλλήλοις (allēlois)}: to one another
+\item \textgreek{ἐστίν (estin)}: are
+\end{itemize}
+
+
+This literal translation from the original Greek, written over two millennia ago, underscores the linguistic and logical precision of Euclid's thought. Ancient Greek syntax often omits the verb "to be" in such assertions, relying on the reader’s inference from context\sidenote{\raggedright\ssmall{For a deeper dive into the translation nuances and broader implications of the Common Notions, refer to Appendix 3.}}. Despite such linguistic economy, the clarity of Euclid’s notions endures, proving foundational to logical reasoning in geometry.
+
+Composed in the thriving intellectual climate of Hellenistic Alexandria, Euclid's work synthesizes and systematizes earlier mathematical theories. This environment stimulated the cross-pollination of ideas and nurtured the development of tools not only for geometry but also for a structured approach to scientific inquiry.\sidenote{\raggedright\ssmall{See the recommended readings for detailed discussions on Hellenistic influences on Euclidean geometry.}} The applicability of C.N.1 extends beyond geometry, underpinning algebraic operations and supporting arguments in calculus. For instance, when proving the equality of two expressions in algebra, we frequently invoke this principle to justify equivalence derived from a common equality.
+
+\clearpage
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(4,0){B}
+\tkzDefPoint(2,3){C}
+\tkzDefPoint(6,3){D}
+\tkzDefPoint(8,0){E}
+
+\tkzCentroid(A,B,C) \tkzGetPoint{a}
+\tkzCentroid(B,C,D) \tkzGetPoint{b}
+\tkzCentroid(B,D,E) \tkzGetPoint{c}
+
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPolygon(D,B,C)
+\tkzDrawPolygon(E,D,B)
+
+\tkzLabelPoints[below left](A,E)
+\tkzLabelPoints[below](B)
+\tkzLabelPoints[above](C,D)
+
+% Correct the labeling of Greek letter points
+\tkzLabelPoint[below](a){$\alpha$}
+\tkzLabelPoint[above right](b){$\beta$}
+\tkzLabelPoint[right](c){$\gamma$}
+
+\tkzMarkSegments[mark=|](A,B C,D E,B)
+\tkzMarkSegments[mark=||](A,C B,D)
+\tkzMarkSegments[mark=|||](C,B D,E)
+\end{tikzpicture}
+\sidecaption[1][-3cm]{\raggedright\ssmall{This diagram demonstrates that if  $\alpha \cong \beta$ and Triangle $\beta \cong \gamma$, then $\alpha$ must $\cong \gamma$ according to Common Notion 1.}}
+\end{figure}
+
+Euclid's Elements has had a profound influence on mathematics and has been applied directly in modern geometry, demonstrating its enduring relevance. His logical constructs and axiomatic methodology have been foundational not only in mathematics but also in shaping methodologies across scientific and philosophical inquiries.
+
+Aristotle emphasized that axioms are self-evident truths that cannot be demonstrated. The use of the term 'things' in this axiom is pivotal, as it broadens its applicability across various fields, representing space, numbers, time, and speed depending on the discipline. The principle articulated in C.N.1 has been a fundamental aspect of mathematical proofs throughout history. For example, it is integral to arguments in algebra and calculus, where it underlies operations involving equalities and equivalences. Its logical simplicity makes it a crucial tool not only for theoretical mathematics but also for practical applications in engineering and physics. The notion that 'things equal to the same thing are also equal to one another' enables a transition from intuitive geometric truths to formal algebraic statements, bridging ancient methodologies with modern mathematical practice.
+
+Each Common Notion serves as a cornerstone of logical reasoning in geometry, establishing foundational principles for complex propositions. This method exemplifies the precision and discipline of classical deductive reasoning.
+
+\clearpage

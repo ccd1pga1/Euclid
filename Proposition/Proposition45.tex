@@ -1,0 +1,171 @@
+
+\section*{Proposition 45}
+
+\renewcommand\qedsymbol{Q.E.F}
+
+\begin{con}
+To construct a parallelogram equal to a given rectilinear figure $ABCD$ in a given rectilinear angle $E$.
+\end{con}
+
+\begin{figure}[H]
+	\begin{subfigure}{0.3\textwidth}
+		\begin{tikzpicture}
+			\tkzDefPoint(0,0){B}
+			\tkzDefPoint(-1,2.8){A}
+			\tkzDefPoint(0,3){D}
+			\tkzDefPoint(1,2.4){C}
+			\tkzLabelPoints[below](B)
+			\tkzLabelPoints[left](A)
+			\tkzLabelPoints[right](C)
+			\tkzLabelPoints[above](D)
+			\tkzDrawPoints(A,B,C,D)	
+			\tkzDrawSegments(A,B B,C C,D D,A B,D)
+		\end{tikzpicture}
+		\caption{Rectilier shape $ABCD$}
+	\end{subfigure}
+%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{subfigure}{0.3\textwidth}
+		\begin{tikzpicture}
+			\tkzDefPoint(2,0){X}
+			\tkzDefShiftPoint[X](0:1){Y}
+			\tkzDefShiftPoint[X](80:1){Z}
+			\tkzDefPoint(2.5,0.5){E}
+			\tkzDrawSegments(X,Y X,Z)
+			\tkzDrawPoints(X,Y,Z)
+			\tkzLabelPoints(E)
+		\end{tikzpicture}
+		\caption{Rectiliear angle $E$}
+	\end{subfigure}
+	\caption{}
+\end{figure}
+
+\textbf{Given:}
+\begin{itemize}
+    \item Rectilinear figure $ABCD$.
+    \item Rectilinear angle $E$.
+     \item A straight line can be drawn between any two points, join $\overline{BD}$.\hfill\textcolor{red}{ I.Post.1}
+\end{itemize}
+
+\begin{con}
+
+\begin{enumerate}
+
+\item[]
+
+    \item A straight line can be drawn between any two points, join $\overline{BD}$.\hfill\textcolor{red}{ I.Post.1}
+    
+      \item Construct the parallelogram $FGHK$ equal $\widetriangle{ABD}$ in $\angle{HKF}$ which equals $E$.\hfill\textcolor{red}{I.42}
+      
+      \clearpage
+      
+    \item Construct the parallelogram $GLMN$ equal to $\widetriangle{DBC}$ to $\overline{GH}$ in $\angle{GHM}$ which equals $E$.\hfill\textcolor{red}{I.44}
+
+\end{enumerate}
+
+\begin{figure}[H]
+	\begin{subfigure}{0.35\textwidth}
+		\begin{tikzpicture}
+		\tkzDefPoint(0,0){K}
+		\tkzDefPoint(1,3){F}
+		\tkzDefPoint(2,0){H}
+		\tkzDefPoint(3,3){G}
+		\tkzLabelPoints[left](K,F)	
+		\tkzLabelPoints[below](H)
+		\tkzLabelPoints[above](G)
+		\tkzDrawPoints(K,H,G,F)
+		\tkzDrawPolygon[fill=yellow, opacity=0.3,thick](K,H,G,F)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+%%%%%%%%%%%%%
+	\begin{subfigure}{0.35\textwidth}
+		\begin{tikzpicture}
+			\tkzDefPoint(0,0){H}
+			\tkzDefPoint(1,0){M}
+			\tkzDefPoint(1,3){G}
+			\tkzDefPoint(2,3){L}
+			\tkzLabelPoints[right](L,M)
+			\tkzLabelPoints[above](G)
+			\tkzLabelPoints[below](H)
+			\tkzDrawPoints(H,M,L,G)
+			\tkzDrawPolygon[fill=purple, opacity=0.3,thick](H,M,L,G)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+	\caption{}
+\end{figure}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){K}
+		\tkzDefPoint(1,3){F}	
+		\tkzDefPoint(2,0){H}	
+		\tkzDefPoint(3,3){G}	
+		\tkzDefPoint(3,0){M}	
+		\tkzDefPoint(4,3){L}
+		\tkzLabelPoints[left](K,F)	
+		\tkzLabelPoints[below](H)
+		\tkzLabelPoints[above](G)
+		\tkzLabelPoints[right](L,M)
+		\tkzDrawPoints(K,H,G,F)
+		\tkzDrawPolygon[fill=yellow, opacity=0.3,thick](K,H,G,F)	
+		\tkzDrawPolygon[fill=purple, opacity=0.3,thick](H,M,L,G)	
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\end{con}
+
+\begin{proof}
+\begin{enumerate}
+    \item Since angle $E$ equals both $\angle{HKF}$ and $\angle{GHM}$, $\angle{HKF}$ equals $\angle{GHM}$.\hfill\textcolor{red}{ C.N.1}
+    
+    \item Add $\angle{KHG}$ to both sides. 
+    
+    \item[$\therefore$] 
+    \[\angle{FKH} + \angle{KHG} = \angle{KHG} + \angle{GHM}\]\hfill\textcolor{red}{ C.N.2}
+    
+   \item \[\angle{FKH} + \angle{KHG} 2\times\ang{90} \]
+   
+   \item[$\therefore$]
+   \[\angle{KHG} + \angle{GHM} =2\times\ang{90}\]\hfill\textcolor{red}{ I.29, C.N.1}
+ 
+ \clearpage
+   
+    \item With a straight line $\overline{GH}$, and at point $H$ on it, two straight lines $\overline{KH}$ and $\overline{HM}$ not lying on the same side make the adjacent angles together equal to two right angles. 
+    
+    \item[$\therefore$] $\overline{KH}$ is in a straight line with $\overline{HM}$.\hfill\textcolor{red}{ I.29}
+    
+    \item Since line $\overline{HG}$ falls upon the parallels $\overline{KM}$ and $\overline{FG}$, the alternate $\angle{MHG}$ and $\angle{HGF}$ are equal.\hfill\textcolor{red}{ I.29}
+    
+  \item Add $\angle{HGL}$ to both sides,
+  \[\angle{MHG} + \angle{HGL} = \angle{HGF} + \angle{HGL}\]\hfill\textcolor{red}{C.N.2}
+  
+  \item \[\angle{MHG} + \angle{HGL} = 2\times\ang{90}\]
+  
+  \item[$\therefore$]
+   \[\angle{HGF} + \angle{HGL} =2\times\ang{90}\]\hfill\textcolor{red}{ I.29, C.N.1, I.14}
+   
+    \item $\overline{FG}$ is in a straight line with $\overline{GL}$.\hfill\textcolor{red}{ I.34, I.30}
+    
+    \item Since \[\overline{FK} \eqparallel \overline{HG}\] 
+    and 
+    \[\overline{HG} \eqparallel \overline{ML}\]
+    
+    \item[$\therefore$] 
+    \[\overline{KF} \eqparallel \overline{ML}\]
+    and the straight lines $\overline{KM}$ and $\overline{FL}$ join them at their ends. 
+    
+    \clearpage
+    
+    \item[$\therefore$] \[\overline{KM} \eqparallel \overline{FL}\]\hfill\textcolor{red}{ I.33, C.N.1}
+    
+   \item Since $\widetriangle{ABD}$ equals parallelogram $FKHG$, and $\widetriangle{DBC}$ equals parallelogram $GHML$, the whole rectilinear figure $ABCD$ equals the whole parallelogram $KFLM$.\hfill\textcolor{red}{ C.N.2}
+   
+    \item[$\therefore$] the parallelogram $KFLM$ has been constructed equal to the given rectilinear figure $ABCD$ in the$\angle{FKM},$ which equals the given angle $E$.
+    
+\end{enumerate}
+
+\end{proof}
+
+\clearpage

@@ -1,0 +1,127 @@
+
+\renewcommand\qedsymbol{Q.E.F}
+
+\section*{Proposition 11}
+
+\begin{con}
+To draw a straight line at right angles to a given straight line from a given point on it.
+\end{con}
+
+Let $\overline{AB}$ be the given straight line, and $C$ the given point on it.
+
+\begin{enumerate}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}    	\tkzLabelPoint[left](A){$A$}
+		\tkzDefPoint(5,0){B}    	\tkzLabelPoint[right](B){$B$}
+		\tkzDrawSegment(A,B) 
+		\tkzDrawPoints[fill=gray,opacity=0.5](A,B)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\item Take an arbitrary point $D$ on $\overline{AC}$.
+
+\item Make $\overline{CE}$ equal to $\overline{CD}$.
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}    		\tkzLabelPoint[left](A){$A$}
+		\tkzDefPoint(5,0){B}    		\tkzLabelPoint[right](B){$B$}
+		\tkzDefPoint(3,0){C}  		\tkzLabelPoint[below](C){$C$}
+		\tkzDefPoint(1.5,0){D}		\tkzLabelPoint[below](D){$D$}
+		\tkzDrawSegment(A,B) 
+		\tkzInterLC(A,B)(C,D) 		\tkzGetPoints{D}{E}
+		\tkzCompass[lenght=1, red, thick](C,D)
+		\tkzCompass[lenght=1, red, thick](C,E)
+		\tkzLabelPoint[below](E){$E$}
+		\tkzDrawPoints[fill=gray,opacity=0.5](A,B,C,D,E)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\item Construct the equilateral $\widetriangle{FDE}$ on $\overline{DE}$.
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}    		\tkzLabelPoint[left](A){$A$}
+		\tkzDefPoint(5,0){B}    		\tkzLabelPoint[right](B){$B$}
+		\tkzDefPoint(3,0){C}  		\tkzLabelPoint[below](C){$C$}
+		\tkzDefPoint(1.5,0){D}		\tkzLabelPoint[below](D){$D$}
+		\tkzInterCC(D,E)(E,D)		 \tkzGetPoints{F}{G}
+		\tkzInterLC(A,B)(C,D) 		\tkzGetPoints{D}{E}
+		\tkzDrawSegment(A,B) 
+		\tkzCompass[lenght=1, red, thick](C,D)
+		\tkzCompass[lenght=1, red, thick](C,E)
+		\tkzCompass[lenght=1, blue, thick](D,F)
+		\tkzCompass[lenght=1, blue, thick](E,F)
+		\tkzLabelPoint[below](E){$E$}
+		\tkzLabelPoint[above](F){$F$}
+		\tkzDrawPoints[fill=gray,opacity=0.5](A,B,C,D,E,F,G)
+		\tkzDrawPolygon[red](D,F,E)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\clearpage
+
+\item Join $\overline{CF}$.
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}    		\tkzLabelPoint[left](A){$A$}
+		\tkzDefPoint(5,0){B}    		\tkzLabelPoint[right](B){$B$}
+		\tkzDefPoint(3,0){C}  		\tkzLabelPoint[below](C){$C$}
+		\tkzDefPoint(1.5,0){D}		\tkzLabelPoint[below](D){$D$}
+		\tkzInterCC(D,E)(E,D)		 \tkzGetPoints{F}{G}
+		\tkzInterLC(A,B)(C,D) 		\tkzGetPoints{D}{E}
+		\tkzDrawSegment(A,B) 
+		\tkzCompass[lenght=1, red, thick](C,D)
+		\tkzCompass[lenght=1, red, thick](C,E)
+		\tkzCompass[lenght=1, blue, thick](D,F)
+		\tkzCompass[lenght=1, blue, thick](E,F)
+		\tkzLabelPoint[below](E){$E$}
+		\tkzLabelPoint[above](F){$F$}
+		\tkzDrawPoints[fill=gray,opacity=0.5](A,B,C,D,E,F,G)
+		\tkzDrawPolygon[blue](D,F,E)
+		\tkzDrawSegment[red](F,C)
+		\tkzMarkRightAngle[red](D,C,F)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{lemma}
+The straight line $\overline{CF}$ has been drawn at right angles to the given straight line $\overline{AB}$ from the given point $C$ on it.
+\end{lemma}
+
+\end{enumerate}
+
+\begin{proof}
+
+\begin{itemize}
+
+\item[]
+
+\item Since 
+\[\overline{CD} = \overline{CE}\]
+
+\item and $\overline{CF}$ is common, $\therefore$ the two sides $\overline{CD}$ and $\overline{CF}$ equal the two sides $\overline{CE}$ and $\overline{CF}$ respectively, 
+
+\item and the base 
+\[\overline{DF} = \overline{EF}\]
+
+\item[$\therefore$] 
+\[\angle{DCF} = \angle{ECF}\] 
+
+\item and they are adjacent angles. \hfill\textcolor{red}{ I.Def.20, I.8}
+
+\item When a straight line standing on a straight line makes the adjacent angles equal to one another, each of the equal angles is right. $\therefore$ each of $\angle{DCF}$ and $\angle{FCE}$ is right. \hfill\textcolor{red}{I.Def.10}
+
+\item[$\therefore$] the straight line $\overline{CF}$ has been drawn at right angles to the given straight line $\overline{AB}$ from the given point $C$ on it.
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

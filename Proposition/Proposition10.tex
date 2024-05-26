@@ -1,0 +1,83 @@
+\renewcommand\qedsymbol{Q.E.F}
+
+\section*{Proposition 10}
+
+\begin{con}
+Let$ \overline{AB}$ be the given finite straight line.  It is required to bisect the finite straight line $\overline{AB}$.
+\end{con}
+
+\vspace{3cm}
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(3,0){B}
+		\tkzDrawSegment[red](A,B)
+		\tkzLabelPoints(A,B)
+		\tkzDrawPoints[fill=gray](A,B)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\vspace{2cm}
+
+\textit{Construction:}
+\begin{enumerate}
+    \item Construct an equilateral $\widetriangle{ABC}$ on the straight line $\overline{AB}$. \hfill\textcolor{red}{ I.1}
+    
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\ETri{0,0}{A}{C}{B}
+		\tkzCompass(A,C)
+		\tkzCompass(B,C)
+	\end{tikzpicture}
+ 	\caption{}
+\end{figure}
+
+\clearpage
+	
+   	\item Bisect the $\angle{ACB}$ by the straight line $\overline{CE}$.\hfill\textcolor{red}{ I.9}
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}[scale=0.8]
+		\ETri{0,0}{A}{C}{B}
+		\tkzDefMidPoint(A,B) 	\tkzGetPoint{D}  
+		\tkzInterCC(A,B)(B,A)		\tkzGetPoints{C}{E}
+	 	\tkzCompass(A,E)
+		\tkzCompass(B,E)
+		\tkzDrawSegment[red](C,E) 
+		\tkzLabelPoints[below](D,E)
+		\tkzDrawSegments(A,E B,E)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\end{enumerate}
+
+\begin{proof}
+
+\begin{itemize}
+
+\item[]
+
+\item Let 
+\[\overline{CA} = \overline{CB}\] 
+
+\item and $\overline{CD}$ is common to both $\widetriangle{ACD}$ and $\widetriangle{BCD}$.\hfill\textcolor{red}{ I.Def.20}
+
+\item By Side-Angle-Side (SAS) congruence:
+\[\widetriangle{ACD} \cong \widetriangle{BCD}\]
+
+\item{$\therefore$} the corresponding parts are equal:
+\[\overline{AD} = \overline{BD}\] \hfill\textcolor{red}{I.4}
+
+\item Thus, the straight line $\overline{AB}$ is bisected at the point $D$.
+
+\item Hence, the construction is successful, and the proof is complete.
+
+\end{itemize}
+
+\end{proof}

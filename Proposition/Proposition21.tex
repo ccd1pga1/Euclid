@@ -1,0 +1,79 @@
+
+\section*{Proposition 21}
+
+\begin{thm}
+If from the ends of one of the sides of a triangle, two straight lines are constructed meeting within the triangle, then the sum of the straight lines so constructed is less than the sum of the remaining two sides of the triangle. Additionally, the constructed straight lines contain a greater angle than the angle contained by the remaining two sides.
+\end{thm}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\Tri{B}{3}{0}{C}{1.2}{1.6}{D}{green, opacity=0.7}
+		\Tri{B}{3}{0}{C}{1}{4}{A}{yellow, opacity=0.7}
+		\tkzLabelPoints[above](D)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+Let $\triangle{ABC}$ be a triangle, and from the ends $B$ and $C$ of one of the sides $\overline{BC}$, let the two straight lines $\overline{BD}$ and$ \overline{DC}$ be constructed meeting within the triangle.
+
+Draw $\overline{BD}$ through to $E$. \hfill\textcolor{red}{I.Post.2}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\Tri{B}{3}{0}{C}{1.2}{1.6}{D}{green, opacity=0.7}
+		\Tri{B}{3}{0}{C}{1}{4}{A}{yellow, opacity=0.7}
+		\tkzInterLL(B,D)(A,C)						\tkzGetPoint{E}
+		\tkzDrawPoints(E)
+		\tkzLabelPoints[above](D,E)
+		\tkzDrawSegment[red](D,E)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\clearpage
+
+\begin{proof}
+
+\begin{itemize}
+
+\item[]
+
+\item Since in any triangle, the sum of two sides is greater than the remaining one, $\therefore$ in the  $\triangle{ABE}$, 
+\[\overline{AB} + \overline{AE} > \overline{BE}\] \hfill\textcolor{red}{ I.20}
+
+\item Add $\overline{EC}$ to each,
+\[\overline{BA} + \overline{AC} > \overline{BE} + \overline{EC}\] \hfill\textcolor{red}{C.N.1}
+
+\item Again, since in $\widetriangle{CED}$, 
+\[\overline{CE} + \overline{ED} > \overline{CD}\] 
+add $\overline{DB}$ to each. 
+
+\item[$\therefore$] 
+\[\overline{CE} + \overline{EB} > \overline{CD} + \overline{DB.}\] \hfill\textcolor{red}{I.20, C.N.1}
+
+\item But,
+\[\overline{BA} +  \overline{AC} > \overline{BE} + \overline{EC}\] 
+
+\item[$\therefore$]
+\[\overline{BA} + \overline{AC} >> \overline{BD} + \overline{DC}.\] \hfill\textcolor{red}{ C.N.1}
+
+\clearpage
+
+\item Again, since in any triangle, the exterior angle is greater than the interior and opposite angle, $\therefore$ in $\widetriangle{CDE}$, \[\angle{BDC} > \angle{CED}\] \hfill\textcolor{red}{I.16} 
+
+\item For the same reason, moreover, in $\widetriangle{ABE}$, 
+\[\angle{CEB} > \angle{BAC}\] 
+
+\item But 
+\[\angle{BDC} > \angle{CEB}\] 
+
+\item[$\therefore$] 
+\[\angle{BDC} >> \angle{BAC}\]
+
+\item[$\therefore$] if from the ends of one of the sides of a triangle two straight lines are constructed meeting within the triangle, then the sum of the straight lines so constructed is less than the sum of the remaining two sides of the triangle, but the constructed straight lines contain a greater angle than the angle contained by the remaining two sides.
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

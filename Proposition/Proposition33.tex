@@ -1,0 +1,66 @@
+\section{Proposition 33}
+
+\begin{thm}
+Straight lines which join the ends of equal and parallel straight lines in the same directions are themselves equal and parallel.
+\end{thm}
+
+\begin{proof}
+
+\begin{itemize}
+
+\item[]
+
+\item Let $\overline{AB}$ and $\overline{CD}$ be equal and parallel, and let the straight lines $\overline{AC}$ and $\overline{BD}$ join them at their ends in the same directions.
+I say that $\overline{AC}$ and $\overline{BD}$ are also equal and parallel.
+
+\item Join $BC$. \hfill\textcolor{red}{I.33,I.Post.1}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){C}
+		\tkzDefPoint(4,0){D}
+		\tkzDefPoint(-1,3){A}
+		\tkzDefPoint(3,3){B}
+		\tkzDrawPolygon(A,B,D,C)
+		\tkzDrawSegment[red](C,B)
+		\tkzDrawPoints(A,B,C,D)
+		\tkzLabelPoints[below](C,D)
+		\tkzLabelPoints[above](A,B)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\item Since 
+\[\overline{AB} \parallel \overline{CD}\] 
+and $BC$ falls upon them, 
+
+\item[$\therefore$] the alternate angles 
+\[\angle{ABC} = \angle {BCD}\] \hfill\textcolor{red}{I.29}
+
+\item Since 
+\[\overline{AB} = \overline{CD}\] 
+and $\overline{BC}$ is common, the two sides $\overline{AB}$ and $\overline{BC}$ equal the two sides $\overline{DC}$ and $\overline{CB}$, and 
+\[\angle{ABC} = \angle{BCD}\]
+
+\item[$\therefore$] the base 
+\[\overline{AC} = \overline{BD}\] 
+the triangle 
+\[\widetriangle{ABC} = \widetriangle{DCB}\] 
+and the remaining angles equal the remaining angles respectively, namely those opposite the equal sides. 
+
+\item[$\therefore$] the angle 
+\[\angle{ACB} = \angle{CBD}\]\hfill\textcolor{red}{I.4}
+
+\item Since the straight line $\overline{BC}$ falling on the two straight lines $\overline{AC}$ and $\overline{BD}$ makes the alternate angles equal to one another, 
+
+\item[$\therefore$] 
+\[\overline{AC} \parallel \overline{BD}\]\hfill\textcolor{red}{I.27}
+
+And it was also proved equal to it. $\therefore$ straight lines which join the ends of equal and parallel straight lines in the same directions are themselves equal and parallel.
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage
+	

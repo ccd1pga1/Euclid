@@ -1,0 +1,107 @@
+
+\section*{Proposition 29}
+
+\begin{thm}
+In a system of parallel straight lines, if a straight line $\overline{EF}$ intersects the lines $\overline{AB}$ and $\overline{CD}$, then the following statements hold true:
+\end{thm}
+
+\begin{enumerate}
+    \item Alternate $\angle{AGH}$ and $\angle{GHD}$ are equal.
+    \item Exterior $\angle{EGB}$ is equal to the interior and opposite $\angle{GHD}$.
+    \item The sum of the interior angles on the same side, namely $\angle{BGH}$ and $\angle{GHD}$, is equal to two right angles.
+\end{enumerate}
+
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(4,0){B}
+		\tkzDefPoint(0,-2){C}
+		\tkzDefPoint(4,-2){D}
+		\tkzDefPoint(1,1){E}
+		\tkzDefPoint(2,-3){F}
+		\tkzDrawSegments(A,B C,D)
+		\tkzDrawSegment[red](E,F)
+		\tkzInterLL(A,B)(E,F)		\tkzGetPoint{G}
+		\tkzInterLL(C,D)(E,F)		\tkzGetPoint{H}
+		\tkzLabelPoints[left](A,C)
+		\tkzLabelPoints[above](B,E,H)
+		\tkzLabelPoints[below](D,F,G)
+		\tkzDrawPoints[red](G,H)
+	\end{tikzpicture}
+   	\caption{Alternate angles}
+\end{figure}   	
+
+\begin{proof}
+
+\begin{itemize}
+\textit{Proof of Statement 1:} 
+
+\item Suppose, for the sake of contradiction, that,  
+\[\angle{AGH} \neq \angle{GHD}\] 
+
+\clearpage
+
+\item Without loss of generality, assume:
+\[\angle{AGH} > \angle{GHD}\] 
+
+\item Adding $\angle{BGH}$ to both sides, we get,
+ \[\angle{AGH} + \angle{BGH} > \angle{BGH} + \angle{GHD}\]
+
+\item However, by the Angle Sum Property, 
+\[\angle{AGH} + \angle{BGH} = 2\times90^\circ\]
+
+\item This implies that, \hfill\textcolor{red}{I.13}
+\[\angle{BGH} + \angle{GHD} <2\times\ang{90}\] 
+
+Now, by the Parallel Postulate, extended lines produced from angles less than two right angles meet. This contradicts the fact that $\overline{AB}$ and $\overline{CD}$, if produced indefinitely, should meet, but they are parallel by hypothesis 
+
+\item[$\therefore$] our assumption that, 
+\[\angle{AGH} \neq \angle{GHD}\]
+must be false, and thus,\hfill\textcolor{red}{Post.5}
+\[\angle{AGH} = \angle{GHD}\] 
+
+\end{itemize}
+
+\clearpage
+
+\textit{Proof of Statement 2:} 
+
+\begin{itemize}
+
+\item Since 
+\[\angle{AGH} = \angle{GHD}\] 
+
+\item (proved above) and 
+\[\angle{AGH} = \angle{EGB}\] 
+
+\item (given), it follows that 
+\[\angle{EGB} = \angle{GHD}\]
+
+\end{itemize}
+
+\textit{Proof of Statement 3:} 
+
+\begin{itemize}
+
+\item Adding angle $\angle{BGH}$ to both sides of the equation 
+\[\angle{EGB} = \angle{GHD}\]
+
+\item We obtain
+\[\angle{EGB} + \angle{BGH} = \angle{BGH} + \angle{GHD}\]
+
+\item By the Angle Sum Property,
+\[\angle{EGB} + \angle{BGH} = 2\times\ang{90}\]
+
+\item $\therefore$ \hfill\textcolor{red}{I.13}
+\[\angle{BGH} + \angle{GHD} =2\times\ang{90}\]
+
+\clearpage
+
+Hence, we have established that a straight line falling on parallel straight lines makes the alternate angles equal to one another, the exterior angle equal to the interior and opposite angle, and the sum of the interior angles on the same side equal to two right angles. 
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

@@ -1,0 +1,173 @@
+
+\renewcommand\qedsymbol{Q.E.F}
+
+\section*{Proposition 23}
+
+\begin{con}
+To construct a rectilinear angle equal to a given rectilinear angle on a given straight line and at a point on it, let $\angle{DCE}$ be the given rectilinear angle, $\overline{AB}$ the given straight line, and $A$ the point on it. Construct a rectilinear angle $\angle{KAG}$ on the given straight line $\overline{AB}$ and at the point $A$ on it such that $\angle{DCE} = \angle{FAG}$.
+\end{con}
+
+\textbf{Construction:}
+
+\begin{figure}[H]
+	\begin{subfigure}{0.45\textwidth}
+		\begin{tikzpicture}
+			\tkzDefPoint(0,0){C}
+			\tkzDefPoint(2.5,-2){Y}
+			\tkzDefPoint(2,1.5){Z}
+			\tkzDefPointOnLine[pos=0.75](C,Y)	\tkzGetPoint{D}
+			\tkzDefPointOnLine[pos=0.75](C,Z)	\tkzGetPoint{E}
+			\tkzDrawSegments(Y,C C,Z)
+			\tkzLabelPoints(C,D,E)
+			\tkzDrawPoints(C,D,E)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+%%%%%%%%%%%%%%%%5
+	\begin{subfigure}{0.45\textwidth}
+		\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(6,0){B}
+		\tkzDrawSegment(A,B)
+		\tkzDrawPoints(A)
+		\tkzLabelPoints(A,B)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+	\caption{}
+\end{figure}
+
+\begin{enumerate}
+
+	\item Draw the segment $\overline{ED}$. \hfill\textcolor{red}{Post.1}
+	
+\begin{figure}[H]
+	\begin{tikzpicture}
+		% Def
+		\tkzDefPoint(0,0){C}
+		\tkzDefPoint(2.5,-2){Y}
+		\tkzDefPoint(2,1.5){Z}
+		\tkzDefPointOnLine[pos=0.75](C,Y)	\tkzGetPoint{D}
+		\tkzDefPointOnLine[pos=0.75](C,Z)	\tkzGetPoint{E}
+		% draw
+		\tkzDrawSegments(Y,C C,Z)
+		\tkzDrawSegment[red](E,D)
+		\tkzDrawPoints(C,D,E)
+		% label
+		\tkzLabelPoints(C,D,E)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+    	\item Draw the given straight line $\overline{AB}$ and mark the point $A$.
+     
+     	\item On $\overline{AB}$ mark the points $G$, $H$ and $I$ so that,  
+     	\[\overline{AG}=\overline{CD}\]
+     	 \[\overline{GH}=\overline{ED}\]
+     	 \[\overline{AI}=\overline{CE}\] \hfill\textcolor{red}{I.22}
+     
+\begin{figure}[H]
+		\begin{tikzpicture}
+		% def
+\tkzDefPoint(0,0){X}
+\tkzDefPoint(2.5,-2){Y}
+\tkzDefPoint(2,1.5){Z}
+\tkzDefPoint(0,-5){A}
+\tkzDefPoint(10,-5){B}
+% calc
+\tkzCalcLength(X,Y) \tkzGetLength{XY}
+\tkzCalcLength(X,Z) \tkzGetLength{XZ}
+\tkzCalcLength(Y,Z) \tkzGetLength{YZ}
+\tkzDefPointWith[linear normed,K=\XY](A,B) \tkzGetPoint{G}
+\tkzDefPointWith[linear normed,K=\YZ](G,B) \tkzGetPoint{H}
+\tkzDefPointWith[linear normed,K=\XZ](A,B) \tkzGetPoint{I}
+\tkzCalcLength(A,I) \tkzGetLength{AI}
+\tkzCalcLength(H,I) \tkzGetLength{HI}
+\tkzCalcLength(A,G) \tkzGetLength{AG}
+		% draw
+		\tkzDrawSegment(A,B)
+		\tkzDrawPoints(A)
+		\tkzCompass(A,G)
+		\tkzCompass(G,H)
+		\tkzCompass(A,I)
+		%\begin{scope}[dim style/.style={dashed, sloped, teal}]
+			%\tkzDrawSegment[dim={\pgfmathprintnumber\XY, -6pt, text=red}](X,Y)
+			%\tkzDrawSegment[dim={\pgfmathprintnumber\XZ,  6pt, text=red}](X,Z)
+			%\tkzDrawSegment[dim={\pgfmathprintnumber\YZ, -6pt, text=red}](Y,Z)  
+			%\tkzDrawSegment[dim={\pgfmathprintnumber\AG, -6pt, text=red}](A,G)
+			%\tkzDrawSegment[dim={\pgfmathprintnumber\AI, -6pt, text=red}](A,I)
+			%\tkzDrawSegment[dim={\pgfmathprintnumber\HI, -6pt, text=red}](H,I)
+			%\tkzDrawSegment[dim={\pgfmathprintnumber\AG, -6pt, text=red}](A,G)                  
+		%\end{scope}
+		% lab
+		\tkzLabelPoints(A,G,H,I,B)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}    
+
+\item Mark the intersect of $\mathscr{C}(A;AG)$ and $\mathscr{C}(H;HI)$, $K$. \hfill\textcolor{red}{I.22}
+
+ \item Construct a triangle $\widetriangle{AKH}$ such that:
+     
+          \[\overline{AK} = \overline{ED}\]
+           \[ \overline{AH} = \overline{CD}\]
+           \[ \overline{KH} = \overline{CE}\]\hfill\textcolor{red}{I.22}
+      
+
+\begin{figure}[H]
+		\begin{tikzpicture}
+		% def
+\tkzDefPoint(0,0){X}
+\tkzDefPoint(2.5,-2){Y}
+\tkzDefPoint(2,1.5){Z}
+\tkzDefPoint(0,-5){A}
+\tkzDefPoint(10,-5){B}
+% calc
+\tkzCalcLength(X,Y) \tkzGetLength{XY}
+\tkzCalcLength(X,Z) \tkzGetLength{XZ}
+\tkzCalcLength(Y,Z) \tkzGetLength{YZ}
+\tkzDefPointWith[linear normed,K=\XY](A,B) \tkzGetPoint{G}
+\tkzDefPointWith[linear normed,K=\YZ](G,B) \tkzGetPoint{H}
+\tkzDefPointWith[linear normed,K=\XZ](A,B) \tkzGetPoint{I}
+		% draw
+		\tkzDrawSegment(A,B)
+		\tkzDrawPoints(A,I,G,H)
+		\tkzInterCC(G,H)(A,I)					\tkzGetPoints{J}{K}
+		\tkzCalcLength(A,G) \tkzGetLength{AG}
+		\tkzCalcLength(A,K) \tkzGetLength{AK}
+		\tkzCalcLength(K,G) \tkzGetLength{KG}
+		% draw
+		\tkzDrawSegment(A,B)
+		\tkzDrawPoints(A,G,H,I)
+		\tkzCompass(G,K)
+		\tkzCompass(H,K)
+		%\begin{scope}[dim style/.style={dashed, sloped, teal}]
+			%\tkzDrawSegment[red,dim={\pgfmathprintnumber\AG, -6pt, text=red}](A,G)
+			%\tkzDrawSegment[red,dim={\pgfmathprintnumber\AK,  6pt, text=red}](A,K)
+			%\tkzDrawSegment[red,dim={\pgfmathprintnumber\KG, -6pt, text=red}](K,G)                    
+		%\end{scope}
+		\tkzDrawSegments[red](A,K A,G K,G)
+		% lab
+		\tkzLabelPoints(A,B,G,H,I,K)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}    
+    
+\end{enumerate}
+
+\begin{proof}
+
+\begin{itemize}
+
+\item[]
+
+\item By construction, 
+\[\angle{DCE} = \angle{KAG}\]
+
+\item[$\therefore$] a rectilinear $\angle{KAG}$ has been constructed on the given straight line $\overline{AB}$ and at the point $A$ on it, equal to the given rectilinear $\angle{DCE}$. \hfill\textcolor{red}{I.8}
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

@@ -1,0 +1,45 @@
+\begin{post}
+To describe a circle with any center and radius.
+\end{post}
+
+In his Elements, Euclid outlines several methods of construction fundamental to geometry, one of which is the drawing of a circle with a compass. This construction, detailed as the third postulate, enables the creation of a circle given two points: one for the center and another on the circumference. The compass used in this method can have an arbitrarily large radius and does not maintain its radius once removed from the page, reflecting Euclid's concept of a collapsing compass.
+
+In order to construct a circle certain characteristics are needed: 
+
+\begin{enumerate}
+
+\item a point $A$ designated as the center of the circle, 
+\item another point $B$ located on the circumference of the circle, 
+\item a plane within which these two points exist. 
+
+\end{enumerate}
+
+\sidenote{\raggedright\ssmall{This diagram depicts a straight line segment CD, with points A and B marked in red on the segment, demonstrating the concept of producing a straight line from point C to D.}}
+\begin{figure}[H]
+\centering
+		\begin{tikzpicture}
+			\tkzDefPoint(0,0){A}
+			\tkzDefPoint(5,0){B}
+			\tkzDefPoint(-3,0){C}
+			\tkzDefPoint(6,0){D}
+			\tkzDrawSegment(C,D)
+			\tkzLabelPoints[below](A,B,C,D)
+			\tkzDrawPoints[red](A,B,C,D)
+		\end{tikzpicture}
+		\caption{Produce a straight line}
+\end{figure}
+
+Euclid's description of a circle in \textit{Definitions I.15} and \textit{Definition I.16} is notable for its simplicity and depth: a circle is a plane figure with all radii equal, extending from the center to the circumference. This definition underpins many of the \textit{Propositions} within Elements, requiring the geometer to employ just a collapsing compass and a straightedge to validate theorems. The notion of the collapsing compass, a tool that resets its radius each time it is lifted, is pivotal in ensuring that geometric constructions rely solely on given points and distances, reinforcing the accuracy and replicability of geometric principles.
+
+This seemingly simple Postulate underpins much of our daily life, often taken for granted. Consider architecture: the need to draw accurate diagrams is imperative to solving force equations that building components must withstand. The use of a compass, a tool perfected by Euclid, demonstrates his rigor and the detailed thought that goes into each construction. Since the compass does not retain its set radius once lifted from the paper, accurately planning the sequence of circles and arcs drawn is crucial.
+
+\clearpage
+
+Thomas Heath provides valuable insight into the language used in the \textit{Postulates}, highlighting a shift from the passive 'a circle can be drawn' in the original text to the more active 'to describe' in Proclus's interpretation, aligning it with the first two postulates. Interestingly, the Greeks did not have a specific term for 'radius'; instead, they described it indirectly as 'a straight line drawn from the center'\margincite{Heath}. This absence of direct terminology reflects a broader flexibility in Euclid's definitions, allowing for circles of any size, from infinitesimally small to indefinitely large. This notion suggests a continuum of sizes, hinting at a boundless but finite space—a concept that would later influence other mathematical fields.
+
+The philosophical implications of Euclidean geometry, particularly the circle, extend beyond mere mathematical interest. Shortly after Euclid, the Neoplatonist movement, spearheaded by philosophers like Plotinus,\sidenote{\raggedright\ssmall{Plotinus, a philosopher and a wirter on metaphysical systems, in the 3rd century CE, was the founder of Neoplatonism, a school of thought that sought to interpret and synthesize the ideas of Plato.}}began to explore geometry's metaphysical aspects. Plotinus viewed the emanation of all existence from a singular source, the One or the Good, through the lens of geometric symmetry, harmony, and proportion—ideas central to the understanding of circles and their inherent properties. Plotinus’ concept of emanation, where the One is at the top, followed by the Intellect (Nous), and then the Soul (Psyche), can be metaphorically represented by concentric circles, with the One being the innermost circle. Each level of reality emanates from the One, just as circles might ripple outwards from a point. This emanation is not a diminishment but an overflowing of abundance, where each level participates in the perfection of the One in a way akin to geometric principles of symmetry and harmony.
+
+By examining these elements together, from the technical aspects of Euclidean constructions to their philosophical resonance, we can gain a comprehensive understanding of the profound impact of Euclidean geometry on both mathematics and philosophy. This approach not only elucidates the geometric principles but also connects them to broader metaphysical theories, underscoring the enduring relevance of Euclid's work.
+
+\clearpage
+

@@ -1,0 +1,174 @@
+
+\section*{Proposition 26}
+
+\begin{thm}
+(SAS Congruence Criterion):
+If $\widetriangle{ABC}$ and $\widetriangle{DEF}$ have $\angle{ABC}$ and $\angle{BCA}$ equal to $\angle{DEF}$ and $\angle{EFD}$, respectively, and one side $\overline{BC}$ equal to $\overline{EF}$, then the triangles are congruent. This means that $\overline{AB}$ equals $\overline{DE}$, $\overline{AC}$ equals $\overline{DF}$, and $\angle{BAC}$ equals $\angle{EDF}$.
+\end{thm}
+
+\begin{figure}[H]
+	\begin{subfigure}{0.35\textwidth}
+		\begin{tikzpicture}
+			\iTri{B}{C}{A}{blue}
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+%%%%%%%%%%%%
+	\begin{subfigure}{0.35\textwidth}
+		\begin{tikzpicture}
+			\iTri{E}{F}{D}{gray}
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+	\caption{SAS Congruence}
+\end{figure}
+
+\textbf{Given:} 
+
+\begin{itemize}
+
+\item $\triangle{ABC}$ and $\triangle{DEF}$ such that:
+  
+    \[\angle{ABC} = \angle{DEF}\]
+    \[\angle{BCA} = \angle{EFD}\]
+    \[\overline{BC} = \overline{EF}\]
+
+\item \textbf{To Prove:} 
+
+  \[\overline{AB} = \overline{DE}\]
+  \[\overline{AC} = \overline{DF}\]
+  \[\angle{BAC} = \angle{EDF}\]
+  
+  \end{itemize}
+  
+  \clearpage
+  
+\begin{proof}
+
+\textbf{Case 1:} Suppose $AB \neq DE$.
+
+\begin{itemize}
+
+\item[]
+
+  \item By the Segment Equality Postulate, one must be greater.\hfill\textcolor{red}{I.Post.1}
+  
+  \item Assume $AB > DE$.
+  
+  \item Construct $BG = DE$ and join $GC$.
+  \[\widetriangle{GBC} \cong \widetriangle{DEF}\]\hfill\textcolor{red}{ I.4}
+  
+  \begin{figure}[H]
+	\begin{subfigure}{0.35\textwidth}
+		\begin{tikzpicture}
+			\iTri{B}{C}{A}{blue}
+			\tkzDefPointOnLine[pos=0.7](B,A)	\tkzGetPoint{G}
+			\tkzDrawSegment[red](C,G)
+			\tkzLabelPoints[left, red](G)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+%%%%%%%%%%%%%%%%		
+	\begin{subfigure}{0.35\textwidth}	
+		\begin{tikzpicture}
+			\iTri{E}{F}{D}{gray}
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+	\caption{SAS Congruence.2}
+\end{figure}
+
+  \item[$\therefore$], 
+  \[\angle{GCB} = \angle{DFE}\]
+  
+  \item But, (given).
+  \[\angle{DFE} = \angle{ACB}\]
+  
+  \item Hence, 
+  \[\angle GCB = \angle BAC\]
+  
+  \clearpage
+  
+  \item This is impossible, as the lesser angle cannot equal the greater angle. Thus,
+  \[AB = DE\]
+  
+\end{itemize}
+
+\textbf{Case 2:} $AB = DE$.
+
+\begin{itemize}
+
+  \item Given that $BC = EF$,
+  
+  \item By Side-Side-Side (SSS) congruence:
+   \[ \widetriangle{ABC} \cong \widetriangle{DEF}\]\hfill\textcolor{red}{C.N.1}
+ 
+  \item[$\therefore$], $AC = DF$ and $\angle BAC = \angle EDF$.
+  
+\end{itemize}
+
+\textbf{Case 3:} Suppose $BC \neq EF$.
+
+\begin{itemize}
+
+  \item By the Segment Equality Postulate, one must be greater.\hfill\textcolor{red}{I.Post.1}
+ 
+  \item Assume $BC > EF$.
+ 
+  \item Construct $BH = EF$ and join $AH$.
+ 
+ \begin{figure}[H]
+	\begin{subfigure}{0.35\textwidth}
+   		\begin{tikzpicture}
+			\iTri{B}{C}{A}{blue}
+			\tkzDefPointOnLine[pos=0.7](B,C)	\tkzGetPoint{H}
+			\tkzLabelPoints[below, red](H)
+			\tkzDrawSegment[red](A,H)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+%%%%%%%%%%%%%%%%5
+	\begin{subfigure}{0.35\textwidth}
+		\begin{tikzpicture}
+			\iTri{E}{F}{D}{gray}
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+	\caption{}
+\end{figure}
+ 
+  \item By Side-Angle-Side (SAS) congruence:\hfill\textcolor{red}{I.Post.4}
+   \[\triangle{ABH} \cong \triangle{DEF}\]
+  
+  \item[$\therefore$]
+  \[\angle{BHA} = \angle{EFD}\] 
+  
+  \item But,(given),
+   \[\angle{EFD} = \angle{BCA}\] 
+  
+  \item Hence, 
+  \[\angle{BHA} = \angle{BCA}\]
+  
+  \item This is impossible, as the exterior angle of a triangle cannot be equal to its interior opposite angle.
+  
+  \item Thus, $BC = EF$.
+
+\end{itemize}
+
+\textbf{Conclusion:}
+\begin{itemize}
+
+  \item From both cases, it's evident that:
+
+    \[AB = DE\]
+    \[AC = DF\]
+    \[\angle BAC = \angle EDF\]
+  
+  \item Thus, if two triangles have two angles equal to two angles respectively, and one side equal to one side, then the remaining sides equal the remaining sides and the remaining angle equals the remaining angle.
+  
+\end{itemize}
+
+\end{proof}
+
+\clearpage
+			

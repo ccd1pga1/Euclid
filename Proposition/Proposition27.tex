@@ -1,0 +1,65 @@
+
+\section*{Proposition 27}
+
+\begin{thm}
+If a straight line $\overline{EF}$ intersects two straight lines $\overline{AB}$ and $\overline{CD}$, and the alternate $\angle{AEF}$ and $\angle{EFD}$ are equal, then $\overline{AB}$ is parallel to $\overline{CD}$.
+\end{thm}
+
+\textbf{To Prove:} $\overline{AB}$ is parallel to $\overline{CD}$.
+
+\begin{proof}
+
+Assume, for the sake of contradiction, that $\overline{AB}$ and $\overline{CD}$ when produced meet in the direction of $B$ and $D$ at a point $G$.
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(3,0){B}
+		\tkzDefPoint(0,-1){C}
+		\tkzDefPoint(3,-1){D}
+		\tkzDefPoint(5,-0.5){G}
+		\tkzDrawSegments(A,B C,D B,G D,G)
+		\tkzLabelPoints[left](A,C)
+		\tkzLabelPoints[above](B)
+		\tkzLabelPoints[below](D)
+		\tkzLabelPoints[right](G)
+	\end{tikzpicture}
+\end{figure}
+
+\begin{itemize}
+   \item In $\widetriangle{GEF}$,  the exterior $\angle{AEF}$ equals the interior and opposite $\angle{EFG}$ (by exterior angle theorem).
+
+\begin{figure}[H]   
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(3,0){B}
+		\tkzDefPoint(0,-1){C}
+		\tkzDefPoint(3,-1){D}
+		\tkzDefPoint(5,-0.5){G}
+		\tkzDefPoint(1,1){H}
+		\tkzDefPoint(2,-2){I}
+		\tkzDrawSegments(A,B C,D B,G D,G)
+		\tkzDrawSegment[red](H,I)
+		\tkzInterLL(A,B)(H,I)		\tkzGetPoint{E}
+		\tkzInterLL(C,D)(H,I)		\tkzGetPoint{F}
+		\tkzLabelPoints[left](A,C)
+		\tkzLabelPoints[above](B,E)
+		\tkzLabelPoints[below](D,F)
+		\tkzLabelPoints[right](G)
+		\tkzDrawPoints[red](E,F)
+	\end{tikzpicture}
+\end{figure}   
+   
+   
+   \item This is impossible, as the exterior angle cannot be equal to the interior and opposite angle in a triangle.\hfill\textcolor{red}{ I.16}
+\end{itemize}
+
+\item[$\therefore$] $\overline{AB}$ and $\overline{CD}$ when produced do not meet in the direction of $B$ and $D$. Similarly, it can be proved that they do not meet towards $A$ and $C$.
+
+Since straight lines that do not meet in either direction are parallel, it follows that $\overline{AB}$ is parallel to $\overline{CD}$. \hfill\textcolor{red}{I.Def.23}
+
+\textbf{Conclusion:} If a straight line falling on two straight lines makes the alternate angles equal to one another, then the straight lines are parallel to one another. 
+
+\end{proof}
+
+\clearpage

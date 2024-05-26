@@ -1,0 +1,106 @@
+
+\section*{Proposition 9}
+
+\renewcommand\qedsymbol{Q.E.F}
+
+\begin{con}
+It is required to bisect $\angle{BAC}$.
+\end{con}
+
+\begin{figure}[H]
+ 	\begin{tikzpicture}
+ 		\tkzDefPoint(0,0){A}
+ 		\tkzDefPoint(-1.5,-1.5){B}
+ 		\tkzDefPoint(1.5,-1.5){C}
+ 		\tkzDrawSegments(A,C A,B)
+ 		\tkzLabelPoints(A,B,C)
+ 		\tkzDrawPoints[gray](A,B,C)
+	\end{tikzpicture}
+ 	\caption{}
+\end{figure}
+
+\textbf{Proof by Construction:}
+
+\begin{enumerate}
+    \item Take an arbitrary point $D$ on $\overline{AB}$.
+    \item Cut off $\overline{AE}$ from $\overline{AC}$ equal to $\overline{AD}$, and join $\overline{DE}$.\hfill \textcolor{red}{I.3}
+ 
+\begin{figure}[H]   
+	\begin{tikzpicture}
+ 		\tkzDefPoint(0,0){A}
+ 		\tkzDefPoint(-3,-3){B}
+ 		\tkzDefPoint(3,-3){C}
+ 		\tkzDefPointOnLine[pos=0.6](A,B)	\tkzGetPoint{D}
+ 		\tkzDefPointOnLine[pos=0.6](A,C)	\tkzGetPoint{E}
+ 		\tkzDrawSegments(A,C A,B D,E)
+ 		\tkzLabelPoints(A,B,C,D,E)
+ 		\tkzDrawPoints[gray](A,B,C,D,E)
+	\end{tikzpicture} 
+    	\caption{}
+\end{figure}
+
+\clearpage
+    
+    \item Construct the equilateral $\triangle{DEF}$ on $DE$.\hfill \textcolor{red}{I.1}
+
+\begin{figure}[H]    
+	\begin{tikzpicture}
+ 		\tkzDefPoint(0,0){A}
+ 		\tkzDefPoint(-3,-3){B}
+ 		\tkzDefPoint(3,-3){C}
+ 		\tkzDefPointOnLine[pos=0.6](A,B)	\tkzGetPoint{D}
+ 		\tkzDefPointOnLine[pos=0.6](A,C)	\tkzGetPoint{E}
+ 		\tkzDrawSegments(A,C A,B D,E)
+ 		\tkzInterCC(D,E)(E,D)			\tkzGetPoints{G}{F}
+ 		\tkzDrawPolygon[fill=green, opacity=0.5](D,F,E)
+ 		\tkzLabelPoints(A,B,C,D,E,F)
+ 		\tkzDrawPoints[gray](A,B,C,D,E,F)
+	\end{tikzpicture} 
+    	\caption{}
+\end{figure}
+
+    \item Join $AF$.
+    \item Then, the $\angle{BAC}$ is bisected by the straight line $\overline{AF}$.
+
+\begin{figure}[H]    
+	\begin{tikzpicture}
+ 		\tkzDefPoint(0,0){A}
+ 		\tkzDefPoint(-3,-3){B}
+ 		\tkzDefPoint(3,-3){C}
+ 		\tkzDefPointOnLine[pos=0.6](A,B)	\tkzGetPoint{D}
+ 		\tkzDefPointOnLine[pos=0.6](A,C)	\tkzGetPoint{E}
+ 		\tkzDrawSegments(A,C A,B D,E)
+ 		\tkzInterCC(D,E)(E,D)			\tkzGetPoints{G}{F}
+ 		\tkzDrawPolygon(D,F,E)
+ 		\tkzLabelPoints(A,B,C,D,E,F)
+ 		\tkzDrawPoints[gray](A,B,C,D,E,F)
+ 		\tkzDrawSegment[red](A,F)
+ 	\end{tikzpicture}   
+    	\caption{}
+\end{figure}
+
+\end{enumerate}
+
+\clearpage
+
+\begin{proof}
+
+\begin{lemma}
+since $AD = AE$ and $AF$ is common, the two sides $AD$ and $AF$ are equal to the two sides $EA$ and $AF$ respectively.\hfill \textcolor{red}{C.N.1,I.Post.1}
+\end{lemma}
+
+\begin{lemma}
+Since $\overline{DF} = \overline{EF}$, the angles $\angle{DAF}$ and $\angle{EAF}$ are equal.\hfill \textcolor{red}{Def.20,I.8}
+\end{lemma}
+
+\textbf{Conclusion:} 
+
+\begin{itemize}
+
+\item[$\therefore$] the given rectilinear angle $\angle BAC$ is bisected by the straight line $AF$.\hfill \textcolor{red}{I.8}
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

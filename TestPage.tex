@@ -1,0 +1,178 @@
+\documentclass{book}
+
+
+\usepackage{MyStyle}
+\usepackage{Maths}
+\usepackage{Design}
+
+\begin{document}
+
+\renewcommand\qedsymbol{Q.E.F.}
+
+\section*{Proposition 22}
+
+\section{Triangle Construction Theorem}
+
+\begin{thm}
+To construct a triangle out of three straight lines which equal three given straight lines, it is necessary that the sum of any two of the straight lines should be greater than the remaining one.
+\end{thm}
+
+\textbf{Construction}
+
+\begin{enumerate}
+
+\item[]
+
+\item Let $A = 4$, $B = 5$, and $C = 6$ be the three given straight lines. Construct a triangle with sides equal to $A$, $B$, and $C$ if $A + B > C$, $A + C > B$, and $B + C > A$. \hfill\textcolor{red}{I.20}
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\tkzDefPoint[label=left:{$C$}](0,0){a}
+		\tkzDefPoint(2,0){b}
+		\tkzDefPoint[label=left:{$B$}](0,1){c}
+		\tkzDefPoint(3,1){d}
+		\tkzDefPoint[label=left:{$A$}](0,2){e}
+		\tkzDefPoint(4,2){f}
+		\tkzDrawSegments(a,b c,d e,f)
+	\end{tikzpicture}
+	\caption{Triangle Construction Step:1}
+\end{figure}
+
+\item Set out a straight line $\overline{DE}$, terminated at $D$ but of infinite length in the direction of $E$. Make 
+\[\overline{DF} = A\]
+\[\overline{FG} = B\]  
+\[\overline{GH} = C\] \hfill\textcolor{red}{I.Post.3 I.Post.1}
+
+\vspace{2cm}
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(-4,0){D}
+		\tkzDefPoint(8,0){E}
+		\tkzDefPoint(0,0){F}
+		\tkzDefPoint(3,0){G}
+		\tkzDefPoint(5,0){H}
+		\tkzDrawSegment(D,E)
+		\tkzDrawPoints(D,F,G,H)
+		\tkzLabelPoints(D,E,F,G,H)
+	\end{tikzpicture}
+	\caption{Triangle Construction Step:2}
+\end{figure}
+
+\clearpage
+
+\item Describe $\mathscr{C}(F;FD)$. 
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(-4,0){D}
+		\tkzDefPoint(8,0){E}
+		\tkzDefPoint(0,0){F}
+		\tkzDefPoint(3,0){G}
+		\tkzDefPoint(5,0){H}
+		\tkzDrawSegment(D,E)
+		\tkzDrawPoints(D,F,G,H)
+		\tkzLabelPoints(D,E,F,G,H)
+		\tkzDrawCircle[red](F,D)
+	\end{tikzpicture}
+	\caption{Triangle Construction Step:3}
+\end{figure}
+
+\item Again, describe $\mathscr{C}(G;GH)$. 
+
+\item Find the intersection of $\mathscr{C}(F;FD)$ and $\mathscr{C}(G;GH)$,  $K$. 
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(-4,0){D}
+		\tkzDefPoint(8,0){E}
+		\tkzDefPoint(0,0){F}
+		\tkzDefPoint(3,0){G}
+		\tkzDefPoint(5,0){H}
+		\tkzDrawSegment(D,E)
+		\tkzDrawCircle[red](F,D)
+		\tkzDrawCircle[blue](G,H)
+		\tkzInterCC(F,D)(G,H)			\tkzGetPoints{K}{L}
+		\tkzDrawPoints(D,F,G,H,K)
+		\tkzLabelPoints(D,E,F,G,H)
+		\tkzLabelPoints[above](K)
+	\end{tikzpicture}
+	\caption{Triangle Construction Step:4}
+\end{figure}
+
+\clearpage
+
+\item Join $\overline{KF}$ and $\overline{KG}$.\hfill\textcolor{red}{I.Post.3, I,Post.1}
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(-4,0){D}
+		\tkzDefPoint(8,0){E}
+		\tkzDefPoint(0,0){F}
+		\tkzDefPoint(3,0){G}
+		\tkzDefPoint(5,0){H}
+		\tkzDrawSegment(D,E)
+		\tkzInterCC(F,D)(G,H)			\tkzGetPoints{K}{L}
+		\tkzCompass[thick](G,K)
+		\tkzCompass[thick](F,K)
+		\tkzDrawPolygon[fill=red](F,G,K)
+		\tkzLabelPoints(D,E,F,G,H)
+		\tkzLabelPoints[above](K)
+		\tkzDrawPoints(D,F,G,H,K)
+	\end{tikzpicture}
+	\caption{Triangle Construction Step:5}
+\end{figure}
+
+\end{enumerate}
+
+\textbf{Claim:} The $\widetriangle{KFG}$ has been constructed out of three straight lines equal to $A$, $B$, and $C$.
+
+\begin{proof}
+
+\begin{itemize}
+
+\item[]
+
+\item Since the point $F$ is the center of $\mathscr{C}{FD}$, 
+
+\item[$\therefore$] 
+\[\overline{FD} = \overline{FK}\] 
+But 
+\[\overline{FD} = A\] 
+
+\item[$\therefore$] 
+\[\overline{KF} = A\] \hfill\textcolor{red}{I.Def.16 C.N.1}
+
+\item Again, since the point $G$ is the center of $\mathscr{G}{GH}$,
+
+\item[$\therefore$] 
+\[\overline{GH} = \overline{GK}\]
+ But 
+\[\overline{GH} = C\] 
+
+\clearpage
+ 
+ \item[$\therefore$] 
+ \[\overline{KG} = C\]
+
+\item And 
+\[\overline{FG} = B\]
+
+\item[$\therefore$] the three straight lines $\overline{KF}$, $\overline{FG}$, and $\overline{GK}$ equal the three straight lines $A$, $B$, and $C$.
+
+\item[$\therefore$] out of the three straight lines $\overline{KF}$, $\overline{FG}$, and $\overline{GK}$, which equal the three given straight lines $A$, $B$, and $C$, the $\widetriangle{KFG}$ has been constructed.
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage
+
+\clearpage
+
+\end{document}

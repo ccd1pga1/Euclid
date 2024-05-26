@@ -1,0 +1,132 @@
+
+\section*{Proposition47}
+
+\begin{thm}
+In a right-angled triangle, the square of the length of the side opposite the right angle is equal to the sum of the squares of the lengths of the other two sides.
+\end{thm}
+
+\begin{proof}
+
+\begin{lemma}
+The square described on the side of a right triangle opposite the right angle is equal to the sum of the squares described on the other two sides.\hfill\textcolor{red}{I.46}
+\end{lemma}
+    
+\begin{lemma}    
+If a straight line falling on two straight lines makes the alternate angles equal to one another, the straight lines are parallel to one another.\hfill\textcolor{red}{I.31}
+\end{lemma}    
+
+\begin{lemma}
+A straight line can be drawn from any point to any other point.\hfill\textcolor{red}{I.Post.1}
+\end{lemma}    
+
+\begin{lemma}
+Parallels are lines which, being in the same plane and being produced indefinitely in both directions, do not meet one another in either direction.\hfill\textcolor{red}{I.Def.22,I.14}
+\end{lemma}
+
+\begin{con}
+    \begin{enumerate}
+    
+    \item[]
+    
+        \item Describe the square $BDEC$ on side $\overline{BC}$.
+        
+        \item Describe the squares $GFBA$ and $HACK$ on sides $\overline{BA}$ and $\overline{AC}$
+        
+        \item Draw $\overline{AL}$ through $A$ parallel to either $\overline{BD}$ or$\overline{CE}$.
+        
+        \clearpage
+        
+        \item Join $\overline{AD}$ and $\overline{FC}$.\hfill\textcolor{red}{I.Def.23}
+    \end{enumerate}
+\end{con}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		  \tkzDefPoint(0,0){B}
+   		 \tkzDefPoint(5,0){C}
+    		 \tkzDefShiftPoint[B]({atan(4/3)}:3){A} % Move 3 units at the calculated angle to get A
+		\tkzDefSquare(B,A)\tkzGetPoints{G}{F}
+		\tkzDefSquare(A,C)\tkzGetPoints{K}{H}
+		\tkzDefSquare(C,B)\tkzGetPoints{D}{E}
+		\tkzFillPolygon[fill = red!50 ](A,C,K,H)
+		\tkzFillPolygon[fill = blue!50 ](C,B,D,E)
+		\tkzFillPolygon[fill = green!50](B,A,G,F)
+		\tkzFillPolygon[fill = orange,opacity=.5](A,B,C)
+		\tkzDrawPolygon[line width = 1pt](A,B,C)
+		\tkzDrawPolygon[line width = 1pt](A,C,K,H)
+		\tkzDrawPolygon[line width = 1pt](C,B,D,E)
+		\tkzDrawPolygon[line width = 1pt](B,A,G,F)
+		   \tkzDefPointBy[projection=onto D--E](A) \tkzGetPoint{L}
+		\tkzLabelSegment[auto](A,C){$a$}
+		\tkzLabelSegment[auto](A,H){$a$}
+		\tkzLabelSegment[auto](C,K){$a$}
+		\tkzLabelSegment[auto](H,K){$a$}
+		\tkzLabelSegment[auto](B,C){$b$}
+		\tkzLabelSegment[auto](B,D){$b$}
+		\tkzLabelSegment[auto](E,D){$b$}
+		\tkzLabelSegment[auto](E,C){$b$}
+		\tkzLabelSegment[auto](B,A){$c$}
+		\tkzLabelSegment[auto](F,B){$c$}
+		\tkzLabelSegment[auto](G,A){$c$}
+		\tkzLabelSegment[auto](G,F){$c$}
+		 \tkzLabelPoints[left](B,F)
+    \tkzLabelPoints[right](K,C)
+    \tkzLabelPoints[above](A,G,H)
+     \tkzLabelPoints(D,E,L)
+		\tkzDrawSegments[thick](A,E A,D B,K F,C A,L)	
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{itemize}
+
+\item[]
+
+ \item In parallelograms, the opposite sides and angles are equal.hfill\textcolor{red}{I.47}
+    
+    \item If a straight line intersects two other straight lines, and if the interior angles on the same side of the intersecting line are supplementary, then the two straight lines are parallel to each other.hfill\textcolor{red}{I.14}
+    
+    \item Parallels are lines which, being in the same plane and being produced indefinitely in both directions, do not meet one another in either direction.hfill\textcolor{red}{I.Def.22}
+    
+    \item If a straight line falling on two straight lines makes the exterior angle equal to the interior and opposite angle on the same side, the straight lines are parallel to one another.hfill\textcolor{red}{I.Post.42}
+   
+    
+    \item If equals are added to equals, the wholes are equal.hfill\textcolor{red}{C.N.2}
+    
+    \begin{itemize}
+    
+    \item[]
+    
+    \item \[\angle{DBC} = \angle{FBA} = 2\times\ang{90}\]
+    
+        \item add $\angle {ABC}$ to each, thus, 
+        \[\angle{DBA} = \angle{FBC}\]
+        
+        \item Since 
+        \[\overline{DB} = \overline{BC}\] 
+        and 
+        \[\overline{FB} = \overline{BA}\]
+        by side-angle-side equality, triangle 
+        \[\angle{ABD} = \triangle{FBC}\]
+        
+        \item Parallelogram \[BL = 2\times\{triangle{ABD}\]
+        and square 
+        \[GB = 2\times \triangle{FBC}\] 
+        
+        \item[$\therefore$] parallelogram $BL$ equals square $GB$.
+        
+        \item Similarly, parallelogram $CL$ equals square $HC$.
+        
+        \item Hence, the whole square 
+        \[BDEC = GFBS + HACK\]\hfill\textcolor{red}{C.N.2}
+        
+        \clearpage
+    
+    \item[$\therefore$] in right-angled triangles, the square on the side opposite the right angle equals the sum of the squares on the sides containing the right angle.
+	\end{itemize}
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

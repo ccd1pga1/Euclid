@@ -1,0 +1,87 @@
+
+\section*{Proposition 7}%
+
+\begin{thm}
+Given two straight lines constructed from the ends of a straight line and meeting at a point, it is not possible to construct two other straight lines on the same side of the original line, meeting in another point, and equal to the first two, namely each equal to that from the same end.
+\end{thm}
+
+\begin{figure}[H]
+\centering
+	\begin{subfigure}{0.35\textwidth}
+
+		\begin{tikzpicture}
+   			\Tri{A}{3}{0}{B}{1.8}{2.5}{C}{none}  
+   			\tkzMarkSegments[mark=|](A,B)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}	
+%%%%%%%%%%%%%%
+	\begin{subfigure}{0.35\textwidth}
+
+		\begin{tikzpicture}
+  	 		\Tri{E}{3}{0}{F}{2.3}{1.8}{D}{none}
+    			\tkzMarkSegments[mark=|](E,F)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+	\caption{}
+\end{figure}
+
+
+\begin{itemize}
+
+\item On the straight line $\overline{AB}$ draw two lines from $A$ and $B$ respectivly to a point $C$.
+\item Attempt to construct two other straight lines $\overline{ED}$ and $\overline{FD}$ on the straight line $\overline{EF}$, were $\overline{EF}=\overline{AB}$, meeting in another point $D$, and make them equal to $\overline{AC}$ and $\overline{BC}$, respectively.
+
+\end{itemize}
+
+	\begin{enumerate}
+\item[]
+    	\item \textbf{Assumption:} Suppose $\overline{AB}$ is greater than $\overline{AC}$.
+
+	\item Assume the contrary, that the construction is possible.
+
+	\item Lay $\overline{BC}$ over $\overline{EF}$.
+	
+	\item Join $\overline{AD}$.
+	
+	\end{enumerate}
+	
+\clearpage
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+	\centering
+    		\Tri{B}{3}{0}{C}{1.8}{2.5}{A}{none}
+    		\Tri{B}{3}{0}{C}{2.3}{1.8}{D}{none}
+    		\tkzDrawSegment[red](A,D)
+     		\tkzMarkSegment[mark=|](B,C)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}	
+
+\begin{proof}
+
+\textbf{Proof by Contradiction:}
+\begin{itemize}
+
+\item A straight line can be drawn between any two points. $\therefore$ $\overline{AD}$ can be drawn joining points $A$ and $D$.\hfill\textcolor{red}{ I.Post.1}
+
+\item If equals are added to equals, the wholes are equal. If equals are subtracted from equals, the remainders are equal.\hfill\textcolor{red}{ C.N.5}
+
+\item Since $\overline{BA}$ equals $\overline{BD}$, and $\overline{BC}$ is common, $\angle{ACD}$ equals $\angle{ADC}$. \hfill\textcolor{red}{ C.N.5}
+
+\item \textbf{Angle Comparison:} $\angle{ADC}$ is greater than $\angle{DCB}$.
+
+\item \textbf{Contradiction:} $\angle{DCB}$ is equal to $\angle{CDB}$ (by the given construction) but is also shown to be much greater than $\angle{DCB}$, leading to a contradiction.
+
+\textbf{Conclusion:} The assumption that the construction is possible leads to a contradiction.
+
+\item[$\therefore$] the original statement is proven—given two straight lines constructed from the ends of a straight line and meeting at a point, it is not possible to construct two other straight lines on the same side of the original line, meeting in another point, and equal to the first two.
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

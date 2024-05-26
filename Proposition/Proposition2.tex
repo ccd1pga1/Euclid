@@ -1,0 +1,189 @@
+\section*{Proposition 2}
+\renewcommand{\qedsymbol}{Q.E.F}
+  
+\begin{con}
+To place a straight line equal to a given straight line with one end at a given point $A$. 
+\end{con}
+
+Let $\overline{BC}$ be the given straight line.
+   
+	\textbf{Con}
+\begin{enumerate}
+	\item   Given a point $A$ and the given straight finite line$\overline{BC}$. 
+
+\begin{figure}[ht]    
+\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(1.5,0.5){B}
+		\tkzDefPoint(2,3){C}
+		\tkzDrawSegment[red](B,C)
+		\tkzDrawPoints[fill=gray](A,B,C)
+		\tkzLabelPoints[left](A)
+		\tkzLabelPoints[right,red](B)
+		\tkzLabelPoints[above,red](C)
+	\end{tikzpicture}
+	\caption{step1}
+\end{figure} 	
+
+	\item Join the straight line $\overline{AB}$ from point $A$ to point $B$, and construct the equilateral $\widetriangle{DAB}$ on it. \hfill\textcolor{red}{ Post.1, I.1}
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}[scale=1.5]
+		\tkzDefPoint(0,0){A}		
+		\tkzDefPoint(1.5,0.5){B}
+		\tkzDefPoint(2,3){C}
+		\tkzDefTriangle[equilateral](A,B) 	\tkzGetPoint{D}
+		\tkzDrawPolygon[blue](A,B,D)
+		\tkzLabelPoints[left](A)  
+		\tkzLabelPoints[above](D)
+		\tkzLabelPoints[right,red](B)
+		\tkzLabelPoints[above,red](C)
+		\tkzCompass(A,D)
+		\tkzCompass(B,D)
+		\tkzDrawSegment[red](B,C)
+		\tkzDrawPoints[fill=gray](A,D)
+		\tkzDrawPoints[red](B,C)
+	\end{tikzpicture}
+ 	\caption{step 2}
+\end{figure}
+
+\item Produce the straight lines $\overline{AE}$ and $\overline{BF}$ in a straight line with $\overline{DA}$ and $\overline{DB}$. 
+\item Describe  $\mathscr{C}(B;BC)$, getting point $G$, the intersect of this circle with $\overline{BF}$ . 
+
+\begin{figure}[H]
+\centering
+	\begin{subfigure}{0.4\textwidth}
+		\begin{tikzpicture}[scale=0.8]
+			\tkzDefPoint(0,0){A}		
+		\tkzDefPoint(1.5,0.5){B}
+		\tkzDefPoint(2,3){C}
+			\tkzDefTriangle[equilateral](A,B) 		\tkzGetPoint{D}
+			\tkzDefPointOnLine[pos=3](D,A)		\tkzGetPoint{E} 
+			\tkzDefPointOnLine[pos=3](D,B)		\tkzGetPoint{F}
+			\tkzDrawSegments(A,E B,F)
+			\tkzDrawSegment[red](B,C)
+			\tkzDrawPolygon[blue](A,B,D)
+			\tkzLabelPoints[left](A)  
+			\tkzLabelPoints[above](D)
+			\tkzLabelPoints[right,red](B)
+			\tkzLabelPoints[above,red](C)
+			\tkzLabelPoints(E,F)
+			\tkzDrawPoints[red](B,C)
+			\tkzDrawPoints[fill=gray](A,B,C,D,E,F)
+		\end{tikzpicture}
+		\caption{Produce the line}
+	\end{subfigure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{subfigure}{0.4\textwidth}
+		\begin{tikzpicture}[scale=0.8]
+			\tkzDefPoint(0,0){A}		
+			\tkzDefPoint(1.5,0.5){B}
+			\tkzDefPoint(2,3){C}
+			\tkzDefTriangle[equilateral](A,B) 		\tkzGetPoint{D}
+			\tkzDefPointOnLine[pos=3](D,A)		\tkzGetPoint{E} 
+			\tkzDefPointOnLine[pos=3](D,B)		\tkzGetPoint{F}
+			\tkzDrawSegments(A,E B,F)
+			\tkzDrawSegment[red](B,C)
+			\tkzInterLC(B,F)(B,C)				\tkzGetPoints{H}{G}
+			\tkzDrawPolygon[blue](A,B,D)
+			\tkzDrawCircle[green](B,C)
+			\tkzLabelPoints[left](A)  
+			\tkzLabelPoints[above](D)
+			\tkzLabelPoints[right,red](B)
+			\tkzLabelPoints[above,red](C)
+			\tkzLabelPoints[right](G)
+			\tkzLabelPoints(E,F)
+			\tkzDrawPoints[red](B,C)
+			\tkzDrawPoints[fill=gray](A,D,E,F,G)
+		\end{tikzpicture}
+		\caption{draw a circle}
+	\end{subfigure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item Now, describe $\mathscr{C}(D;DG)$, the intersect of this circle and $\overline{AE}$ gives point $L$.  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{subfigure}{0.55\textwidth}
+		\begin{tikzpicture}[scale=0.7]
+			\tkzDefPoint(0,0){A}		
+			\tkzDefPoint(1.5,0.5){B}
+			\tkzDefPoint(2,3){C}
+			\tkzDefTriangle[equilateral](A,B) 		\tkzGetPoint{D}
+			\tkzDefPointOnLine[pos=3](D,A)		\tkzGetPoint{E} 
+			\tkzDefPointOnLine[pos=3](D,B)		\tkzGetPoint{F}
+			\tkzDrawSegments(A,E B,F)
+			\tkzDrawSegment[red](B,C)
+			\tkzInterLC(B,F)(B,C)				\tkzGetPoints{H}{G}
+			\tkzInterLC(D,E)(D,G)				\tkzGetPoints{K}{L}
+			\tkzDrawPolygon[blue](A,B,D)
+			\tkzDrawCircle[green](B,C)
+			\tkzDrawCircle[purple](D,G)
+			\tkzLabelPoints[left](A,L)  
+			\tkzLabelPoints[above](D)
+			\tkzLabelPoints[right,red](B)
+			\tkzLabelPoints[above,red](C)
+			\tkzLabelPoints[right](G)
+			\tkzLabelPoints(E,F)
+			\tkzDrawPoints[red](B,C)
+			\tkzDrawPoints[fill=gray](A,D,E,F,G,L)
+		\end{tikzpicture}	
+		\caption{intersection}
+	\end{subfigure}
+	\caption{something}
+\end{figure}
+\hfill\textcolor{red}{ Post.2,Post.3}
+
+\clearpage
+
+\end{enumerate}
+
+\begin{proof}
+
+\begin{itemize}
+
+\item Since the point $B$ is the center of the circle with radius $BC$, $\therefore$ $\overline{BC}$ equals $\overline{BG}$.  Again, since the point $D$ is the center of the circle with radius $DG$, $\therefore$ $\overline{DL}$ equals $\overline{DG}$. \hfill\textcolor{red}{ I.Def.15}
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}[scale=0.7]
+		\tkzDefPoint(0,0){A}		
+		\tkzDefPoint(1.5,0.5){B}
+		\tkzDefPoint(2,3){C}
+		\tkzDefTriangle[equilateral](A,B) 		\tkzGetPoint{D}
+		\tkzDefPointOnLine[pos=3](D,A)		\tkzGetPoint{E} 
+		\tkzDefPointOnLine[pos=3](D,B)		\tkzGetPoint{F}
+		\tkzDrawSegments(L,E G,F)
+		\tkzDrawSegments[red, thick](B,C A,L B,G)
+		\tkzInterLC(B,F)(B,C)				\tkzGetPoints{H}{G}
+		\tkzInterLC(D,E)(D,G)				\tkzGetPoints{K}{L}
+		\tkzDrawPolygon[blue](A,B,D)
+		\tkzDrawCircle[green](B,C)
+		\tkzDrawCircle[purple](D,G)
+		\tkzLabelPoints[left](A,L)  
+		\tkzLabelPoints[above](D)
+		\tkzLabelPoints[right,red](B)
+		\tkzLabelPoints[above,red](C)
+		\tkzLabelPoints[right](G)
+		\tkzLabelPoints(E,F)
+		\tkzDrawPoints[red](B,C)
+		\tkzDrawPoints[fill=gray](A,D,E,F,G,L)
+	\end{tikzpicture}
+	\caption{end}
+\end{figure}
+
+	\item In these,  $\overline{DA}$ equals $\overline{DB}$, $\therefore$ the remainder $AL$ equals the remainder $BG$. \hfill\textcolor{red}{C.N.3}
+	\item But $\overline{BC}$ was also proved equal to $\overline{BG}$, $\therefore$ each of the straight lines $\overline{AL}$ and $\overline{BC}$ equals $\overline{BG}$. And things which equal the same thing also equal one another $\therefore$ $\overline{AL}$ also equals $\overline{BC}$.
+
+\end{itemize}
+																	
+\textbf{Conclusion:}
+\begin{itemize}
+	\item $\therefore$ the straight line $\overline{AL}$ equal to the given straight line $\overline{BC}$ has been placed with one end at the given point $A$.
+	\item The construction has been successfully completed. 
+\end{itemize}
+
+\end{proof}
+
+\clearpage

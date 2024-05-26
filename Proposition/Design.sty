@@ -1,0 +1,211 @@
+
+\newcounter{thm}[section] % Define a theorem counter tied to sections
+\newcounter{con}[section] % Define a construction counter tied to sections
+\newcounter{defin}[chapter] % Define a definition counter tied to sections
+\newcounter{post}[chapter] % Define a definition counter tied to sections
+\newcounter{cn}[chapter] % Define a definition counter tied to sections
+
+\renewcommand{\thethm}{\thechapter.\thesection.\arabic{thm}} % Include chapter and section numbers in theorem counter
+\renewcommand{\thecon}{\thechapter.\thesection.\arabic{con}} % Include chapter and section numbers in construction counter
+\renewcommand{\thedefin}{\thechapter.\thesection.\arabic{defin}} % Include chapter and section numbers in definition counter
+\renewcommand{\thedefin}{\thechapter.\thesection.\arabic{post}} % Include chapter and section numbers in definition counter
+\renewcommand{\thecn}{\thechapter.\thesection.\arabic{cn}} % Include chapter and section numbers in definition counter
+
+
+\colorlet{colthm}{red!90!black}
+\colorlet{colcon}{blue!55!white}
+\colorlet{coldefin}{green!50!black!50}
+\colorlet{colpost}{green!50!black!50}
+\colorlet{colcn}{green!80!black!50}
+
+
+\newcommand{\newmybox}[4]{%
+  \tcbset{
+    #1base/.style={ 
+      empty,
+      frame engine=path,
+      colframe=yellow!10,
+      sharp corners,
+      title={#2 \thesection.\thetcbcounter}, % Include only section numbers in the title
+      attach boxed title to top left={yshift*=-\tcboxedtitleheight},
+      boxed title style={size=minimal, top=4pt, left=4pt, colback=#4}, % Use the provided color variable for title background
+      coltitle=#4,fonttitle=\large\bfseries\sffamily,
+    },
+  }
+  \newtcolorbox[use counter=#1]{#1}{%
+    #1base, % Use renamed base style for theorem environment
+    drop fuzzy shadow,
+    coltitle=black,
+    borderline west={3pt}{-3pt}{#4}, % Use the provided color variable for the borderline
+    attach boxed title to top left={xshift=-3mm, yshift*=-\tcboxedtitleheight/2},
+    boxed title style={right=3pt, bottom=3pt, overlay={
+      \draw[draw=#4, fill=#4, line join=round] % Use the provided color variable for the fill and draw
+        (frame.south west) -- (frame.north west) -- (frame.north east) --
+        (frame.south east) -- ++(-2pt, 0) -- ++(-2pt, -4pt) --
+        ++(-2pt, 4pt) -- cycle;
+    }},
+  }
+}
+
+
+% Define the new command for creating boxes
+\newcommand{\newmythm}[3]{%
+  \newmybox{#1}{#2}{#3}{col#1}%
+}
+
+\newmythm{thm}{Theorem}{thm}
+\newmythm{con}{Construction}{con}
+\newmythm{defin}{Definition}{defin}
+\newmythm{post}{Postulate}{defin}
+\newmythm{cn}{Postulate}{cn}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newcounter{con}
+%\colorlet{colecon}{red!80!black}
+%\tcbset{
+%  constructionbase/.style={ % Renamed base style for construction environment
+%    empty,
+%    frame engine=path,
+%    colframe=yellow!10,
+%    sharp corners,
+%    title={Construction \thetcbcounter},
+%    attach boxed title to top left={yshift*=-\tcboxedtitleheight},
+%    boxed title style={size=minimal, top=4pt, left=4pt},
+%    coltitle=colecon,fonttitle=\large\bfseries\sffamily,
+%  }
+%}
+
+%\newtcolorbox[use counter=con]{con}{%
+%  constructionbase, % Use renamed base style for construction environment
+%  drop fuzzy shadow,
+%  coltitle=black,
+%  borderline west={3pt}{-3pt}{teal!50},
+%  attach boxed title to top left={xshift=-3mm, yshift*=-\tcboxedtitleheight/2},
+%  boxed title style={right=3pt, bottom=3pt, overlay={
+%    \draw[draw=teal!70, fill=teal!70, line join=round]
+%      (frame.south west) -- (frame.north west) -- (frame.north east) --
+%      (frame.south east) -- ++(-2pt, 0) -- ++(-2pt, -4pt) --
+%      ++(-2pt, 4pt) -- cycle;
+%  }},
+%  overlay unbroken={
+%    \scoped \shade[left color=teal!10!black, right color=teal]
+%    ([yshift=-0.2pt]title.south west) -- ([xshift=-1.5pt, yshift=-0.2pt]title.south-|frame.west) -- ++(0, -6pt) -- cycle;
+%  },
+%}
+%%%%%%%%%%%%%%%%%%%%%
+\definecolor{titlebgdark}{RGB}{0,163,243}
+\definecolor{titlebglight}{RGB}{191,233,251}
+
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries}
+  {}
+  {20pt}
+  {%
+    \begin{tcolorbox}[
+      enhanced,
+      colback=titlebgdark,
+      boxrule=0.25cm,
+      colframe=titlebglight,
+      arc=0pt,
+      outer arc=0pt,
+      leftrule=0pt,
+      rightrule=0pt,
+      fontupper=\color{white}\sffamily\bfseries\huge,
+      enlarge left by=-1in-\hoffset-\oddsidemargin, 
+      enlarge right by=-\paperwidth+1in+\hoffset+\oddsidemargin+\textwidth,
+      width=\paperwidth, 
+      left=1in+\hoffset+\oddsidemargin, 
+      right=\paperwidth-1in-\hoffset-\oddsidemargin-\textwidth,
+      top=0.6cm, 
+      bottom=0.6cm,
+      overlay={
+        \node[
+          fill=titlebgdark,
+          draw=titlebglight,
+          line width=0.15cm,
+          inner sep=0pt,
+          text width=1.7cm,
+          minimum height=1.7cm,
+          align=center,
+          font=\color{white}\sffamily\bfseries\fontsize{30}{36}\selectfont
+        ] 
+        (chapname)
+        at ([xshift=-4cm]frame.north east)
+        {\thechapter};
+        \node[font=\small,anchor=south,inner sep=2pt] at (chapname.north)
+        {\MakeUppercase\chaptertitlename};  % if using amsbook, this should be \chaptername
+      } 
+    ]
+    #1
+    \end{tcolorbox}%
+  }
+\titleformat{name=\chapter,numberless}[display]
+  {\normalfont\huge\bfseries}
+  {}
+  {20pt}
+  {%
+    \begin{tcolorbox}[
+      enhanced,
+      colback=titlebgdark,
+      boxrule=0.25cm,
+      colframe=titlebglight,
+      arc=0pt,
+      outer arc=0pt,
+      remember as=title,
+      leftrule=0pt,
+      rightrule=0pt,
+      fontupper=\color{white}\sffamily\bfseries\huge,
+      enlarge left by=-1in-\hoffset-\oddsidemargin, 
+      enlarge right by=-\paperwidth+1in+\hoffset+\oddsidemargin+\textwidth,
+      width=\paperwidth, 
+      left=1in+\hoffset+\oddsidemargin, 
+      right=\paperwidth-1in-\hoffset-\oddsidemargin-\textwidth,
+      top=0.6cm, 
+      bottom=0.6cm, 
+    ]
+    #1
+    \end{tcolorbox}%
+  }
+\titlespacing*{\chapter}
+  {0pt}{0pt}{40pt}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+ %%%%%%%------------->Theorem
+% \tcbuselibrary{theorems}
+%\tcbuselibrary{skins}
+ %\newtcbtheorem[number within=chapter]{thm}{Theorem}{
+ % theorem style=change apart,
+ % enhanced,
+ % frame hidden,interior hidden,
+ % sharp corners,
+ % boxrule=0pt,
+ % left=0.2cm,right=0.2cm,top=0.2cm,
+ % toptitle=0.1cm+1pt,%        <-- I used your values here
+ % bottomtitle=-0.1cm+0.5em,%  <-- I used your values here
+ % colframe=white!25!black,colback=white,coltitle=white,
+ % title style=white!25!black,
+ % bottomrule=1pt,%  <-- reserve space
+  %borderline south={1pt}{0pt}{white!25!black},%---- draw line
+ % fonttitle=\bfseries,fontupper=\normalsize}{thm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   %%%%%%%------------->Construction
+% \tcbuselibrary{theorems}
+%\tcbuselibrary{skins}
+ %\newtcbtheorem[number within=chapter]{con}{Construction}{
+ % theorem style=change apart,
+%  enhanced,
+%  frame hidden,interior hidden,
+ % sharp corners,
+ % boxrule=0pt,
+ % left=0.2cm,right=0.2cm,top=0.2cm,
+ % toptitle=0.1cm+1pt,%        <-- I used your values here
+%  bottomtitle=-0.1cm+0.5em,%  <-- I used your values here
+%  colframe=white!25!black,colback=white,coltitle=white,
+%  title style=white!25!black,
+%  bottomrule=1pt,%  <-- reserve space
+%  borderline south={1pt}{0pt}{white!25!black},%---- draw line
+%  fonttitle=\bfseries,fontupper=\normalsize}{con}

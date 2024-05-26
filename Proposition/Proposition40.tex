@@ -1,0 +1,76 @@
+
+\section*{Proposition 40}
+
+\begin{thm}
+Equal triangles which are on equal bases and on the same side are also in the same parallels.
+\end{thm}
+
+\textbf{Given:} Let $\widetriangle{ABC}$ and $\widetriangle{CDE}$ be equal triangles on equal bases $\overline{BC}$ and $\overline{CE}$ and on the same side.
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\TRI{0,0}{B}{0:2}{C}{70:2}{A}{green,  opacity=0.3}
+		\TRI{2,0}{C}{0:2}{E}{70:2}{D}{orange,  opacity=0.4}
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\textbf{To Prove:} They are also in the same parallels.
+
+\textbf{Construction:} Join $AD$. I say that $AD$ is $\parallel$ to $BE$. \hfill\textcolor{red}{I.Post.1}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\TRI{0,0}{B}{0:2}{C}{70:2}{A}{green,  opacity=0.3}
+		\TRI{2,0}{C}{0:2}{E}{70:2}{D}{orange,  opacity=0.4}
+		\tkzDrawSegment(A,D)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{proof}
+
+\textbf{Proof by Contradiction:}
+
+If not, draw $AF$ through $A$ $\parallel$ to $BE$, and join $FE$. \hfill\textcolor{red}{ I.31, I.Post.1}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\TRI{0,0}{B}{0:2}{C}{70:2}{A}{green,  opacity=0.3}
+		\TRI{2,0}{C}{0:2}{E}{70:2}{D}{orange,  opacity=0.4}
+		\tkzDefPointOnLine[pos=0.8](C,D)		\tkzGetPoint{F}
+		\tkzDrawSegments(A,D A,F F,E)
+		\tkzLabelPoints[below left](F)
+		\tkzDrawPoints(F)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{itemize}
+
+\item[$\therefore$] 
+\[\widetriangle{ABC} = \widetriangle{FCE}\]
+for they are on equal bases $\overline{BC}$ and $\overline{CE}$ and in the same parallels $\overline{BE}$ and $\overline{AF}$. \hfill\textcolor{red}{I.38} 
+
+\item But, 
+\[\widetriangle{ABC} = \widetriangle{DCE}\] 
+
+\item[$\therefore$] 
+\[\widetriangle{DCE} = \widetriangle{FCE}\] 
+the greater equals the less, which is impossible. \hfill\textcolor{red}{C.N.1}
+
+\item[$\therefore$] 
+\[\overline{AF} \nparallel \overline{BE}\]
+
+\item Similarly, we can prove that neither is any other straight line except $\overline{AD}$.
+
+\item[$\therefore$] 
+\[\overline{AD} \parallel \overline{BE}\]
+
+\item[$\therefore$] equal triangles which are on equal bases and on the same side are also in the same parallels.
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

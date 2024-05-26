@@ -1,0 +1,105 @@
+
+\section*{Proposition 14}
+
+\begin{thm}
+If, with any straight line, and at a point on it, two straight lines not lying on the same side make the sum of the adjacent angles equal to two right angles, then the two straight lines are in a straight line with one another.
+\end{thm}
+
+\textbf{Given:} If with any straight line $\overline{AB}$, and at a point $B$ on it, two straight lines $\overline{BC}$ and $\overline{BD}$ not lying on the same side make;  \[\angle{ABC} + \angle{ABD} =2\times\ang{90}\]
+
+\textbf{To prove:} The two straight lines $\overline{CB}$ and $\overline{BD}$ are in a straight line with one another.
+
+
+With any straight line $\overline{AB}$, and at the point $B$ on it, let the two straight lines $\overline{BC}$ and $\overline{BD}$ not lying on the same side make the sum of the adjacent $\angle{ABC}$ and $\angle{ABD}$ equal to two right angles. I say that $\overline{BD}$ is in a straight line with $\overline{CB}$.
+
+\begin{figure}[H]
+	\begin{subfigure}{0.35\textwidth}
+		\begin{tikzpicture}
+			\tkzDefPoint(0,2.5){A}
+			\tkzDefPoint(1,0){B}
+			\tkzDrawSegment(A,B)
+			\tkzLabelPoints(A,B)
+			\tkzDrawPoints(A,B)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+%%%%%%%%%%%%%
+	\begin{subfigure}{0.35\textwidth}
+		\begin{tikzpicture}
+			\tkzDefPoint(0,2.5){A}
+			\tkzDefPoint(1,0){B}
+			\tkzDefPoint(0,0){C}
+			\tkzDefPoint(3,0){D}
+			\tkzDrawSegments(A,B C,D)
+			\tkzLabelPoints(A,B,C,D)
+			\tkzDrawPoints(A,B,C,D)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+	\caption{}
+\end{figure}
+
+\begin{lemma}
+If a straight line (in this case, $\overline{BD}$) falling on two straight lines (in this case, $\overline{AB}$ and $\overline{BE}$) makes the interior angles on the same side less than two right angles, then the two straight lines ($AB$ and $BE$) produced indefinitely meet on that side on which are the angles less than the two right angles.\hfill\textcolor{red}{I.Post.2}
+\end{lemma}
+
+\clearpage
+
+\begin{lemma}
+If a straight line stands on a straight line, then it makes either two right angles or angles less than two right angles.\hfill\textcolor{red}{I.Post.4}
+\end{lemma}
+
+\textbf{Assume for contradiction:} $\overline{BD}$ is not in a straight line with $\overline{CB}$.
+
+\textbf{By Lemma 1} Produce $\overline{BE}$ in a straight line with $\overline{CB}$.\hfill\textcolor{red}{I.Post.2}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,2.5){A}
+		\tkzDefPoint(1,0){B}
+		\tkzDefPoint(0,0){C}
+		\tkzDefPoint(3,0){D}
+		\tkzDefPoint(2.7,1){E}
+		\tkzDrawSegments(A,B C,D)
+		\tkzDrawSegment[red](B,E)
+		\tkzLabelPoints(A,B,C,D,E)
+		\tkzDrawPoints(A,B,C,D,E)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{proof}
+
+\begin{itemize}
+
+\item[]
+
+\item[By Lemma 2] Since, $AB$ stands on $BE$, 
+\[\angle{ABC} + \angle{ABE} =2\times\ang{90}\]\hfill\textcolor{red}{I.Post.4,}
+
+\item[Given:]
+\[\angle{ABC} + \angle{ABD} =2\times\ang{90}\]
+
+\item[$\therefore$] 
+
+\[\angle{CBA} + \angle{ABE} = \angle{CBA} + \angle{ABD}\]
+
+\item[By Lemma 3] Subtract angle $CBA$ from each side: 
+\[\angle{ABE} =  \angle{ABD}\]\hfill\textcolor{red}{C.N.3}
+
+\item[Contradiction:] The less ($\angle{ABE}$) equals the greater ($\angle{ABD}$), which is impossible.
+
+\item[$\therefore$]
+\[ \overline{BE} \neq \overline{CB}\]
+
+\item[Similarly,] it can be proven that no other straight line except $\overline{BD}$ is in line with $\overline{CB}$.
+
+\item[Thus,] $\overline{CB}$ is in a straight line with $\overline{BD}$.
+
+\item[Conclusion] If with any straight line, and at a point on it, two straight lines not lying on the same side make the sum of the adjacent angles equal to two right angles, then the two straight lines are in a straight line with one another.
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

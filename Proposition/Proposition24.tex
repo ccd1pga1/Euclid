@@ -1,0 +1,97 @@
+
+\section*{Proposition 24}
+
+\renewcommand\qedsymbol{Q.E.F}
+
+\begin{thm}
+If two triangles have two sides equal to two sides respectively, but have one of the angles contained by the equal straight lines greater than the other, then they also have the base greater than the base.
+\end{thm}
+
+
+
+Let $\widetriangle{ABC}$ and $\widetriangle{DEF}$, such that 
+\[\overline{AB} = \overline{DE}\]
+\[ \overline{AC} = \overline{DF}\]
+ \[ \angle{CAB} > \angle{FDE}\]
+
+\begin{figure}[h]
+\centering
+	\begin{subfigure}{0.4\textwidth}
+		\begin{tikzpicture}
+			\tri{C}{3,1}{B}{64}{A}{none}
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+%%%%%%%%%%%%
+	\begin{subfigure}{0.4\textwidth}
+		\begin{tikzpicture}
+			\tri{F}{3,1}{E}{75}{D}{none}
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+	\caption{}
+\end{figure}
+
+\textbf{Construction:}
+\begin{enumerate}
+    \item Construct $\angle{EDG}$ equal to $\angle{BAC}$ at point $D$ on $\overline{DE}$. \hfill\textcolor{red}{I.23, I.3, I.Post.1}
+   
+    \item Make $\overline{DG}$ equal to either $\overline{AC}$ or $\overline{DF}$.
+   
+    \item Join $\overline{EG}$ and $\overline{FG}$.
+\end{enumerate}
+
+\clearpage
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(-0.5,0.5){G}
+		\tkzDefPoint(3,1){E}
+		\tkzDefPoint(0,0){F}
+		\tkzDefPoint(0.4,4.3){D}
+		\tkzDrawPolygon[fill=gray, opacity=0.3](F,E,D)
+		\tkzDrawPolygon(G,E,D)
+		\tkzLabelPoints(E,F,G)
+		\tkzLabelPoints[above](D)	
+		\tkzDrawSegment(G,F)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{proof}
+
+\begin{itemize}
+    	\item If two angles of a triangle are unequal, then the sides opposite these angles are also unequal.\hfill\textcolor{red}{ I.23}
+    
+  	\item Since 
+  	\[\overline{AB} = \overline{DE}\] 
+  	and
+  	\[ \overline{AC} = \overline{DG}\]
+	\begin{itemize}
+            	\item The two sides $\overline{BA}$ and $\overline{AC}$ equal the two sides $\overline{ED}$ and $\overline{DG}$ respectively.\hfill\textcolor{red}{I.4}
+            	
+            	\item Also, $\angle{BAC}$ equals $\angle{EDG}$.
+        \end{itemize}
+    	\item[$\therefore$] the base $\overline{BC}$ equals the base $\overline{EG}$. \hfill\textcolor{red}{C.N.1}
+    	
+    		\item Since $\overline{DF}$ equals $\overline{DG}$, $\angle{DGF}$ equals $\angle{DFG}$.
+    		
+    		\item[$\therefore$] 
+    		\[\angle{DFG} > \angle{EGF}\]\hfill\textcolor{red}{ I.5}
+
+\clearpage
+    		
+    		\item[Thus], $\widetriangle{EFG}$, the side $\overline{EG}$ opposite the greater angle is greater than $\overline{EF}$.\hfill\textcolor{red}{ I.19}
+    		
+    		\item Since 
+    		\[\overline{EG} = \overline{BC}\] 
+    		it follows that 
+    		\[\overline{BC} > \overline{EF}\]
+\end{itemize}
+
+\section*{Conclusion:}
+$\therefore$ if two triangles have two sides equal to two sides respectively, but have one of the angles contained by the equal straight lines greater than the other, then they also have the base $\overline{BC}$ greater than the base $\overline{EF}$.
+
+\end{proof}
+
+\clearpage

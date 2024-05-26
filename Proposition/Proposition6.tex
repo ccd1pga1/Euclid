@@ -1,0 +1,68 @@
+
+\section*{Proposition 6}
+	
+\begin{thm}
+If in a triangle two angles equal one another, then the sides opposite the equal angles also equal one another.
+\end{thm}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\Tri{B}{3}{0}{C}{1.5}{2.5}{A}{none}
+    		\tkzDrawPolygon(A,B,C)
+    		\tkzMarkSegment[mark=|](A,B)
+    		\tkzMarkSegment[mark=|](A,C)
+    		\tkzMarkAngle[size=0.5](A,C,B)
+    		\tkzMarkAngle[size=0.5](C,B,A)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{itemize}
+	\item[\textbf{Given:}]
+    	\item  If $\overline{AB}$ does not equal $\overline{AC}$, then one of them is greater. \hfill\textcolor{red}{C.N}
+    	\item If $\overline{AB}$ is greater, cut off $\overline{DB}$ from $\overline{AB}$ (the greater) equal to $\overline{AC}$ (the less), and join $\overline{DC}$.\hfill\textcolor{red}{ I.3, I.Post.1}
+\end{itemize}
+
+\begin{con}
+
+\begin{enumerate}
+\item[]
+    	\item \textbf{Assumption:} Suppose $\overline{AB}$ is greater than $\overline{AC}$.
+    
+	\item Cut off $\overline{DB}$ from $\overline{AB}$ such that $\overline{DB}$ = $\overline{AC}$, and join $\overline{DC}$.
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\Tri{B}{3}{0}{C}{1.5}{2.5}{A}{none}
+		\tkzDefPointOnLine[pos=0.7](B,A)\tkzGetPoint{D}
+		\tkzDrawPolygon(A,B,C)
+		\tkzDrawSegment[dashed](C,D)
+    		\tkzDrawPoints[left](D)
+    		\tkzLabelPoints(D)
+    		\tkzMarkAngle[size=0.5](B,A,C)
+   		\tkzMarkAngle[size=0.5](C,B,A)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\end{enumerate}
+
+\end{con}
+
+\begin{proof}
+
+\begin{itemize}
+\item[]
+    	\textbf{ Proof by Contradiction: }
+    	\item Since $\overline{DB}$ = $\overline{AC}$ and $\overline{BC}$ is common $\therefore$ $\widetriangle{DBC}$ $\cong$ $\widetriangle{ACB}$ by SSS (side-side-side) criterion.  [$\Rightarrow$ $\overline{DC}$ = $\overline{AB}$ $\quad$ and $\quad$ $\angle{DBC}$ = $\angle{ACB}$]
+    	\item This implies the base $\overline{DC}$ equals the base $\overline{AB}$, and the $\widetriangle{DBC}$ equals $\widetriangle{ACB}$, which is absurd since the less ($\widetriangle{DBC}$) equals the greater ($\widetriangle{ACB}$).
+    	\item[ $\therefore$] the assumption that $\overline{AB}$ is greater than $\overline{AC}$ is false.
+    	\item Hence, $\overline{AB}$ is not unequal to $\overline{AC}$, it, $\therefore$ equals it.
+\end{itemize}
+
+\textbf{Conclusion:}
+
+$\therefore$ if in a triangle two angles equal one another, then the sides opposite the equal angles also equal one another.
+\end{proof}
+	
+\clearpage

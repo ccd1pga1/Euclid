@@ -1,0 +1,114 @@
+\definsection{Definition IX}
+
+\begin{defin}
+\textgreek{Ἡ προαίρεσις δύο εὐθειῶν γραμμῶν ἐκ πόντου ἑκατέρωθεν πρὸς διαφορετικὰ μέρη καλεῖται ἐυθὺ γωνία.}
+
+The inclination of two right lines extending out from one point in different directions is called a rectilineal angle.
+\end{defin}
+
+Rectilinear angles, as defined by Euclid, refer to angles formed by straight lines.\cite{Euclid} This concept doesn't involve angle measurement but focuses on the angular relationship between lines.
+
+It's important to note that in the Elements, almost all angles are rectilinear, like the illustrated angle BAC. Angles are typically named by three points, with the middle point representing the vertex of the angle. When there's no ambiguity, simply naming the angle by its vertex is sufficient, as in the example of angle A.
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(2,0){A}
+		\tkzDefPoint(5,0){B}
+		\tkzDefPoint(4,1){C}
+		\tkzDrawSegment[add=0 and 0.2](A,B)
+		\tkzDrawSegment[add=0 and 0.2](A,C)
+		\tkzLabelPoints(A,B,C)
+		\tkzDrawPoints(A,B,C)
+	\end{tikzpicture}
+	\caption{Simple angle}
+\end{figure}
+
+\begin{subdefin}
+Language of angles
+\end{subdefin}
+
+A right line drawn from the vertex and turning about it in the plane of the angle, from the position of coincidence with one leg to that of coincidence with the other, is said to turn through the angle, and the angle is the greater as the quantity of turning is the greater. Again, since the line may turn from one position to the other in either of two ways, two angles are formed by two lines drawn from a point.
+Thus if AB, AC be the legs, a line may turn from the position AB to the position AC in the two ways indicated by the arrows. The smaller of the angles thus formed is to be understood as the angle contained by the lines. The larger, called a re-entrant angle, seldom occurs in the “Elements.”
+
+\begin{figure}[H]
+	\centering
+		\begin{tikzpicture}
+			\tkzDefPoint(0,0){A}
+			\tkzDefPoint(-1,3){C}
+			\tkzDefPoint(3,0){B}
+			\tkzDrawSegments(A,B A,C)
+			\tkzDrawPoints(A,B,C)
+			\tkzLabelPoints(A,B,C)
+			\tkzMarkAngle[arrows=->](B,A,C)
+			\tkzMarkAngle[mark=None,size=0.5cm, postaction = {decorate, decoration={markings,mark = at position .5 with {\arrow{>}}}}](C,A,B)
+		\end{tikzpicture}
+		\caption{The angle}
+\end{figure}
+
+
+
+\begin{subdefin}
+Angles as magnitudes
+\end{subdefin}
+
+Regarding the treatment of angles as magnitudes by Euclid, rectilinear angles can be added together. The angle formed by joining two or more angles together is called their sum. Thus;
+
+
+
+\[\widetriangle{ABC} + \widetriangle{PQR} = \widetriangle{AB^{\prime}R}\]
+
+ formed by applying $\overline{QP}$ to $\overline{BC}$, so that the vertex $Q$ shall fall on the vertex $B$, and $\overline{QR}$ on the opposite side of $\overline{BC}$ from $\overline{BA}$.
+ 
+
+ \begin{figure}[h]
+ 	\centering
+		\begin{subfigure}{0.25\textwidth}
+			 \begin{tikzpicture}
+			 	\tkzDefPoint(0,0){Q}
+			 	\tkzDefPoint(2,0){P}
+			 	\tkzDefPoint(1.8,1.8){R}
+			 	\tkzDrawSegments(P,Q Q,R)
+			 	\tkzLabelPoints(P,Q,R)
+			\end{tikzpicture}
+			\sidecaption[a][-2cm]{$\angle{PQR}$}
+		\end{subfigure}
+%%%%%%%%%%%%%%%%%%%%%%
+		\begin{subfigure}{0.25\textwidth}
+			\begin{tikzpicture}
+				\tkzDefPoint(0,0){B}
+			 	\tkzDefPoint(2,0){A}
+			 	\tkzDefPoint(1.8,1.8){C}
+			 	\tkzDrawSegments(A,B B,C)
+			 	\tkzLabelPoints(A,B,C)
+			\end{tikzpicture}
+			\sidecaption[b][-1cm]{$\angle{ABC}$}
+		\end{subfigure}
+%%%%%%%%%%%%%%%%%%%%%%
+		\begin{subfigure}{0.25\textwidth}
+			\begin{tikzpicture}
+				\tkzDefPoint(0,0){B'}
+			 	\tkzDefPoint(2,0){A}
+			 	\tkzDefPoint(1.8,1.8){C}
+				\tkzDefPoint(1.2,3){R}
+				\tkzDrawSegments(A,B B,C B,R)
+				\tkzLabelPoints(A,B,C,R)
+			\end{tikzpicture}
+			\sidecaption{\small{$\angle{PQR}+\angle{ABC}=\angle{AB^{\prime}R}$}}
+		\end{subfigure}
+		\caption{The sum of angles}
+\end{figure}
+
+ 
+
+However, when the sum of angles exceeds two right angles, it continues to be treated as a sum of angles rather than as an individual angle. For example, \textcolor{red}{proposition I.32} demonstrates that the sum of the interior angles of a triangle equals two right angles.
+
+It's crucial to distinguish between treating angles as magnitudes and measuring angles. In the Elements, angles themselves are the magnitudes, with measurement only done in terms of right angles, which are defined in the subsequent definition. Degree and radian measurements weren't introduced until later. In terms of degrees, a right angle is $\ang{90}$, while in radians, it's $\frac{\pi}{2}$ radians.
+
+
+
+In ancient Greek mathematics, only positive magnitudes were considered; zero and negative magnitudes were not conceived. While this may complicate some mathematical concepts, it occasionally simplifies others. Nonetheless, the absence of zero and negative magnitudes doesn't diminish the mathematical power; any statement involving zero or negative magnitudes can be translated into one without them, albeit potentially longer and less straightforward.
+
+In the Elements, angles are always greater than zero and less than two right angles ($\ang{180}$ or $\pi$ radians), except possibly in one interpretation of \textcolor{red}{proposition III.20}, where the central angle of a circle could exceed two right angles.
+
+\clearpage

@@ -1,0 +1,59 @@
+\definsection{Definition XXI}
+
+\begin{defin}
+"Further, of trilateral figures, a right-angled triangle is that which has a right angle, an obtuse-angled triangle that which has an obtuse angle, and an acute-angled triangle that which has its three angles acute."
+\end{defin}
+
+
+In Euclid's Elements, Definition 21 serves as a pivotal moment where triangles are meticulously classified based on their angles, introducing readers to the rich diversity of these fundamental geometric shapes. This classification is not merely a taxonomic exercise but a profound insight into the intrinsic properties of triangles, laying the groundwork for numerous geometrical principles and propositions that follow.
+
+Right Triangle: At the heart of this classification is the right triangle, a figure defined by the presence of a right angle, a cornerstone in Euclidean geometry. This type of triangle is emblematic of geometric rigor, embodying principles of orthogonality and symmetry. $\textcolor{red}{Proposition I.17}$ further illuminates this by asserting that the sum of any two angles in a triangle is less than two right angles, ensuring the uniqueness of the right angle within a triangle.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(2.5,0){B}
+\tkzDefPoint(0,3){C}
+\tkzDrawPolygon(A,B,C)
+\tkzMarkRightAngle(B,A,C)
+\tkzDrawPoints(A,B,C)
+\end{tikzpicture}
+\sidecaption[a][-2cm]{\ssmall{Right angled triangle\\ $Total angels = 2\times\ang{90}$}}
+\end{figure}
+
+\clearpage
+
+Obtuse Triangle: The obtuse triangle, characterized by an obtuse angle, introduces the concept of angles greater than a right angle within the context of a triangle. This classification underlines a critical Euclidean theorem: a triangle cannot simultaneously house a right angle and an obtuse angle, underscoring the mutual exclusivity of these geometric figures and emphasizing the delicate balance of angles within triangles.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(-1,2){B}
+\tkzDefPoint(3,0){C}
+\tkzDrawPolygon(A,B,C)
+\tkzMarkAngle[red,size=0.5cm](C,A,B)
+\tkzDrawPoints(A,B,C)
+\end{tikzpicture}
+\sidecaption[a][-2cm]{Obtuse triangle\\$Contains an angle>\ang{90}$}
+\end{figure}
+
+Acute Triangle: Finally, the acute triangle, with all its angles being acute, represents the harmony and balance of smaller angles coexisting in a single shape. This classification showcases the versatility and the boundless configurations within geometric figures, highlighting Euclid's deep understanding of the interplay between angles.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(3,1){B}
+\tkzDefPoint(1.5,2){C}
+\tkzDrawPolygon(A,B,C)
+\tkzDrawPoints(A,B,C)
+\end{tikzpicture}
+\sidecaption[a][-2cm]{Acute triangle\\$All angles<\ang{90}$}
+\end{figure}
+
+Through these classifications, Euclid not only establishes a fundamental geometric lexicon but also sets the stage for exploring the relationships between angles and sides in triangles, a theme that permeates the Elements. This taxonomy of triangles according to their angles is not just a methodical categorization but a reflection of Euclid's broader endeavor to unveil the elegance, coherence, and profundity of the geometric world.
+
+
+\clearpage

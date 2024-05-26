@@ -1,0 +1,140 @@
+
+\section*{Proposition 44}
+
+\renewcommand\qedsymbol{Q.E.F}
+
+\begin{con}
+To a given straight line in a given rectilinear angle, to apply a parallelogram equal to a given triangle.
+\end{con}
+
+Given a straight line $\overline{AB}$, a rectilinear angle $D$, and a triangle $C$, the goal is to apply a parallelogram equal to triangle $C$ to the straight line $\overline{AB}$ in an angle equal to $D$.
+
+\begin{con}
+
+\begin{enumerate}
+
+\item[]
+
+  \item Construct the parallelogram $BEFG$ equal to triangle $C$ in the $\angle{EBG}$ which equals $D$, and let it be placed so that $\overline{BE}$ is in a straight line with $\overline{AB}$.
+
+\begin{figure}[H]  
+	\begin{subfigure}{0.3\textwidth}
+		\begin{tikzpicture}
+			\tkzDefPoint(0,0){X}
+			\tkzDefShiftPoint[X](0:-1){Y}
+			\tkzDefShiftPoint[X](80:1){Z}
+			\tkzDrawSegments(X,Y X,Z)
+			\tkzDrawPoints(X,Y,Z)	
+		\end{tikzpicture}
+		\caption{Given angle D}
+	\end{subfigure}
+%%%%%%%%%%%%%
+	\begin{subfigure}{0.3\textwidth}
+		\begin{tikzpicture}
+ 			\Tri{A}{2}0{B}{1}{2}{D}{none}
+   			\end{tikzpicture}
+		\caption{Given triangle C}
+	\end{subfigure}
+%%%%%%%%%%%%%%
+	\begin{subfigure}{0.3\textwidth}
+		\begin{tikzpicture}
+			\tkzDefPoint(0,0){A}
+			\tkzDefPoint(3,0){B}
+			\tkzDrawPoints(A,B)
+			\tkzLabelPoints(A,B)
+			\tkzDrawSegment(A,B)
+	 \end{tikzpicture}
+		\caption{given $\overline{AB}$}
+	\end{subfigure}
+	\caption{Given Prop 44}
+\end{figure}
+
+Construct a polygon equal to $C$;\hfill\textcolor{red}{I.42}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+ 		\tkzDefPoint(0,0){G}
+ 		\tkzDefPoint(2,0){F}
+ 		\tkzDefPoint(1,1){B}
+ 		\tkzDefPoint(3,1){E}
+		\tkzDrawPolygon[fill=blue, opacity=0.5](G,F,E,B)
+		\tkzLabelPoints[left](B,G)
+		\tkzLabelPoints[right](F,E)
+		\tkzDrawPoints(B,G,F,E)
+	\end{tikzpicture}
+	\caption{Polygon $BEFG$}
+\end{figure} 
+ 
+  \item Produce $\overline{FG}$ through to $H$,  and draw $\overline{AH}$ through $A$ $\parallel$ to either $\overline{BG}$ or $\overline{EF}$. Join$ \overline{HB}$. \hfill\textcolor{red}{ I.42}
+
+\begin{figure}  [H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){G}
+		\tkzDefPoint(2,0){F}
+		\tkzDefPoint(1,1){B}
+		\tkzDefPoint(3,1){E}
+		\tkzDefShiftPoint[G](0:-1){H}
+		\tkzDefShiftPoint[B](0:-1){A}
+		\tkzDrawSegment(H,B)
+		\tkzDrawPolygon(A,H,F,E)
+		\tkzDrawPolygon[fill=gray, opacity=0.4](B,G,F,E)
+		\tkzLabelPoints[above](B)
+		\tkzLabelPoints[below](G)
+		\tkzLabelPoints[left](A,H)
+		\tkzLabelPoints[right](F,E)
+		\tkzDrawPoints(B,G,F,E)
+	\end{tikzpicture}
+	\caption{}
+\end{figure} 
+  
+  \item By the construction, $\overline{HF}$ falls upon the parallels $\overline{AH}$ and $\overline{EF}$. $\therefore$, the sum of $\angle{AHF}$ and $\angle{HFE}$ equals two right angles. \hfill\textcolor{red}{ I.Post.2}
+  
+  \item Since $\overline{HF}$ falls on parallels, the sum of $\angle{BHG}$ and $\angle{GFE}$ is less than two right angles. Straight lines produced indefinitely from angles less than two right angles meet, so$ \overline{HB}$ and $\overline{FE}$ will meet. \hfill\textcolor{red}{ I.31, I.Post.1}
+  
+  \item Let them be produced and meet at $K$. Draw $\overline{KL}$ through the point $K$ $\parallel$ to either $\overline{EA}$ or $\overline{FH}$. Produce $\overline{HA}$ and $\overline{GB}$ to the points $L$ and $M$. \hfill\textcolor{red}{ I.31}
+  
+\begin{figure}[H]    
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){G}
+		\tkzDefPoint(2,0){F}
+		\tkzDefPoint(1,1){B}
+		\tkzDefPoint(3,1){E}
+		\tkzDefShiftPoint[G](0:-1){H}
+		\tkzDefShiftPoint[B](0:-1){A} 
+		\tkzInterLL(H,B)(F,E)		\tkzGetPoint{K}
+		\tkzDefShiftPoint[K](0:-3){L}
+		\tkzInterLL(G,B)(K,L)	\tkzGetPoint{M} 
+		\tkzDrawSegments(H,B B,M H,K M,K K,E)
+		\tkzDrawPolygon(A,H,F,E)
+		\tkzDrawPolygon[fill=blue, opacity=0.5](B,G,F,E)
+		\tkzDrawPolygon[fill=blue, opacity=0.5](A,B,M,L)
+		\tkzLabelPoints[above](L,M,K)
+		\tkzLabelPoints[below](G,B)
+		\tkzLabelPoints[left](A,H)
+		\tkzLabelPoints[right](F,E)
+		\tkzDrawPoints(B,G,F,E)
+	\end{tikzpicture}
+	\caption{}
+\end{figure} 
+  
+  \end{enumerate}
+  
+  \end{con}
+  
+  \begin{proof}
+  
+  \begin{itemize}
+  
+  \item Then $HLKF$ is a parallelogram, $\overline{HK}$ is its diameter, and $AHGB$ and $MBEK$ are parallelograms, and $LABM$ and $BGFE$ are the complements about $HK$. $\therefore$, $LABM$ equals $BGFE$. \hfill\textcolor{red}{ I.43}
+  
+  \item But $BGFE$ equals triangle $C$, $\therefore$ $LABM$ also equals $C$.\hfill\textcolor{red}{  C.N.1}
+  
+ \item Since $\angle{GBE}$ equals $\angle{ABM}$, while $\angle{GBE}$ equals $D$, $\therefore$ $\angle{ABM}$ also equals the $\angle$ $D$. \hfill\textcolor{red}{ I.15, C.N.1}
+  
+  \item[$\therefore$] the parallelogram $LABM$ equal to the given triangle $C$ has been applied to the given straight line $\overline{AB}$, in $\angle{ABM}$ which equals $D$. 
+
+\end{itemize}%
+
+\end{proof}%
+
+\clearpage

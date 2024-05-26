@@ -1,0 +1,58 @@
+\section*{Proposition 15}
+
+\begin{thm}
+If two straight lines cut one another, then they make the vertical angles equal to one another.
+\end{thm}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+		\tkzDefPoint(0,2.5){A}
+		\tkzDefPoint(3.8,-1.5){B}
+		\tkzDefPoint(0,0){C}
+		\tkzDefPoint(4,0){D}
+		\tkzDrawSegments(A,B C,D)
+		\tkzLabelPoints(A,B,C,D)
+		\tkzDrawPoints(A,B,C,D)
+		\tkzInterLL(A,B)(C,D)   \tkzGetPoint{E}
+		\tkzLabelPoints[below, red](E)
+		\tkzDrawPoint[red](E)
+		\tkzDrawPoints(A,B,C,D)	
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+Let the straight lines $\overline{AB}$ and $\overline{CD}$ cut one another at the point $E$.
+
+\begin{proof}
+
+\begin{itemize}
+
+\begin{lemma}
+\[\angle{CEA} = \angle{DEB} \text{ and } \angle{BEC} = \angle{AED}\].Proof: By the angle sum property\[\angle{CEA} + \angle{AED} = 2\times\ang{90}\] \hfill\textcolor{red}{ I.13} 
+\end{lemma}
+
+\item Similarly,  
+\[\angle{AED} + \angle{DEB} = 2\times\ang{90}\]
+
+\clearpage
+
+\begin{lemma}
+\[\angle{CEA} + \angle{AED} = \angle{AED} + \angle{DEB}\]
+\end{lemma}
+
+\item By previous claims, 
+\[\angle{CEA} + \angle{AED} = \angle{AED} + \angle{DEB}\] 
+
+\item Subtracting  $\angle{AED}$ from both sides,
+\[\angle{CEA} = \angle{DEB}\]
+
+
+\textbf{Extension of lemma 0.1.3} Similarly, $\angle BEC = \angle AED$.
+
+$\therefore$ if two straight lines cut one another, then they make the vertical angles equal to one another.
+
+\end{itemize}
+
+\end{proof}
+
+\clearpage

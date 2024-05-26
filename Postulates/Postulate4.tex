@@ -1,0 +1,58 @@
+
+\begin{post}
+That all right angles equal one another.
+\end{post}
+
+In defining a right angle, it's evident that the two angles formed at the intersection of a perpendicular line,  as such: 
+
+\sidenote{$\angle{ACD} \cong \angle{BCD}$}
+\begin{figure}[h]
+\centering
+	\begin{tikzpicture}
+	\tkzDefPoint(0,0){A}
+	\tkzDefPoint(4,0){B}
+	\tkzDefPoint(2,0){C}
+	\tkzDefPoint(2,2){D}
+	\tkzDrawSegments(A,B C,D)
+	\tkzDrawPoints(A,B,C,D)
+	\tkzLabelPoints[below](A,B,C)
+	\tkzLabelPoints[right](D)
+	\tkzMarkRightAngle[red,size=0.4](A,C,D)
+	\tkzMarkRightAngle[blue,size=0.4](B,C,D)
+	\tkzLabelAngle[pos=0.7](A,C,D){$\theta=\ang{90}$}
+	\tkzLabelAngle[pos=0.7](B,C,D){$\theta=9\ang{90}$}
+	\end{tikzpicture}
+	\sidecaption[1.4][-1.5cm]{\raggedright\ssmall{Diagram showing two right angles formed by perpendicular lines AC and BC at point C. Both angles ACD and BCD are marked to indicate they are right angles, denoted by $\theta=\ang{90}$.}}
+\end{figure}
+
+This Postulate asserts the essential truth that a right angle is a determinate magnitude\margincite{Heath}, this concept is crucial. \textit{Postulate 4} states: "All right angles are equal to one another." Euclid's reliance on such specific definitions ensures that the conclusions drawn from his axioms and postulates are logically sound and universally applicable within the framework of classical geometry. This exactness is what makes the Elements a seminal work in the logical presentation of mathematical proofs and theorems. The specificity in stating that certain angles are equal to two right angles—or any other exact angle measurement—is critical for the development of logical proofs throughout the work. This precision in describing angles is deeply connected to Euclid's foundational postulates, particularly \textit{Postulate 4}, which establishes the equality of all right angles. By doing so, it provides a universal reference for measuring other angles.
+
+\clearpage
+
+This postulate states that an angle formed at the intersection of one perpendicular line, like $\angle{ACD}$, is equal to an angle formed at the intersection of any other perpendicular line, such as $\angle{EGH}$.
+
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}[rotate=30]
+	\tkzDefPoint(0,0){E}
+	\tkzDefPoint(4,0){F}
+	\tkzDefPoint(2,0){G}
+	\tkzDefPoint(2,2){H}
+	\tkzDrawSegments(E,F G,H)
+	\tkzDrawPoints(E,G,G,H)
+	\tkzLabelPoints[below](E,G,H)
+	\tkzLabelPoints[right](F)
+	\tkzMarkRightAngle[red,size=0.4](E,G,H)
+	\tkzMarkRightAngle[blue,size=0.4](F,G,H)
+	\end{tikzpicture}
+	\sidecaption[1.5][-1.5cm]{\raggedright\ssmall{ in the document we will use the notation;$A + B =2\times\ang{90}$}}
+\end{figure}
+
+This kind of specific statement is a fundamental building block in geometric proofs because it leverages the established truths (axioms and postulates) to make broader conclusions. The only angle measurements considered in the Elements are in terms of right angles. For example, in \textit{Proposition I.17}, it's demonstrated that the sum of two angles is always less than two right angles. Another instance is found in the proof of \textit{Proposition II.9}, where two angles are proven to each be half of a right angle, hence they are congruent. Furthermore, in \textit{Proposition III.16}, this postulate is invoked to argue that the sum of two angles cannot be less than two right angles while also being equal to two other right angles.
+
+This approach underlines the rigor of Euclidean geometry, where every assertion, no matter how simple it seems, is tightly bound to the system's logical structure. It ensures that every geometric statement can be verified based on universally accepted truths, maintaining the integrity and internal consistency of mathematical arguments.
+
+In a broader sense, a determinate magnitude in Euclidean geometry can refer to any precisely defined length, area, volume, or angular measure. Euclid's reliance on such specific definitions ensures that the conclusions drawn from his \textit{Axioms} and \textit{Postulates} are logically sound and universally applicable within the framework of classical geometry. This exactness is what makes the Elements a seminal work in the logical presentation of mathematical proofs and theorems. This is a demonstration of Euclid's use of right angles in his geometric proofs.\sidenote[3][-2cm]{\raggedright\ssmall{For a deeper historical insight into how these principles were applied in ancient Greek mathematics and their influence on later scholars, see references such as Heath's translation of the *Elements*, which provides extensive commentary and analysis.}}
+
+\clearpage

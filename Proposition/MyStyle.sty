@@ -1,0 +1,250 @@
+\nonstopmode
+\usepackage{parskip} %
+\usepackage{tkz-euclide}			%Tkz-Euclide diagrams
+\usepackage{amsmath,amsthm,amssymb,cancel}					%Math packages
+\usepackage[margin=1.25in,headheight=14.5pt,headsep=10pt,footskip=20pt,top=1in,bottom=1in,left=1in,right=1in,a4paper]{geometry}		%Adjust page layout
+\usepackage{fancyhdr}		%Customize headers and footers
+\usepackage{mathrsfs}			%Maths sybols
+\usepackage{graphicx}           		%Include graphics
+\usepackage{cleveref}           		%Enhanced cross-referencing
+%\usepackage{titlesec}           		%Customize chapter and section titles
+\usepackage{setspace}           		%Adjust line spacing
+\usepackage[utf8]{inputenc}     		%Input encoding
+\usepackage[T1]{fontenc}        		%Font encoding
+\usepackage{xcolor}
+%\usepackage{showframe}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\setstretch{1.5}                			% Adjust line spacing
+\pagestyle{fancy}               			%Use fancy headers and footers
+
+\usepackage[explicit]{titlesec}
+\usepackage[many]{tcolorbox}
+\usepackage{lmodern}
+%\tcbuselibrary{skins}
+%\usetikzlibrary{shadings}
+
+%\raggedbottom
+
+\makeatletter%%%%%%%%%%%%%%%%%eqparallel
+\newcommand{\eqparallel}{\mathrel{\vphantom{\parallel}\mathpalette\eqparallel@\relax}}
+\newcommand{\eqparallel@}[2]{%
+  \ooalign{\hidewidth$\m@th#1\parallel$\hidewidth\cr$\m@th#1=$\cr}%
+}
+\makeatother
+
+\makeatletter%%%%%%%%%%%%%%%%%centers figures
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+    
+
+% Set the head height and adjust the top margin
+\setlength{\headheight}{14.5pt}
+\addtolength{\topmargin}{-2.5pt}
+
+\setlength{\parindent}{4em} %spacing of beginning of a new paragraph
+\setlength{\parskip}{1em}   %spacing between paragraphs
+%\renewcommand{\cleardoublepage}{\clearpage} %for the headings
+
+% Customize chapter and section titles
+%\titleformat{\chapter}[display]
+%  {\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+%\titleformat{\section}
+ % {\normalfont\Large\bfseries}{\thesection}{1em}{}
+%\titleformat{\subsection}
+%  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+\usetikzlibrary{decorations.markings}
+
+\newtheorem{construction}{Construction}%
+\newtheorem{theorem}{Theorem}[section]%
+\newtheorem{corollary}{Corollary}[theorem]%
+\newtheorem{lemma}[theorem]{Lemma}%
+\newtheorem{definition}{Definition}%
+\newtheorem{postulate}{Postulate}%
+\newtheorem*{remark}{Remark}
+
+
+
+\newcommand{\Ang}[1]{$\angle{#1}$}%   Angle
+\newcommand{\Over}[1]{$\overline{#1}$}%   striagt lines
+\newcommand{\Triangle}[1]{$\widetriangle{#1}$}%  triangle
+\DeclareSymbolFont{yhlargesymbols}{OMX}{yhex}{m}{n}
+\DeclareMathAccent{\widetriangle}{\mathord}{yhlargesymbols}{"E6}
+\newcommand{\Cir}[1]{$\mathscr{C}{#1}$} % circle center;radius
+
+\setlength{\parindent}{0em}%
+\setlength{\parskip}{1em}%
+
+\makeatletter
+ \def\@textbottom{\vskip \z@ \@plus 1pt}
+ \let\@texttop\relax
+\makeatother
+
+
+
+
+%%%%%%%%%%%
+\newcommand{\ETri}[4]{%
+	\tkzDefPoint(#1){#2}%
+ \tkzDefShiftPoint[A](60:3){#3}%<------------45 for right angles iso
+ \tkzDefShiftPoint[A](0:3){#4}%
+ \tkzDrawPolygon(#2,#3,#4)%
+ \tkzDrawPoints(#2,#3,#4)%
+ \tkzLabelPoints[below](#2,#4)%
+ \tkzLabelPoints[above](#3)%
+}%
+
+%%%%New command to make triangle based on shifting the first point by(ang:dist)
+\newcommand{\TRI}[7]{%
+	\tkzDefPoint(#1){#2}%
+ \tkzDefShiftPoint[#2](#3){#4}%
+ \tkzDefShiftPoint[#2](#5){#6}%
+ \tkzDrawPolygon[fill=#7](#2,#4,#6)%
+ \tkzDrawPoints(#2,#4,#6)%
+ \tkzLabelPoints[below](#2,#4)%
+ \tkzLabelPoints[above](#6)%
+}%
+
+\newcommand{\AB}[1]{%
+	\tkzDefPoint(0,0){A}%
+	\tkzDefPoint(3,0){B}%
+}%
+
+\newcommand{\A}[1]{%
+	\tkzDefPoint(0,0){A}%
+}%
+
+\newcommand{\B}[1]{%
+	\tkzDefPoint(3,0){B}%	
+}%
+
+\newcommand{\C}[1]{%
+	\tkzDefPoint(1.5,2.5){C}%
+}%
+
+\newcommand{\Lem}[2]{%
+  \begin{lemma}%
+    {#1}%
+    \ifx&#2&%
+    % No items provided, do nothing
+    \else
+      \begin{itemize}%
+        #2%
+      \end{itemize}%
+    \fi
+  \end{lemma}%
+}
+
+\newcommand{\Tri}[8]{%%
+	\tkzDefPoint(0,0){#1}%
+	\tkzDefPoint({#2,#3}){#4}%
+	\tkzDefPoint({#5,#6}){#7}%
+	\tkzDrawPolygon[fill=#8](#1,#4,#7)%
+	\tkzLabelPoint[left](#1){$#1$}% 
+	\tkzLabelPoint[below](#4){$#4$}%
+	\tkzLabelPoint[above](#7){$#7$}%
+	\tkzDrawPoints(#1,#4,#7)%
+}
+
+\newcommand{\iTri}[4]{%
+	\tkzDefPoint(0,0){#1}%
+	\tkzDefPoint(3,0){#2}%
+	\tkzDefPoint(1.5,3){#3}%
+	\tkzDrawPolygon[fill=#4, opacity=0.3](#1,#2,#3)% 
+	\tkzLabelPoint[left](#1){$#1$}% 
+	\tkzLabelPoint[right](#2){$#2$}%
+	\tkzLabelPoint[above](#3){$#3$}%
+	\tkzMarkSegment[mark=|](#1,#3)%
+	\tkzMarkSegment[mark=|](#2,#3)%
+}	
+	
+\newcommand{\tri}[7]{%
+\tkzDefPoint(0,0){#1}% 
+\tkzDefPoint(#2,#3){#4}%
+ \tkzDefPointBy[rotation=center #1 angle #5](#4)%
+       \tkzGetPoint{#6}%
+\tkzDrawPolygon[fill=#7](#1,#4,#6)% 
+%\tkzLabelPoint[left](#1){$#1$}% 
+%\tkzLabelPoint[right](#4){$#4$}%
+%\tkzLabelPoint[above](#6){$#6$}%
+%\tkzMarkSegment[mark=|](#1,#4)%
+%\tkzMarkSegment[mark=|](#1,#6)%
+}
+
+%\setlength{\marginparwidth}{0pt}%
+% Paragraph style}%
+
+%\pagestyle{fancy}%
+
+
+
+    
+%Reset counters   
+%\AtBeginEnvironment{theorem}{\setcounter{CountStep}{0}}%
+%\AtBeginEnvironment{theorem}{\setcounter{CountDiag}{0}} %
+%\AtBeginEnvironment{construction}{\setcounter{CountStep}{0}}%
+%\AtBeginEnvironment{construction}{\setcounter{CountDiag}{0}}%
+
+%%%%TestZZone%%%%%%
+\makeatletter
+\tikzset{nomorepostaction/.code = \let\tikz@postactions\pgfutil@empty}
+\newdimen\pgflinewidth@arrow
+\pgfarrowsdeclare{_latex}{_latex}
+{
+  \pgfutil@tempdima=0.28pt%
+  \pgfutil@tempdimb=\pgflinewidth@arrow%
+  \ifdim\pgfinnerlinewidth>0pt%
+    \pgfmathsetlength\pgfutil@tempdimb{.6\pgflinewidth@arrow-.4*\pgfinnerlinewidth}%
+  \fi%
+  \advance\pgfutil@tempdima by.3\pgfutil@tempdimb%
+  \pgfarrowsleftextend{+-1\pgfutil@tempdima}
+  \pgfarrowsrightextend{+9\pgfutil@tempdima}
+}
+{
+  \pgfutil@tempdima=0.28pt%
+  \pgfutil@tempdimb=\pgflinewidth@arrow%
+  \ifdim\pgfinnerlinewidth>0pt%
+    \pgfmathsetlength\pgfutil@tempdimb{.6\pgflinewidth@arrow-.4*\pgfinnerlinewidth}%
+  \fi%
+  \advance\pgfutil@tempdima by.3\pgfutil@tempdimb%
+  \pgfpathmoveto{\pgfqpoint{9\pgfutil@tempdima}{0pt}}
+  \pgfpathcurveto
+  {\pgfqpoint{6.3333\pgfutil@tempdima}{.5\pgfutil@tempdima}}
+  {\pgfqpoint{2\pgfutil@tempdima}{2\pgfutil@tempdima}}
+  {\pgfqpoint{-1\pgfutil@tempdima}{3.75\pgfutil@tempdima}}
+  \pgfpathlineto{\pgfqpoint{-1\pgfutil@tempdima}{-3.75\pgfutil@tempdima}}
+  \pgfpathcurveto
+  {\pgfqpoint{2\pgfutil@tempdima}{-2\pgfutil@tempdima}}
+  {\pgfqpoint{6.3333\pgfutil@tempdima}{-.5\pgfutil@tempdima}}
+  {\pgfqpoint{9\pgfutil@tempdima}{0pt}}
+  \pgfusepathqfill
+}
+
+\tikzset{
+    bigdiagramarrow/.style = {
+        -_latex,
+        arrow thick
+    },
+    arrow line width/.code={
+        \pgfmathsetlength\pgflinewidth@arrow{#1}
+    },
+    arrow line width/.initial=\pgflinewidth,
+    arrow ultra thin/.style={arrow line width=0.1pt},
+    arrow very thin/.style={arrow line width=0.2pt},
+    arrow thin/.style={arrow line width=0.4pt},
+    arrow semithick/.style={arrow line width=0.6pt},
+    arrow thick/.style={arrow line width=0.8pt},
+    arrow very thick/.style={arrow line width=1.2pt},
+    arrow ultra thick/.style={arrow line width=1.6pt},
+}
+\makeatother
+
+
+
+%%%%%%%TestZone2
+%\usetikzlibrary{fit,shapes.geometric}
+\usetikzlibrary{tikzmark}
+\usetikzlibrary{shapes.geometric} % required for the ellipse shape
+%\usetikzlibrary{arrows, backgrounds, calc, hobby, positioning}

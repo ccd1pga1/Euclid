@@ -1,0 +1,50 @@
+
+\section*{Proposition 18}
+ 
+\begin{thm}
+In any triangle, the angle opposite the greater side is greater.
+\end{thm}
+
+Let $\widetriangle{ABC}$ be a triangle having the side $\overline{AC}$ greater than $\overline{AB}$.
+
+\begin{figure}[H]
+ 	\begin{tikzpicture}
+		 \Tri{B}{-2}{3}{A}{3}{0}{C}{blue,  opacity=0.1}
+ 	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+Since $\overline{AC}$ is greater than $\overline{AB}$, make $\overline{AD}$ equal to $\overline{AB}$, and join $\overline{BD}$. \hfill\textcolor{red}{I.3, I.Post.1}
+
+\begin{figure}[H]
+	\begin{tikzpicture}
+  		\Tri{B}{-2}{3}{A}{3}{0}{C}{blue,  opacity=0.1}
+  		\tkzInterLC(A,C)(A,B)					\tkzGetPoints{E}{D}
+ 		 \tkzDrawPoints(D)
+ 		 \tkzLabelPoints[above](D)
+ 		 \tkzDrawSegment(B,D)
+	\end{tikzpicture}
+	\caption{}
+\end{figure}
+
+\begin{proof}
+
+\begin{itemize}
+
+\item Since $\angle{ADB}$ is an exterior angle of the $\widetriangle{BCD}$,
+
+\item[$\therefore$] it is greater than the interior and opposite $\angle{DCB}$. \hfill\textcolor{red}{I.16}
+
+\item But the $\angle{ADB}$ equals $\angle{ABD}$, since the side $\overline{AB}$ equals $\overline{AD}$, 
+
+\item[$\therefore$] $\angle{ABD} > \angle{ACB}$
+
+\item[$\therefore$] $\angle{ABC} \gg \angle{ACB}$. \hfill\textcolor{red}{I.5}
+
+\item[$\therefore$] in any triangle, the angle opposite the greater side is greater.
+
+\end{itemize}
+
+\end{proof}
+ 
+\clearpage

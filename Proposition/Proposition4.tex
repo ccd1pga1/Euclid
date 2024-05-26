@@ -1,0 +1,99 @@
+
+
+\section*{Proposition 4}
+
+\begin{thm}
+If two triangles have two sides equal to two sides respectively and have the angles contained by the equal straight lines equal, then they also have the base equal to the base, the triangle equals the triangle, and the remaining angles equal the remaining angles respectively, namely those opposite the equal sides.
+\end{thm}
+
+\begin{figure}[H]
+\centering
+	\begin{subfigure}{0.4\textwidth}
+		\begin{tikzpicture}
+			\tkzDefPoint(0,0){C}
+			\tkzDefPoint(-2,0){B}
+			\tkzDefPoint(-1.5,2){A}
+			\tkzDrawPolygon[red](A,B,C)
+			\tkzLabelPoints[right](C)
+			\tkzLabelPoints[left](B)
+			\tkzLabelPoints[above](A)
+			\tkzMarkAngle[size=0.5](C,B,A)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+%%%%%%%%%%%%	
+	\begin{subfigure}{0.4\textwidth}
+		\begin{tikzpicture}
+			\tkzDefPoint(0,0){F}
+			\tkzDefPoint(-2,0){E}
+			\tkzDefPoint(-1.5,2){D}
+			\tkzDrawPolygon[red](D,E,F)
+			\tkzLabelPoints[right](F)
+			\tkzLabelPoints[left](E)
+			\tkzLabelPoints[above](D)
+			\tkzMarkAngle[size=0.5](F,E,D)
+		\end{tikzpicture}
+		\caption{}
+	\end{subfigure}
+	\caption{Side angle side theorem}
+\end{figure}
+
+\begin{proof}
+
+Given two $\widetriangle{ABC}$ and $\widetriangle{DEF}$, where side $\overline{AB}$ is equal to side $\overline{DE}$, side $\overline{AC}$ is equal to side $\overline{DF}$, and $\angle{BAC}$ is equal to $\angle{EDF}$.
+
+\begin{itemize}
+\item
+	\begin{lemma}
+	If two triangles have two sides equal to two sides respectively, and have the included angle equal, then the triangles are congruent.
+	\end{lemma}
+\item Proof: By side-side-angle congruence criterion.
+	\begin{lemma}
+	If $\widetriangle{ABC}$ is superimposed onto $\widetriangle{DEF}$, such that point $A$ coincides with point $D$ and $\overline{AB}$ coincides with $\overline{DE}$, then point $B$ coincides with point $E$.
+	\end{lemma}
+\item Proof: By definition of superposition, and the fact that $\overline{AB}$ equals $\overline{DE}$.
+	\begin{lemma}
+	If $\overline{AB}$ coincides with $\overline{DE}$, then $\overline{AC}$ coincides with $\overline{DF}$.
+	\end{lemma}
+\item Proof: Since $\angle{BAC}$ equals $\angle{EDF}$, by definition of coinciding angles.
+\clearpage
+	\begin{lemma}
+	 If $B$ coincides with $E$, then $\overline{BC}$ coincides with $\overline{EF}$ and equals it.
+	\end{lemma}
+\item Proof: By definition of coinciding points, and the fact that $\overline{AB}$ equals $\overline{DE}$.\hfill\textcolor{red}{C.N.4}
+	\begin{lemma}
+	The whole $\widetriangle{ABC}$ coincides with the whole $\widetriangle{DEF}$ and equals it.
+	\end{lemma}
+\item Proof: By Lemma 1.4.2, Lemma 1.4.4, and Lemma 1.4.5 \hfill\textcolor{red}{C.N.4}
+	\begin{lemma}
+	The remaining angles also coincide and are equal.
+	\end{lemma}
+\item Proof: By Lemma 1.4.6 and Lemma 14.2
+	\begin{lemma}
+	If two triangles have two sides equal to two sides respectively and have the angles contained by the equal straight lines equal, then they also have the base equal to the base, the triangle equals the triangle, and the remaining angles equal the remaining angles respectively, namely those opposite the equal sides.
+	\end{lemma}
+\item Proof: By Lemma 5, Lemma 6, and the initial assumption.
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){C}
+		\tkzDefPoint(-2,0){B}
+		\tkzDefPoint(-1.5,2){A}
+		\tkzDrawPolygon[red, dash pattern= on 3pt off 5pt](A,B,C)
+		\tkzDrawPolygons[blue, dash pattern = 0n 3pt off 5pt,dash phase=4pt](A,B,C)
+		\tkzLabelPoints[right](A)
+		\tkzLabelPoints[left](B)
+		\tkzLabelPoints[above](C)
+		\tkzMarkAngle[size=0.5](C,B,A)
+	\end{tikzpicture}
+	\caption{SAS conclusion}
+\end{figure}
+
+\textbf{Conclusion:} The theorem is proved.
+
+\end{proof}
+
+\clearpage
+ 

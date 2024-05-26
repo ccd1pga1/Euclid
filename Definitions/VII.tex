@@ -1,0 +1,64 @@
+\definsection{Definition VII}
+
+\begin{defin}
+\textgreek{Ὅταν ἡ ἐπιφάνεια ὀρθὴ γραμμὴ ἥ τις δύναμις συνάπτουσα δύο ἑκάστους τυχόντας σημείους ἐν αὐτῇ ἐν τῇ ἐπιφανείᾳ πᾶν ὅλον ἔχει, καλεῖται ἐπίπεδον.}
+
+When a surface is such that the right line joining any two arbitrary points in it lies wholly in the surface, it is called a plane.
+\end{defin}
+
+In the context of Euclidean geometry, a plane is a fundamental concept that forms the basis for two-dimensional space. While various definitions exist, they collectively describe a plane as a flat, infinite surface devoid of thickness or curvature.
+
+Euclid's Elements introduces a plane as a surface understood to possess two dimensions, denoted as length and breadth. However, these dimensions are not explicitly defined, leaving room for interpretation. Moreover, subsequent definitions within the Elements illustrate that a plane need not necessarily be flat, encompassing surfaces such as cones, cylinders, and spheres.
+
+Expanding upon Euclid's foundation, modern mathematics defines a Euclidean plane as a geometric space of dimension two, symbolized as $\mathbb{E}^{2}$ \sidenote{\raggedright\small{Represents the expected value of a random variable, or Euclidean space, or a field in a tower of fields, or the Eudoxus reals.}} In this space, each point is determined by a pair of real numbers, providing a coordinate system to locate points on the plane. It is an affine space, meaning it includes parallel lines, and possesses metrical properties derived from a defined distance metric, allowing for the measurement of angles and the definition of circles.
+
+In geometric terms, a plane extends infinitely in all directions, with zero thickness and zero curvature. It is challenging to visualize a plane in real-life scenarios, but examples include the flat surfaces of cubes, cuboids, or sheets of paper. The position of any point on a plane can be specified using an ordered pair of coordinates, indicating its precise location relative to the origin or any chosen reference point.
+
+\clearpage
+
+\textbf{Colinear points}
+
+Points which lie on the same right line are called collinear points. A figure formed of collinear points is called a row of points
+
+This statement is fundamental in geometry and pertains to the concept of collinearity. Let's break it down:
+
+\begin{itemize}
+\item Collinear Points: These are points that lie on the same straight line. In other words, if you were to draw a straight line, any points that you place on that line are collinear points. Collinear points share a common line of direction.
+\item Row of Points: A figure formed by collinear points is referred to as a row of points. Essentially, it's a sequence of points arranged along a straight line. It's like placing dots in a straight line; they form a row of collinear points.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.3\textwidth}
+        \begin{tikzpicture}
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(0.75,0){B}
+\tkzDefPoint(1.5,0){C}
+\tkzDefPoint(2.5,0){D}
+\tkzDrawSegment(A,D)
+\tkzDrawPoints(A,B,C,D)
+\tkzLabelPoints[below](A,B,C,D)
+       \end{tikzpicture}
+        \sidecaption[a][-1cm]{With collinear points all the points are arranged long a straight line segment.}
+    \end{subfigure}
+\begin{subfigure}{0.3\textwidth}
+        \begin{tikzpicture}
+\tkzDefPoint(0,0){A}
+\tkzDefPoint(1,1.5){B}
+\tkzDefPoint(2,-1){C}
+\tkzDefPoint(2.25,0.5){D}
+\tkzDefPoint(2.5,-0.25){E}
+\tkzDrawSegments(A,B B,C C,D D,E)
+\tkzDrawPoints(A,B,C,D,E)
+\tkzLabelPoints(A,B,C,D,E)
+      \end{tikzpicture}
+        \sidecaption{With non colinear points the points are dispersed along a line.}
+    \end{subfigure}
+    \caption{Coliner and non-coliner points}
+\end{figure}
+
+A straight line, by definition, extends indefinitely in both directions without curvature. $\therefore$ if points lie on the same straight line, they are collinear, regardless of whether the line is oriented horizontally, vertically, or at any angle. As long as the points can be connected by a single straight path, they are collinear.
+If a line is angled at some point along its path, it's still considered the same line as long as it remains straight. Any points lying on this line would still be collinear.
+In summary, collinear points are points that lie on the same straight line, and a row of points is formed by such collinear points. The orientation of the line, whether horizontal, vertical, or angled, doesn't affect collinearity as long as the line remains straight.
+
+\clearpage

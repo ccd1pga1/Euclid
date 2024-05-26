@@ -1,0 +1,61 @@
+\definsection{Definition XX}
+
+\begin{defin}
+"Of trilateral figures, an equilateral triangle is that which has its three sides equal, an isosceles triangle that which has two of its sides alone equal, and a scalene triangle that which has its three sides unequal."
+\end{defin}
+
+Definition 20 classifies triangles based on their symmetries,
+
+According to Definition 20:
+
+A scalene triangle (C) has no symmetries.
+An isosceles triangle (B) has bilateral symmetry.
+An equilateral triangle (A) not only possesses three bilateral symmetries but also 120° rotational symmetries.
+
+\begin{figure}[h]
+\begin{subfigure}{0.305\textwidth}
+\centering
+\begin{tikzpicture}
+\ETri{0,0}{A}{B}{C}
+\tkzDefLine[altitude](A,B,C)		\tkzGetPoint{D}
+\tkzDrawSegment[dashed,red](B,D)
+\tkzDefLine[altitude](B,A,C)		\tkzGetPoint{E}
+\tkzDrawSegment[dashed,red](A,E)
+\tkzDefLine[altitude](B,C,A)		\tkzGetPoint{F}
+\tkzDrawSegment[dashed,red](C,F)
+\end{tikzpicture}
+\sidecaption[a][-4cm]{\raggedright\ssmall{An equilateral triangle possesses three bilateral symmetries and also $\ang{120}$ rotational symmetries.}}
+\end{subfigure}
+%%%%%%%%
+\begin{subfigure}{0.35\textwidth}
+\begin{tikzpicture}
+\tkzDefPoint(0,1){A}
+\tkzDefPoint(3,1){B}
+\tkzDefPoint(1.5,3.5){C}
+\tkzDrawPolygon(A,B,C)
+\tkzMarkSegment[mark=|](A,C)
+\tkzMarkSegment[mark=|](B,C)
+\tkzDefLine[altitude](A,C,B)		\tkzGetPoint{D}
+\tkzDrawSegment[dashed,red](C,D)
+\end{tikzpicture}
+\sidecaption[b][-2cm]{\raggedright\ssmall{An isosceles triangle has bilateral symmetry.}}
+\end{subfigure}
+%%%%%%%%%%
+\begin{subfigure}{0.31\textwidth}
+\begin{tikzpicture}
+\Tri{A}{2.5}{-1.5}{B}{1}{2}{C}{none}
+\end{tikzpicture}
+\sidecaption[c][-1cm]{\raggedright\ssmall{A scalene triangle has no symmetries.}}
+\end{subfigure}
+\caption{Triangles and their symmetry}
+\end{figure}
+
+
+It's worth noting that under this definition, an equilateral triangle is not considered an isosceles triangle. However, in Euclid's Elements, the term "isosceles triangle" is introduced in $\textcolor{red}{Proposition I.5,}$ and later in $\textcolor{red}{Books II}$ and $\textcolor{red}{IV}$. The usage of "isosceles triangle" in the Elements does not exclude equilateral triangles. In modern practice, it's only necessary for at least two sides to be equal for a triangle to be classified as isosceles.
+
+\clearpage
+
+Equilateral triangles are constructed in the first proposition of the $\textcolor{red}{Elements, I.1}$. Additionally, an alternate characterization of isosceles triangles, namely that their base angles are equal, is demonstrated in $\textcolor{red}{Propositions I.5}$ and $\textcolor{red}{I.6}$.
+
+
+\clearpage

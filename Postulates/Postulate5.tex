@@ -1,0 +1,71 @@
+\begin{post}
+That, if a straight line falling on two straight lines makes the interior angles on the same side less than two right angles, the two straight lines, if produced indefinitely, meet on that side on which are the angles less than the two right angles.
+\end{post}
+
+This postulate, less self-evident compared to Euclid's other four, has been extensively scrutinized and many have attempted to derive it from more "obvious" postulates. While ancient Greek mathematicians like Thales and Pythagoras laid foundations that contributed to Euclid’s axiomatic approach, explicit efforts to address Euclid's fifth postulate are scarcely documented. Post-Euclid, the obsession to prove this fifth postulate using simpler axioms failed repeatedly, often falling into the trap of \textit{petitio principii}\sidenote{\raggedright\ssmall{Petitio principii, or "begging the question," is a logical fallacy where the conclusion is assumed in the premises, inadvertently using what needs to be proven as the proof itself.}}—assuming the truth of what it tried to establish. Ptolemy's attempts to prove Proposition I.29 without using Postulate 5 inadvertently resulted in deducing the postulate from his proof.
+
+The premise of this postulate is illustrated in the following diagram; if:
+
+\[ \angle{ABE} + \angle{BED} < 2\times\ang{90}\] 
+
+then lines $\overline{AC}$ and $\overline{DF}$, when extended towards points $A$ and $D$ respectively, will intersect.
+
+\begin{figure}[h]
+\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(0,0){A}
+		\tkzDefPoint(2,0){B}
+		\tkzDefPoint(4,0){C}
+		\tkzDefPoint(0,-1){D}
+		\tkzDefPoint(2.5,-1.15){E}
+		\tkzDefPoint(4.2,-1.5){F}
+		\tkzDrawSegments(A,C D,F)
+		\tkzDrawLine[add =0.5 and 0.5](B,E)
+		\tkzDrawPoints(A,B,C,D,E,F)
+		\tkzLabelPoints[below](D,E,F)
+		\tkzLabelPoints[above](A,B,C)
+	\end{tikzpicture}
+	\caption{Illustration of non-parallel lines meeting}
+\end{figure}
+
+\clearpage
+
+Commonly known as the "parallel postulate," it is pivotal in proving properties of parallel lines, extensively explored up to \textit{Proposition I.31}.
+
+If instead:
+
+\[ \angle{ABE} + \angle{BED} = 2\times\ang{90}\] 
+
+lines are parallel, as shown below.
+
+\sidenote[2][2cm]{\raggedright\ssmall{We use $>$ to indicate the lines are parallel}}
+\begin{figure}[h]
+\centering
+	\begin{tikzpicture}
+		\tkzDefPoint(0,1){A}
+		\tkzDefPoint(2,1.5){B}
+		\tkzDefPoint(4,2){C}
+		\tkzDefPoint(0,-0.5){D}
+		\tkzDefPoint(2.5,0){E}
+		\tkzDefPoint(4.2,0.5){F}
+		\tkzDrawSegments(A,C D,F)
+		\tkzDrawLine[add =0.5 and 0.5](B,E)
+		\begin{scope}[decoration={
+    markings,
+    mark=at position 0.3 with {\arrow{>}}}
+    ] 
+    \tkzDrawSegments[postaction={decorate}](A,C)
+    \tkzDrawSegments[postaction={decorate}](D,F)
+\end{scope}
+		\tkzDrawPoints(A,B,C,D,E,F)
+		\tkzLabelPoints[below](D,E,F)
+		\tkzLabelPoints[above](A,B,C)
+	\end{tikzpicture}
+	\caption{Illustration of parallel lines}
+\end{figure}
+
+In the early 19th century, mathematicians such as Bolyai, Lobachevsky, and Gauss explored non-Euclidean geometries, including hyperbolic and elliptic, which, though diverging from Euclidean principles, proved internally consistent and practically applicable.
+
+The parallel postulate is essential for deriving the principles of Euclidean geometry, and understanding non-Euclidean geometries provides valuable insight. Although Euclid does not explicitly employ this postulate until \textit{Proposition I.29}, the subsequent propositions heavily rely on it. Additional commentary on this postulate is provided in \textit{Propositions I.29} and \textit{I.30}.
+
+\clearpage
